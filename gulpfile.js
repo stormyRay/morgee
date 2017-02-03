@@ -11,16 +11,16 @@ var reactify = require('reactify');
 var streamify = require('gulp-streamify');
 
 var path = {
-    HTML: 'index.html',
-    MINIFIED_OUT: 'index.build.min.js',
-    OUT: 'index.build.js',
+    HTML: 'pickImage.html',
+    MINIFIED_OUT: 'pickImage.build.min.js',
+    OUT: 'pickImage.build.js',
     DEST: 'dist',
     DEST_BUILD: 'dist/build',
     DEST_SRC: 'dist/build',
-    JS_ENTRY_POINT: './src/index.js',
-    SCSS_ENTRY_POINT: './src/style/index.scss',
-    CSS_OUT: 'index.css',
-    RESOURCES_SRC: ['src/resources/**/*'],
+    JS_ENTRY_POINT: './src/pickImage.js',
+    SCSS_ENTRY_POINT: './src/style/pickImage.scss',
+    CSS_OUT: 'pickImage.css',
+    RESOURCES_SRC: ['resources/**/*'],
     RESOURCES_DEST: 'dist/resources'
 };
 /*////////////////////////////////////////////////////////////////////////////////
