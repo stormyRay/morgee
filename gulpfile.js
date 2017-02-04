@@ -11,13 +11,13 @@ var reactify = require('reactify');
 var streamify = require('gulp-streamify');
 
 var path = {
-    HTML: 'pickImage.html',
+    HTML: 'src/pickimage.html',
     MINIFIED_OUT: 'pickImage.build.min.js',
     OUT: 'pickImage.build.js',
     DEST: 'dist',
     DEST_BUILD: 'dist/build',
     DEST_SRC: 'dist/build',
-    JS_ENTRY_POINT: './src/pickImage.js',
+    JS_ENTRY_POINT: './src/entries/pickImage.js',
     SCSS_ENTRY_POINT: './src/style/pickImage.scss',
     CSS_OUT: 'pickImage.css',
     RESOURCES_SRC: ['resources/**/*'],
