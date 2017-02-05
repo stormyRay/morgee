@@ -1,0 +1,1 @@
+export const SWITCH_NAV_TYPE = "SWITCH_NAV_TYPE";
