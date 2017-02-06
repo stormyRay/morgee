@@ -1,9 +1,8 @@
 import { connect } from "react-redux";
 import TypeNav from "../../components/TypeNav";
-//import {typeNav} from "../../actions/index";
-import {switchType} from "../../actions/typeNav";
+import {typeNav} from "../../actions/index";
 
-//const {switchType} = typeNav;
+const {switchType} = typeNav;
 
 const mapStateToProps = (state, ownProps) => {
 	return {

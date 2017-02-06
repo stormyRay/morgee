@@ -1,1 +1,1 @@
-//export {import default as typeNav from "./typeNav"};
+export {default as typeNav} from "./typeNav";

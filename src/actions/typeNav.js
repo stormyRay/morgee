@@ -7,4 +7,4 @@ export const switchType = (activeType) => {
 	}
 }
 
-//export * as default;
+export default {switchType};
