@@ -18,7 +18,7 @@ var path = {
     DEST_BUILD: 'dist/build',
     DEST_SRC: 'dist/build',
     JS_ENTRY_POINT: './src/entries/pickImage.js',
-    SCSS_ENTRY_POINT: './src/style/pickImage.scss',
+    SCSS_ENTRY_POINT: './src/styles/pickImage.scss',
     CSS_OUT: 'pickImage.css',
     RESOURCES_SRC: ['resources/**/*'],
     RESOURCES_DEST: 'dist/resources'
