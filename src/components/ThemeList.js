@@ -1,4 +1,5 @@
 import React from "react";
+import {SEARCH_BY_THEME} from "../contsants/text";
 
 class ThemeList extends React.Component{
 	constructor(props) {
@@ -8,7 +9,10 @@ class ThemeList extends React.Component{
 	render() {
 		return (
 			<div className="theme-list-container">
-				THEME LIST HERE!
+				<div className="theme-list-header">
+					<h3>{SEARCH_BY_THEME}</h3>
+				</div>
+				<div className="theme-list-content"></div>
 			</div>
 		)
 	}

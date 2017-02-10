@@ -6,9 +6,13 @@ class ImageInSale extends React.Component{
 	}
 
 	render() {
+		const {header} = this.props;
 		return (
 			<div className="image-in-sale-container">
-				AN IMAGE
+				<div className="image-in-sale-header">
+					<h3>header</h3>
+				</div>
+				<div className="image-in-sale-content"></div>
 			</div>
 		)
 	}
