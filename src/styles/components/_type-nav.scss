@@ -1,0 +1,30 @@
+.nav-pills{
+	height: 4rem;
+	margin: 0;
+	padding: 0;
+	@extend .common-container;
+	@extend .common-border-bottom;
+	li{
+		display: inline-block;
+		width: 50%;
+		height: 100%;
+		text-align: center;
+
+		a{
+			height: 100%;
+			vertical-align: middle;
+			padding-bottom: 1.05rem;
+			line-height: 3.5rem;
+			font-size: 1.4rem;
+			text-decoration: none;
+			color: rgba(0,0,0,0.5);
+		}
+
+		&.active a{
+			border-bottom: 0.4rem solid #000000;
+		}
+		&.disabled a {
+			color: rgba(0,0,0,0.25);
+		}
+	}
+}

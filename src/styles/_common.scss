@@ -1,0 +1,20 @@
+
+html{
+	//Basic font size for em converting.
+	font-size:62.5%;
+	body{
+		margin: 0;
+		background-color: rgba(0,0,0,0.1)
+	}
+}
+.common-border-top{
+	border-top: 0.1em solid rgba(0,0,0, 0.25);
+}
+.common-border-bottom{
+	border-bottom: 0.1em solid rgba(0,0,0, 0.25);
+}
+
+.common-container{
+	width: 100%;
+	background-color: #FFFFFF;
+}

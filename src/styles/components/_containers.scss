@@ -1,0 +1,38 @@
+.container{
+	@extend .common-border-top;
+	@extend .common-border-bottom;
+	@extend .common-container;
+	margin-top: 1rem;
+	box-sizing:border-box;
+	.header{
+		width: 100%;
+		overflow: hidden;
+		padding: 1.6rem 0;
+		h3{
+			width: 100%;
+			text-align: center;
+			font-size: 1.8rem;
+			line-height: 1;
+			color: #000000;
+			margin: 0;
+			vertical-align: middle;
+			span{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.hot-image-content{
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+
+	&::-webkit-scrollbar {
+	    display: none;
+	}
+
+	.see-more-panel{
+		display: inline-block;
+	}
+}
