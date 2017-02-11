@@ -1,10 +1,18 @@
-.image-in-sale-wrapper {
-    width: 12rem;
-    height: 14rem;
+.image-wrapper {
     background-color: #000000;
     position: relative;
 
-    .image-in-sale {
+    &.image-in-sale-wrapper{
+	    width: 12rem;
+	    height: 14rem;
+    }
+
+    &.theme-image-wrapper{
+    	width: 10.9rem;
+    	height: 12.7rem;
+    }
+
+    img {
 	    max-width: 100%;
 	    max-height: 100%;
 	    top: 50%;
@@ -45,4 +53,9 @@
 			float: right;
 		}
 	}
+}
+
+.theme-container{
+	display: inline-block;
+	margin: 0 0.6rem;
 }

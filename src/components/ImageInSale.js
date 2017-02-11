@@ -9,7 +9,7 @@ class ImageInSale extends React.Component{
 		const {src, title, theme, price} = this.props;
 		return (
 			<div className="image-in-sale-container" onClick={()=>{alert("I want to buy " + title)}}>
-				<div className="image-in-sale-wrapper">
+				<div className="image-wrapper image-in-sale-wrapper">
 					<img className="image-in-sale"  src={src} />
 				</div>
 				<div className="image-information">

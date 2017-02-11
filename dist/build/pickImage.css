@@ -85,12 +85,16 @@ html {
       .hot-image-content .see-more-panel .see-more-wrapper p {
         margin: 0.7rem auto; }
 
-.image-in-sale-wrapper {
-  width: 12rem;
-  height: 14rem;
+.image-wrapper {
   background-color: #000000;
   position: relative; }
-  .image-in-sale-wrapper .image-in-sale {
+  .image-wrapper.image-in-sale-wrapper {
+    width: 12rem;
+    height: 14rem; }
+  .image-wrapper.theme-image-wrapper {
+    width: 10.9rem;
+    height: 12.7rem; }
+  .image-wrapper img {
     max-width: 100%;
     max-height: 100%;
     top: 50%;
@@ -121,3 +125,7 @@ html {
     color: black;
     padding: 0.3rem 0.5rem;
     float: right; }
+
+.theme-container {
+  display: inline-block;
+  margin: 0 0.6rem; }
