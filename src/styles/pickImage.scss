@@ -1,4 +1,8 @@
-@import "./vendors/bootstrap/index";
-div{
-	font-size: 16px;
-}
+
+
+//@import "./vendors/bootstrap/index";
+@import "./common";
+@import "./components/sprite-images";
+@import "./components/type-nav";
+@import "./components/containers";
+@import "./components/showing-images";

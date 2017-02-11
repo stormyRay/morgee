@@ -14,7 +14,7 @@ class TypeNav extends React.Component {
 		return (
 			<Nav bsStyle="pills" justified activeKey={activeType} onSelect={swicthType}>
 				<NavItem eventKey="image">{IMAGE_AND_TSHIRT}</NavItem>
-				<NavItem eventKey="text" disabled>{TEXT_AND_TSHIRT}</NavItem>
+				<NavItem eventKey="text">{TEXT_AND_TSHIRT}</NavItem>
 			</Nav>
 			)
 	}

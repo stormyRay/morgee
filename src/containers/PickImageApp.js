@@ -1,10 +1,10 @@
 import React from "react";
 import {Provider} from "react-redux";
-import PickImagePage from "../components/PickImagePage";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/index";
+import PickImagePage from "../components/PickImagePage";
 
 const store = createStore(reducers, {activeType: "image"},
     applyMiddleware(thunkMiddleware)
