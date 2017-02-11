@@ -1,6 +1,10 @@
 import React from "react";
+<<<<<<< HEAD
 import {HOT_PICTURE, SEE_MORE} from "../constants/texts";
 import ImageInSale from "./ImageInSale";
+=======
+import {HOT_PICTURE} from "../constants/text";
+>>>>>>> 763900616e762553d4952b93dda522fe9d4647e7
 
 class HotImages extends React.Component{
 	constructor(props) {
@@ -15,6 +19,7 @@ class HotImages extends React.Component{
 				);
 		}
 		return (
+<<<<<<< HEAD
 			<div className="container hot-images-container">
 				<div className="header hot-image-header">
 					<h3>{HOT_PICTURE}<span className="right-arrow-icon" /></h3>
@@ -26,6 +31,14 @@ class HotImages extends React.Component{
 						<p>{SEE_MORE}</p>
 					</div>
 				</div>
+=======
+			<div className="hot-images-container">
+				<div className="hot-image-header">
+					<h3>{HOT_PICTURE}</h3>
+					<span className="right-arrow-icon" />
+				</div>
+				<div className="hot-image-content"></div>
+>>>>>>> 763900616e762553d4952b93dda522fe9d4647e7
 			</div>
 		)
 	}
