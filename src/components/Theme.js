@@ -6,9 +6,13 @@ class Theme extends React.Component{
 	}
 
 	render() {
+		const {src, title} = this.props;
 		return (
 			<div className="theme-container">
-				A THEME
+				<div className="theme-image-wrapper">
+					<img className="theme-image"  src={src} />
+				</div>
+				<h3 className="theme-title">{title}</h3>
 			</div>
 		)
 	}

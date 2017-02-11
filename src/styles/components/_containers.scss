@@ -34,5 +34,28 @@
 
 	.see-more-panel{
 		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 6.6rem;
+
+		.see-more-wrapper{
+			position:absolute;
+			top: 4.6rem;
+			left: 50%;
+    		transform: translate(-50%, 0);
+
+			.see-more-icon{
+				display: block;
+				width: 2.8rem;
+				height: 2.8rem;
+				background-color: #000000;
+				opacity: 0.75;
+				margin: 0 auto;
+			}
+
+			p{
+				margin: 0.7rem auto;
+			}
+		}
 	}
 }

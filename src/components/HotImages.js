@@ -22,8 +22,10 @@ class HotImages extends React.Component{
 				<div className="hot-image-content">
 					{ShowingImages}
 					<div className="see-more-panel">
-						<span className="see-more-icon" />
-						<p>{SEE_MORE}</p>
+						<div className="see-more-wrapper">
+							<span className="see-more-icon" />
+							<p>{SEE_MORE}</p>
+						</div>
 					</div>
 				</div>
 			</div>

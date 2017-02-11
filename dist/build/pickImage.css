@@ -66,7 +66,24 @@ html {
   .hot-image-content::-webkit-scrollbar {
     display: none; }
   .hot-image-content .see-more-panel {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 6.6rem; }
+    .hot-image-content .see-more-panel .see-more-wrapper {
+      position: absolute;
+      top: 4.6rem;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      .hot-image-content .see-more-panel .see-more-wrapper .see-more-icon {
+        display: block;
+        width: 2.8rem;
+        height: 2.8rem;
+        background-color: #000000;
+        opacity: 0.75;
+        margin: 0 auto; }
+      .hot-image-content .see-more-panel .see-more-wrapper p {
+        margin: 0.7rem auto; }
 
 .image-in-sale-wrapper {
   width: 12rem;
