@@ -1,1 +1,5 @@
 export const SWITCH_NAV_TYPE = "SWITCH_NAV_TYPE";
+
+export const UPDATE_HOT_IMAGES = "UPDATE_HOT_IMAGES";
+export const UPDATE_THEMES = "UPDATE_THEMES";
+export const UPDATE_IMAGES = "UPDATE_IMAGES";

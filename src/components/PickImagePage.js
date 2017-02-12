@@ -2,7 +2,7 @@ import React from "react";
 import TypeNavContainer from "../containers/pick-image-containers/TypeNavContainer";
 
 import HotImages from "./HotImages";
-import ThemeList from "./ThemeList";
+import ThemeListContainer from "../containers/pick-image-containers/ThemeListContainer";
 
 class PickImagePage extends React.Component{
 	constructor(props) {
@@ -14,7 +14,7 @@ class PickImagePage extends React.Component{
 			<div>
 				<TypeNavContainer />
 				<HotImages />
-				<ThemeList />
+				<ThemeListContainer />
 				{this.props.children}
 			</div>
 		)
