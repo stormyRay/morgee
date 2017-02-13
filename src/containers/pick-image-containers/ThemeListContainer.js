@@ -8,6 +8,10 @@ import {imagesAndThemes} from "../../actions/index";
 class ThemeList extends React.Component{
 	constructor(props) {
 		super(props);
+		this.state = {
+			hasMore: true,
+			currentPage: 1
+		}
 	}
 
 	componentDidMount() {
