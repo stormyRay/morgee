@@ -1,10 +1,12 @@
 import React from "react";
+import { browserHistory } from "react-router";
 import {HOT_PICTURE, SEE_MORE} from "../constants/texts";
 import ImageInSale from "./ImageInSale";
 
 class HotImages extends React.Component{
 	constructor(props) {
 		super(props);
+		this.handleClickSeeMore = this.handleClickSeeMore.bind(this);
 	}
 
 	render() {
@@ -22,7 +24,7 @@ class HotImages extends React.Component{
 				<div className="hot-image-content">
 					{ShowingImages}
 					<div className="see-more-panel">
-						<div className="see-more-wrapper">
+						<div className="see-more-wrapper" onClick={this.handleClickSeeMore}>
 							<span className="see-more-icon" />
 							<p>{SEE_MORE}</p>
 						</div>
@@ -30,6 +32,11 @@ class HotImages extends React.Component{
 				</div>
 			</div>
 		)
+	}
+
+	handleClickSeeMore() {
+		const path = "/hot"
+    	browserHistory.push(path);
 	}
 }
 
