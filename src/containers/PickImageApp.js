@@ -6,7 +6,14 @@ import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/index";
 import PickImagePage from "../components/PickImagePage";
 
-const store = createStore(reducers, {activeType: "image"},
+const store = createStore(reducers, {
+	activeType: "image",
+	themes:{
+		themeList: [],
+		page: 0,
+		hasMore: true
+	}
+},
     applyMiddleware(thunkMiddleware)
     );
 

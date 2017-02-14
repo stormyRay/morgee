@@ -8,25 +8,21 @@ import {imagesAndThemes} from "../../actions/index";
 class ThemeList extends React.Component{
 	constructor(props) {
 		super(props);
-		this.state = {
-			hasMore: true,
-			currentPage: 1
-		}
 	}
 
-	componentDidMount() {
-		const {getThemes} = imagesAndThemes;
-		const {dispatch} = this.props;
-		dispatch(getThemes());
-	}
+	// componentDidMount() {
+	// 	const {getThemes} = imagesAndThemes;
+	// 	const {themes, dispatch} = this.props;
+	// 	dispatch(getThemes(themes.page));
+	// }
 
 	render() {
-		const {themes} = this.props;
+		const {themes, dispatch} = this.props;
+		const {themeList, hasMore, page} = themes;
 		const {getThemes} = imagesAndThemes;
-		const {dispatch} = this.props;
 		var showingThemes = [];
-		for(var i = 0; i < themes.length; i++){
-			showingThemes.push(<Theme key={themes[i].id} {...themes[i]} />)
+		for(var i = 0; i < themeList.length; i++){
+			showingThemes.push(<Theme key={themeList[i].id} {...themeList[i]} />)
 		}
 		return (
 			<div className="container theme-list-container">
@@ -34,7 +30,7 @@ class ThemeList extends React.Component{
 					<h3>{SEARCH_BY_THEME}</h3>
 				</div>
 				<div className="theme-list-content">
-					<InfiniteScroll hasMore={true} loadMore={() => {dispatch(getThemes())}} loader={<div className="loader">Loading ...</div>}>
+					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getThemes(page))}} loader={<div className="loader">Loading ...</div>}>
 						{showingThemes}
 					</InfiniteScroll>
 				</div>

@@ -16,9 +16,9 @@ export const updateHotImages = (images) => {
 	}
 }
 
-export const getThemes = () => {
+export const getThemes = (page) => {
 	return dispatch => {
-    return fetch("/getThemes.json")
+    return fetch("/getThemes.json?page=" + page)
       .then(response => response.json())
       .then(json => dispatch(updateThemes(json.themes)))
   }
