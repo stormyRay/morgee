@@ -13,11 +13,23 @@ app.get('/getThemes.json', function(req, res){
 	//var dancersString = fs.readFileSync(path.join(__dirname, 'dancers.json'), "utf-8").replace(/(\r\n|\n|\r|\t)/gm,"");
 	//console.log(dancersString);
 	//console.log(JSON.stringify(dancers));
-	res.status(200).send(JSON.stringify({
-		success: true,
-		message: "Successfully get dancer information",
-		themes: themes
-	}));
+	const LIMIT = 4;
+	var start = req.query.page * LIMIT;
+	var results = themes.slice(start, start + LIMIT);
+	console.log(JSON.stringify(results));
+	console.log("page: " + parseInt(req.query.page));
+	setTimeout(function(){
+		res.status(200).send(JSON.stringify({
+			success: true,
+			message: "Successfully get themes",
+			themes: {
+				themeList: results,
+				hasMore: start + LIMIT < themes.length,
+				page: parseInt(req.query.page) + 1
+			}
+		}));
+	}, 2500);
+	
 })
 // send all requests to index.html so browserHistory works
 app.get('/*', function (req, res) {
