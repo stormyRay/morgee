@@ -13,6 +13,12 @@ const store = createStore(reducers, {
 		themeList: [],
 		page: 0,
 		hasMore: true
+	},
+	gallery: {
+		imageList: [],
+		page: 0,
+		theme: "选择图片",
+		hasMore: true
 	}
 },
     applyMiddleware(thunkMiddleware)
@@ -28,7 +34,7 @@ class RootApp extends React.Component{
 			<Provider store={store} key="provider">
 		    	<Router history={browserHistory}>
 		    		<Route path="/" component={PickImagePage}></Route>
-		    		<Route path="/theme/:theme" conponent={ImageListContainer} />
+		    		<Route path="/theme/:theme" component={ImageListContainer} />
 		    		<Route path="/hot" component={ImageListContainer} theme="hot"/>
 		    	</Router>
 			</Provider>

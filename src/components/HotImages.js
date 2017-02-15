@@ -2,6 +2,7 @@ import React from "react";
 import { browserHistory } from "react-router";
 import {HOT_PICTURE, SEE_MORE} from "../constants/texts";
 import ImageInSale from "./ImageInSale";
+import {ImagesAndThemes} from "../actions/index";
 
 class HotImages extends React.Component{
 	constructor(props) {
@@ -9,11 +10,17 @@ class HotImages extends React.Component{
 		this.handleClickSeeMore = this.handleClickSeeMore.bind(this);
 	}
 
+	componentDidMount() {
+		const {getHotImages} = this.props;
+		getHotImages();
+	}
+
 	render() {
 		var ShowingImages = []
-		for(var i =0; i < images.length; i++){
+		const {hotImages} = this.props;
+		for(var i =0; i < hotImages.length; i++){
 			ShowingImages.push(
-				<ImageInSale key={images[i].id} {...images[i]} />
+				<ImageInSale key={hotImages[i].id} {...hotImages[i]} />
 				);
 		}
 		return (

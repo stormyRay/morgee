@@ -10,12 +10,6 @@ class ThemeList extends React.Component{
 		super(props);
 	}
 
-	// componentDidMount() {
-	// 	const {getThemes} = imagesAndThemes;
-	// 	const {themes, dispatch} = this.props;
-	// 	dispatch(getThemes(themes.page));
-	// }
-
 	render() {
 		const {themes, dispatch} = this.props;
 		const {themeList, hasMore, page} = themes;

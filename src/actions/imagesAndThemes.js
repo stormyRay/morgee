@@ -1,4 +1,4 @@
-import {UPDATE_HOT_IMAGES, UPDATE_THEMES, UPDATE_IMAGES} from "../constants/actionTypes";
+import {UPDATE_HOT_IMAGES, UPDATE_THEMES, UPDATE_IMAGES, CLEAR_IMAGES} from "../constants/actionTypes";
 import fetch from "isomorphic-fetch";
 
 export const getHotImages = () => {
@@ -9,10 +9,10 @@ export const getHotImages = () => {
   }
 }
 
-export const updateHotImages = (images) => {
+export const updateHotImages = (hotImages) => {
 	return{
 		type: UPDATE_HOT_IMAGES,
-		images
+		hotImages
 	}
 }
 
@@ -31,5 +31,25 @@ export const updateThemes = (themes) => {
 	}
 }
 
+export const getImages = (page, theme) => {
+	return dispatch => {
+    return fetch("/getImages.json?page=" + page + "&theme=" + theme)
+      .then(response => response.json())
+      .then(json => dispatch(updateImages(json.images)))
+  }
+}
 
-export default {getHotImages, getThemes};
+export const updateImages = (images) => {
+	return{
+		type: UPDATE_IMAGES,
+		images
+	}
+}
+
+export const clearImageList = () => {
+	return {
+		type: CLEAR_IMAGES
+	}
+}
+
+export default {getHotImages, getThemes, getImages, clearImageList};
