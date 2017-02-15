@@ -10,14 +10,9 @@ app.use(compression())
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, '../dist')))
 app.get('/getThemes.json', function(req, res){
-	//var dancersString = fs.readFileSync(path.join(__dirname, 'dancers.json'), "utf-8").replace(/(\r\n|\n|\r|\t)/gm,"");
-	//console.log(dancersString);
-	//console.log(JSON.stringify(dancers));
 	const LIMIT = 4;
 	var start = req.query.page * LIMIT;
 	var results = themes.slice(start, start + LIMIT);
-	console.log(JSON.stringify(results));
-	console.log("page: " + parseInt(req.query.page));
 	setTimeout(function(){
 		res.status(200).send(JSON.stringify({
 			success: true,
@@ -28,20 +23,76 @@ app.get('/getThemes.json', function(req, res){
 				page: parseInt(req.query.page) + 1
 			}
 		}));
-	}, 2500);
+	}, 1500);
 	
 })
+
+app.get('/getHotImages.json', function(req, res){
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully get hot images",
+		hotImages: hotImages
+	}));
+	
+});
+
+app.get('/getImages.json', function(req, res){
+	var page = parseInt(req.query.page);
+	var theme = req.query.theme;
+	console.log("theme:" + theme);
+	if(theme == "hot"){
+		res.status(200).send(JSON.stringify({
+			success: true,
+			message: "Successfully get themes",
+			images: {
+				imageList: hotImages,
+				hasMore: false,
+				page: 1,
+				theme: "热门图片"
+			}
+		}));
+	} else {
+		var imageList = [];
+		var index = parseInt(theme);
+		var number = 0;
+		const LIMIT = 4;
+		for (var i = 1; i <= LIMIT; i ++){
+			number = parseInt(theme) % 5 + i * 5 + page * 20;
+			if(number > 151)
+				break;
+			imageList.push({
+				id: number.toString(),
+				src: "/images/" + (number<10?("00"+ number): (number<100?("0"+number):number)) + ".jpg",
+				title: "占位",
+				theme: "占"+theme,
+				price: (0.1 * number ).toFixed(1)
+			});
+		}
+		res.status(200).send(JSON.stringify({
+			success: true,
+			message: "Successfully get themes",
+			images: {
+				imageList: imageList,
+				hasMore: number < 151,
+				page: parseInt(page) + 1,
+				theme: "主题ID" + theme
+			}
+		}));
+	}
+	
+});
+
 // send all requests to index.html so browserHistory works
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
-})
+});
 
 
 
 var PORT = process.env.PORT || 3000
 app.listen(PORT, function() {
   console.log('Production Express server running at localhost:' + PORT)
-})
+});
 
 const themes = [{
 	id: "1",
@@ -93,7 +144,7 @@ const themes = [{
 	title: "飞行"
 }, {
 	id: "13",
-	src: "/images/030.jpg",
+	src: "/images/024.jpg",
 	title: "毒"
 }, {
 	id: "14",
@@ -115,4 +166,48 @@ const themes = [{
 	id: "18",
 	src: "/images/035.jpg",
 	title: "妖精"
+}];
+
+const hotImages = [{
+	id: "094",
+	src: "/images/094.jpg",
+	title: "耿鬼",
+	theme: "幽灵",
+	price: 0.3
+}, {
+	id: "006",
+	src: "/images/006.jpg",
+	title: "喷火龙",
+	theme: "火",
+	price: 0.3
+}, {
+	id: "149",
+	src: "/images/149.jpg",
+	title: "快龙",
+	theme: "龙",
+	price: 0.3
+}, {
+	id: "025",
+	src: "/images/025.jpg",
+	title: "皮卡丘",
+	theme: "电",
+	price: 0.2
+}, {
+	id: "142",
+	src: "/images/142.jpg",
+	title: "化石翼龙",
+	theme: "岩石",
+	price: 0.1
+}, {
+	id: "130",
+	src: "/images/130.jpg",
+	title: "暴鲤龙",
+	theme: "水",
+	price: 0.2
+}, {
+	id: "065",
+	src: "/images/065.jpg",
+	title: "胡地",
+	theme: "超能",
+	price: 0.3
 }]
