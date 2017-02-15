@@ -73,8 +73,8 @@ gulp.task('build-debug', function () {
 gulp.task('replaceHTML', function(){
     gulp.src(path.HTML)
         .pipe(htmlreplace({
-            'css': 'build/' + path.CSS_OUT,
-            'js': 'build/' + path.MINIFIED_OUT,
+            'css': '/build/' + path.CSS_OUT,
+            'js': '/build/' + path.MINIFIED_OUT,
             'debug': ''
         }))
         .pipe(gulp.dest(path.DEST));
