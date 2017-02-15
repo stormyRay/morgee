@@ -82,8 +82,8 @@ gulp.task('replaceHTML', function(){
 gulp.task('replaceHTML-debug', function(){
     gulp.src(path.HTML)
         .pipe(htmlreplace({
-            'css': 'build/' + path.CSS_OUT,
-            'js': 'build/' + path.OUT
+            'css': '/build/' + path.CSS_OUT,
+            'js': '/build/' + path.OUT
         }))
         .pipe(gulp.dest(path.DEST));
 });
