@@ -1,27 +1,44 @@
 import React from "react";
 import { connect } from "react-redux";
+import InfiniteScroll from "react-infinite-scroller";
 import ImageInSale from "../../components/ImageInSale";
+import {imagesAndThemes} from "../../actions/index";
 
 class ImageList extends React.Component{
 	constructor(props) {
 		super(props);
 	}
 
+	componentWillMount() {
+		const {clearImageList} = imagesAndThemes;
+		if(this.props.gallery.imageList.length > 0)
+			this.props.dispatch(clearImageList());
+	}
+
+	componentWillUpdate(nextProps, nextState) {
+		document.title = nextProps.gallery.theme;
+	}
+
 	render() {
-		const {themes} = this.props;
-		const {themeList} = themes;
-		var themeId = parseInt(this.props.params.theme) || -1;
+		const {gallery, dispatch} = this.props;
+		const {imageList, hasMore, page, theme} = gallery;
+		const {getImages} = imagesAndThemes;
+		const themeId = this.props.params.theme || this.props.route.theme;
 		var ShowingImages = [];
-		for(var i =0; i < themeList.length; i++){
-			if(themeList[i].id > themeId)
+		for(var i =0; i < imageList.length; i++){
 			ShowingImages.push(
-				<ImageInSale key={themeList[i].id} {...themeList[i]} />
+				<ImageInSale key={imageList[i].id} {...imageList[i]} />
 				);
 		}
 		return (
-			<div className="container hot-images-container">
-				<div className="hot-image-content">
-					{ShowingImages}
+			<div className="container images-list-container">
+				<div className="header images-list-header">
+					<h3>{theme}</h3>
+				</div>
+				<div className="image-list-content">
+					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getImages(page, themeId))}} loader={<div className="loader">Loading ...</div>}>
+						{ShowingImages}
+					</InfiniteScroll>
 				</div>
 			</div>
 		)
@@ -30,7 +47,7 @@ class ImageList extends React.Component{
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    themes: state.themes
+    gallery: state.gallery
   }
 }
 
