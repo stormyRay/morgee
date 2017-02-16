@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import $ from "jquery";
 import InfiniteScroll from "react-infinite-scroller";
 import ImageInSale from "../../components/ImageInSale";
 import {imagesAndThemes} from "../../actions/index";
@@ -17,6 +18,15 @@ class ImageList extends React.Component{
 
 	componentWillUpdate(nextProps, nextState) {
 		document.title = nextProps.gallery.theme;
+
+		//hack for Wechat browser to change the title
+		var $body = $('body');
+		var $iframe = $('<iframe src="/favicon.ico"></iframe>');
+		$iframe.on('load',function() {
+  			setTimeout(function() {
+    			$iframe.off('load').remove();
+			}, 0);
+		}).appendTo($body);
 	}
 
 	render() {
