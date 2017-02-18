@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import $ from "jquery";
 import InfiniteScroll from "react-infinite-scroller";
 import ImageInSale from "../../components/ImageInSale";
-import {imagesAndThemes} from "../../actions/index";
+import {imagesAndThemes} from "../../actions/pickImageIndex";
 
 class ImageList extends React.Component{
 	constructor(props) {

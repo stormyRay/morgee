@@ -95,6 +95,11 @@ app.get('/theme/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
 
+app.get('/customize', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
+});
+
+
 
 var PORT = process.env.PORT || 3000
 app.listen(PORT, function() {
@@ -123,7 +128,7 @@ const themes = [{
 	title: "水"
 }, {
 	id: "6",
-	src: "/images/087.jpg",
+	src: "/images/124.jpg",
 	title: "冰"
 }, {
 	id: "7",

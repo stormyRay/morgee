@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import InfiniteScroll from "react-infinite-scroller";
 import {SEARCH_BY_THEME} from "../../constants/texts";
 import Theme from "../../components/Theme";
-import {imagesAndThemes} from "../../actions/index";
+import {imagesAndThemes} from "../../actions/pickImageIndex";
 
 class ThemeList extends React.Component{
 	constructor(props) {

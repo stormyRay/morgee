@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import HotImages from "../../components/HotImages";
-import {imagesAndThemes} from "../../actions/index";
+import {imagesAndThemes} from "../../actions/pickImageIndex";
 
 const {getHotImages} = imagesAndThemes;
 

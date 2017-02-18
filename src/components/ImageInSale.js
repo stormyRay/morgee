@@ -10,7 +10,7 @@ class ImageInSale extends React.Component{
 		return (
 			<div className="image-in-sale-container" onClick={()=>{alert("I want to buy " + title)}}>
 				<div className="image-wrapper image-in-sale-wrapper">
-					<img className="image-in-sale"  src={src} />
+					<img className="image-in-sale"  style={{backgroundImage: "url('" + src + "')"}} />
 				</div>
 				<div className="image-information">
 					<div className="top-info">

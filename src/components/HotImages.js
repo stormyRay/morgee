@@ -2,7 +2,7 @@ import React from "react";
 import { browserHistory } from "react-router";
 import {HOT_PICTURE, SEE_MORE} from "../constants/texts";
 import ImageInSale from "./ImageInSale";
-import {ImagesAndThemes} from "../actions/index";
+import {ImagesAndThemes} from "../actions/pickImageIndex";
 
 class HotImages extends React.Component{
 	constructor(props) {
