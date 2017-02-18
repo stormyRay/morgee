@@ -39,7 +39,6 @@ app.get('/getHotImages.json', function(req, res){
 app.get('/getImages.json', function(req, res){
 	var page = parseInt(req.query.page);
 	var theme = req.query.theme;
-	console.log("theme:" + theme);
 	if(theme == "hot"){
 		res.status(200).send(JSON.stringify({
 			success: true,
@@ -83,10 +82,18 @@ app.get('/getImages.json', function(req, res){
 });
 
 // send all requests to index.html so browserHistory works
-app.get('/*', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
-
+app.get('/index', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
+});
+app.get('/hot', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
+});
+app.get('/theme/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
+});
 
 
 var PORT = process.env.PORT || 3000
