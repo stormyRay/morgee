@@ -69,6 +69,9 @@ gulp.task('build', function () {
         .pipe(streamify(uglify(path.MINIFIED_OUT)))
         .pipe(gulp.dest(path.DEST_BUILD))
 });
+gulp.task('apply-prod-environment', function() {
+    process.env.NODE_ENV = 'production';
+});
 
 gulp.task('build-debug', function () {
     browserify({
@@ -149,5 +152,5 @@ return watcher.on('update', function () {
  * gulp task binding
  */////////////////////////////////////////////////////////////////////////////////
 gulp.task('default', ['debug']);
-gulp.task('production', ['copyResources', 'replaceHTML', 'sass', 'build']);
+gulp.task('production', ['apply-prod-environment', 'copyResources', 'replaceHTML', 'sass', 'build']);
 gulp.task('debug', ['copyResources', 'replaceHTML-debug', 'sass', 'build-debug']);

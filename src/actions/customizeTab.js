@@ -1,6 +1,6 @@
 import {SWITCH_CUSTOMIZE_TAB} from "../constants/actionTypes";
 
-export const switchCustomizeTab = (activeType) => {
+export const switchCustomizeTab = (activeCustomizeTab) => {
 	return{
 		type: SWITCH_CUSTOMIZE_TAB,
 		activeCustomizeTab

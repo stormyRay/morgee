@@ -6,8 +6,9 @@ import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizePage from "../components/CustomizePage";
 
-const store = createStore(reducers, {},
-    applyMiddleware(thunkMiddleware)
+const store = createStore(reducers, {
+	activeCustomizeTab: "type"
+	}, applyMiddleware(thunkMiddleware)
     );
 
 class CustimuzeShirtApp extends React.Component{

@@ -1,4 +1,7 @@
 import React from "react";
+import CustomizeTabNavContainer from "../containers/customize-containers/CustomizeTabNavContainer"
+import SettingPanelContainer from "../containers/customize-containers/SettingPanelContainer"
+import CustomizeButtons from "./CustomizeButtons";
 
 class CustomizePage extends React.Component{
 	constructor(props) {
@@ -7,7 +10,11 @@ class CustomizePage extends React.Component{
 
 	render() {
 		return (
-			<div>Customize Shirt</div>
+			<div>
+				<CustomizeButtons />
+				<SettingPanelContainer />
+				<CustomizeTabNavContainer />
+			</div>
 		)
 	}
 }
