@@ -19,6 +19,54 @@ html {
   height: 1rem;
   background-color: #777777; }
 
+.customize-buttons-container {
+  padding: 1.2rem; }
+  .customize-buttons-container .customize-button {
+    width: 49%;
+    height: 4rem;
+    border: 0.3rem solid #000000;
+    font-size: 1.4rem;
+    padding: 0; }
+    .customize-buttons-container .customize-button.customize-button-back {
+      margin-right: 1%;
+      background-color: #FFFFFF;
+      color: #000000; }
+    .customize-buttons-container .customize-button.customize-button-complete {
+      margin-left: 1%;
+      background-color: #000000;
+      color: #FFFFFF; }
+
+.customize-tab-nav-container {
+  height: 5.5rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #000000;
+  background-color: #FFFFFF; }
+  .customize-tab-nav-container ul {
+    margin: 0;
+    padding: 0; }
+    .customize-tab-nav-container ul li {
+      display: inline-block;
+      width: 25%;
+      height: 100%; }
+      .customize-tab-nav-container ul li .customize-tab-wrapper {
+        font-size: 0.8rem;
+        color: #000000; }
+      .customize-tab-nav-container ul li.active {
+        background-color: #000000; }
+        .customize-tab-nav-container ul li.active .customize-tab-wrapper {
+          font-size: 0.8rem;
+          color: #FFFFFF; }
+
+.setting-panel-container {
+  bottom: 5.5rem;
+  width: 100%;
+  position: fixed;
+  height: 6.2rem;
+  border-top: 1px solid #000000;
+  background-color: #FFFFFF; }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {
     width: 9.06rem;

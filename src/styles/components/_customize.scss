@@ -1,0 +1,65 @@
+$tabNavHeight : 5.5rem;
+$settingHeight : 6.2rem;
+.customize-buttons-container{
+	padding: 1.2rem;
+	.customize-button{
+		width: 49%;
+		height: 4rem;
+		border: 0.3rem solid #000000;
+		font-size: 1.4rem;
+		padding: 0;
+
+		&.customize-button-back{
+			margin-right: 1%;
+			background-color: #FFFFFF;
+			color: #000000;
+		}
+
+		&.customize-button-complete{
+			margin-left: 1%;
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+	}
+}
+
+.customize-tab-nav-container{
+	height: $tabNavHeight;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid #000000;
+	background-color: #FFFFFF;
+
+	ul{
+		margin: 0;
+		padding: 0;
+
+		li{
+			display: inline-block;
+			width: 25%;
+			height: 100%;
+			.customize-tab-wrapper{
+				font-size: 0.8rem;
+				color: #000000;
+			}
+
+			&.active{
+				background-color: #000000;
+				.customize-tab-wrapper{
+					font-size: 0.8rem;
+					color: #FFFFFF;
+				}
+			}
+		}
+	}
+}
+
+.setting-panel-container{
+	bottom: $tabNavHeight;
+	width: 100%;
+	position: fixed;
+	height: $settingHeight;
+	border-top: 1px solid #000000;
+	background-color: #FFFFFF;
+}
