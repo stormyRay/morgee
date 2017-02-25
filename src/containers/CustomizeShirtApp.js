@@ -7,9 +7,12 @@ import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizePage from "../components/CustomizePage";
 
 const store = createStore(reducers, {
-	activeCustomizeTab: "type"
-	}, applyMiddleware(thunkMiddleware)
-    );
+	activeCustomizeTab: "type",
+	customizeSettings: {
+		clothType: "male_normal",
+		clothColor: "black"
+		}
+}, applyMiddleware(thunkMiddleware));
 
 class CustimuzeShirtApp extends React.Component{
 	constructor(props) {
