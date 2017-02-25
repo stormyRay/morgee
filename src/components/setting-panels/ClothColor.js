@@ -10,10 +10,10 @@ class ClothColor extends React.Component{
 	}
 
 	render(){
-		const {selectedColor, switchColor} = this.props;
+		const {selectedColor, switchClothColor} = this.props;
 		return (
 			<div className="setting-panel-container">
-				<Nav bsStyle="pills" justified activeKey={selectedColor} onSelect={switchColor}>
+				<Nav bsStyle="pills" justified activeKey={selectedColor} onSelect={switchClothColor}>
 					<NavItem eventKey="white">
 						<div className="customize-tab-wrapper">
 							<span className="sprite-image white-color" />

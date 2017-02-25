@@ -10,10 +10,10 @@ class ClothType extends React.Component{
 	}
 
 	render(){
-		const {selectedType, swicthClothType} = this.props;
+		const {selectedType, switchClothType} = this.props;
 		return (
 			<div className="setting-panel-container">
-				<Nav bsStyle="pills" justified activeKey={selectedType} onSelect={swicthClothType}>
+				<Nav bsStyle="pills" justified activeKey={selectedType} onSelect={switchClothType}>
 					<NavItem eventKey="man_normal">
 						<div className="customize-tab-wrapper">
 							<span className="sprite-image man-normal" />

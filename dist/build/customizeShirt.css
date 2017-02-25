@@ -67,6 +67,24 @@ html {
   border-top: 1px solid #000000;
   background-color: #FFFFFF; }
 
+.setting-panel-container {
+  width: 100%; }
+  .setting-panel-container ul {
+    margin: 0;
+    padding: 0; }
+    .setting-panel-container ul li {
+      display: inline-block;
+      width: 25%;
+      height: 100%; }
+      .setting-panel-container ul li .customize-tab-wrapper {
+        font-size: 0.8rem;
+        color: #000000; }
+      .setting-panel-container ul li.active {
+        background-color: #000000; }
+        .setting-panel-container ul li.active .customize-tab-wrapper {
+          font-size: 0.8rem;
+          color: #FFFFFF; }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {
     width: 9.06rem;

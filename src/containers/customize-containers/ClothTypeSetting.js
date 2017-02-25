@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import ClothType from "../../components/setting-panels/ClothType";
 import {customizeSettings} from "../../actions/customizeIndex";
 
-const {switchCustomizeTab} = customizeSettings;
+const {changeClothType} = customizeSettings;
 
 const mapStateToProps = (state, ownProps) => {
 	return {

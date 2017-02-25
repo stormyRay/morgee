@@ -1,0 +1,27 @@
+.setting-panel-container{
+	width: 100%;
+
+	ul{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li{
+			display: inline-block;
+			width: 25%;
+			height: 100%;
+			.customize-tab-wrapper{
+				font-size: 0.8rem;
+				color: #000000;
+			}
+
+			&.active{
+				background-color: #000000;
+				.customize-tab-wrapper{
+					font-size: 0.8rem;
+					color: #FFFFFF;
+				}
+			}
+		}
+	}
+}

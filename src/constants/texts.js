@@ -11,6 +11,7 @@ export const SEARCH_BY_THEME = "按主题查找";
 
 export const SEE_MORE = "查看更多";
 
+//Customize T-shirt Page
 export const SELECT_OTHER_IMAGE = "选择其他图片";
 export const COMPLETE_CUSTOMIZE = "完成定制";
 
