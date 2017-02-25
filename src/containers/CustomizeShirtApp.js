@@ -9,7 +9,7 @@ import CustomizePage from "../components/CustomizePage";
 const store = createStore(reducers, {
 	activeCustomizeTab: "type",
 	customizeSettings: {
-		clothType: "male_normal",
+		clothType: "man_normal",
 		clothColor: "black"
 		}
 }, applyMiddleware(thunkMiddleware));

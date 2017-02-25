@@ -19,10 +19,10 @@ export const SELECT_COLOR = "选择颜色";
 export const IMAGE_SIZE = "图案大小";
 export const IMAGE_POSITION = "图案位置";
 
-export const MALE_NORMAL = "男性合身款";
-export const MALE_FIT = "男性修身款";
-export const FEMALE_LOOSE = "女性宽松款"
-export const FEMALE_NORMAL = "女性合身款";
+export const MAN_NORMAL = "男性合身款";
+export const MAN_FIT = "男性修身款";
+export const WOMAN_LOOSE = "女性宽松款"
+export const WOMAN_NORMAL = "女性合身款";
 
 export const WHITE_COLOR = "白色";
 export const BLACK_COLOR = "黑色";
