@@ -6,9 +6,13 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	render(){
+		const {clothType, clothColor, imageSize, imagePosition} = this.props.settings;
 		return (
 			<div className="tshirt-showing-area">
-				T-shirt's here!
+				<p>{"Cloth Type: " + clothType}</p>
+				<p>{"Cloth Color: " + clothColor}</p>
+				<p>{"Image Size: " + imageSize}</p>
+				<p>{"Image Position: " + imagePosition}</p>
 			</div>
 			)
 	}

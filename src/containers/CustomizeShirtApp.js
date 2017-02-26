@@ -10,7 +10,9 @@ const store = createStore(reducers, {
 	activeCustomizeTab: "type",
 	customizeSettings: {
 		clothType: "man_normal",
-		clothColor: "black"
+		clothColor: "black",
+		imageSize: 50,
+		imagePosition: 50
 		}
 }, applyMiddleware(thunkMiddleware));
 

@@ -1,8 +1,8 @@
 import React from "react";
 import ClothTypeSetting from "../containers/customize-containers/ClothTypeSetting";
 import ClothColorSetting from "../containers/customize-containers/ClothColorSetting";
-import ImageSize from "./setting-panels/ImageSize";
-import ImagePosition from "./setting-panels/ImagePosition";
+import ImageSizeSetting from "../containers/customize-containers/ImageSizeSetting";
+import ImagePositionSetting from "../containers/customize-containers/ImagePositionSetting";
 
 
 class SettingPanel extends React.Component{
@@ -16,8 +16,8 @@ class SettingPanel extends React.Component{
 		switch(activeCustomizeTab) {
 			case "type" : setting = (<ClothTypeSetting />); break;
 			case "color" : setting = (<ClothColorSetting />); break;
-			case "size" : setting = (<ImageSize />); break;
-			case "position" : setting = (<ImagePosition />); break;
+			case "size" : setting = (<ImageSizeSetting />); break;
+			case "position" : setting = (<ImagePositionSetting />); break;
 			default: setting = null;
 		}
 		return (

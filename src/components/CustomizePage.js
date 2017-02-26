@@ -1,5 +1,5 @@
 import React from "react";
-import TshirtSampleArea from "./TshirtSampleArea";
+import TshirtSampleContainer from "../containers/customize-containers/TshirtSampleContainer";
 import CustomizeTabNavContainer from "../containers/customize-containers/CustomizeTabNavContainer"
 import SettingPanelContainer from "../containers/customize-containers/SettingPanelContainer"
 import CustomizeButtons from "./CustomizeButtons";
@@ -13,7 +13,7 @@ class CustomizePage extends React.Component{
 		return (
 			<div>
 				<CustomizeButtons />
-				<TshirtSampleArea />
+				<TshirtSampleContainer />
 				<SettingPanelContainer />
 				<CustomizeTabNavContainer />
 			</div>
