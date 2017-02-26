@@ -9,7 +9,7 @@ class CustomizeButtons extends React.Component{
 	render(){
 		return (
 			<div className="customize-buttons-container">
-				<button className="customize-button customize-button-back">{SELECT_OTHER_IMAGE}</button>
+				<button className="customize-button customize-button-back" onClick={()=>{window.history.back();}}>{SELECT_OTHER_IMAGE}</button>
 				<button className="customize-button customize-button-complete">{COMPLETE_CUSTOMIZE}</button>
 			</div>
 			)

@@ -25,7 +25,7 @@ class CustimuzeShirtApp extends React.Component{
 		return(
 			<Provider store={store} key="provider">
 		    	<Router history={browserHistory}>
-		    		<Route path="/customize" component={CustomizePage}></Route>
+		    		<Route path="/customize/image/:imageId" component={CustomizePage}></Route>
 		    	</Router>
 			</Provider>
 			)

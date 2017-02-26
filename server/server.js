@@ -60,7 +60,7 @@ app.get('/getImages.json', function(req, res){
 			if(number > 151)
 				break;
 			imageList.push({
-				id: number.toString(),
+				id: (number < 10 ? "00" + number : (number <100 ? "0" + number : number.toString())),
 				src: "/images/" + (number<10?("00"+ number): (number<100?("0"+number):number)) + ".jpg",
 				title: "占位",
 				theme: "占"+theme,
@@ -95,7 +95,7 @@ app.get('/theme/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
 
-app.get('/customize', function (req, res) {
+app.get('/customize/image/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
 

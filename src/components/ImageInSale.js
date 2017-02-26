@@ -1,14 +1,16 @@
 import React from "react";
+import { browserHistory } from "react-router";
 
 class ImageInSale extends React.Component{
 	constructor(props) {
 		super(props);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	render() {
-		const {src, title, theme, price} = this.props;
+		const {id, src, title, theme, price} = this.props;
 		return (
-			<div className="image-in-sale-container" onClick={()=>{alert("I want to buy " + title)}}>
+			<div className="image-in-sale-container" onClick={this.handleClick}>
 				<div className="image-wrapper image-in-sale-wrapper">
 					<img className="image-in-sale"  style={{backgroundImage: "url('" + src + "')"}} />
 				</div>
@@ -22,6 +24,13 @@ class ImageInSale extends React.Component{
 			</div>
 		)
 	}
+
+	handleClick() {
+		const {id} = this.props;
+		const path = `/customize/image/${id}`;
+    	location.href = path;
+	}
+
 }
 
 export default ImageInSale;
