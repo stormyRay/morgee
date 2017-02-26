@@ -6,15 +6,20 @@ class TshirtSampleArea extends React.Component{
 		super(props);
 
 		this.shirtUrl = "";
-		this.state = {
-			wrapperStyle: {}
-		};
+		this.wrapperStyle = {};
 
 		this.buildImageSrc = this.buildImageSrc.bind(this);
 		this.buildTshirtSrc = this.buildTshirtSrc.bind(this);
 		this.computeSize = this.computeSize.bind(this);
 		this.computePositionY = this.computePositionY.bind(this);
 		this.computeWrapperSize = this.computeWrapperSize.bind(this);
+	}
+
+	componentDidMount() {
+		this.forceUpdate();
+		window.onresize = function(event) {
+			this.forceUpdate();
+		}.bind(this);
 	}
 
 	render(){
@@ -28,8 +33,8 @@ class TshirtSampleArea extends React.Component{
 			backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
 			backgroundPositionY: this.computePositionY(imagePosition)
 		};
-		this.computeWrapperSize();
-		const wrapperStyle = this.state.wrapperStyle;
+		
+		const wrapperStyle = this.computeWrapperSize();
 		
 		return (
 			<div className="shirt-showing-area">
@@ -72,32 +77,55 @@ class TshirtSampleArea extends React.Component{
 	computeWrapperSize(){
 		var rawImage = new Image();
 		rawImage.src = this.shirtUrl;
+		var imageWidth = 600;
+		var imageHeight = 740;
+		var imageRatio = imageWidth / imageHeight;
 
-		rawImage.onload = function(){
-			var imageWidth = rawImage.width;
-			var imageHeight = rawImage.height;
-			var imageRatio = imageWidth / imageHeight;
+		if($(".shirt-background").width()){
+		var containerWidth = $(".shirt-background").width();
+		var containerHeight = $(".shirt-background").height();
+		var containerRatio = containerWidth / containerHeight;
+	} else {
+		var containerRatio = 1;
+	}
 
-			var containerWidth = $(".shirt-background").width();
-			var containerHeight = $(".shirt-background").height();
-			var containerRatio = containerWidth / containerHeight;
+		if(imageRatio >= containerRatio){
+			return {
+					width: "100%",
+					height: 100 / imageRatio * containerRatio + "%"
+			};
+		} else {
+			return {
+					width: 100 * imageRatio /containerRatio + "%",
+					height: "100%"
+			};
+		}
 
-			if(imageRatio >= containerRatio){
-				this.setState({
-					wrapperStyle:{
-						width: "100%",
-						height: 100 / imageRatio * containerRatio+ "%"
-					}
-				});
-			} else {
-				this.setState({
-					wrapperStyle:{
-						width: 100 * imageRatio /containerRatio + "%",
-						height: "100%"
-					}
-				});
-			}
-		}.bind(this);
+		// rawImage.onload = function(){
+		// 	var imageWidth = rawImage.width;
+		// 	var imageHeight = rawImage.height;
+		// 	var imageRatio = imageWidth / imageHeight;
+
+		// 	var containerWidth = $(".shirt-background").width();
+		// 	var containerHeight = $(".shirt-background").height();
+		// 	var containerRatio = containerWidth / containerHeight;
+
+		// 	if(imageRatio >= containerRatio){
+		// 		this.setState({
+		// 			wrapperStyle:{
+		// 				width: "100%",
+		// 				height: 100 / imageRatio * containerRatio+ "%"
+		// 			}
+		// 		});
+		// 	} else {
+		// 		this.setState({
+		// 			wrapperStyle:{
+		// 				width: 100 * imageRatio /containerRatio + "%",
+		// 				height: "100%"
+		// 			}
+		// 		});
+		// 	}
+		// }.bind(this);
 	}
 }
 
