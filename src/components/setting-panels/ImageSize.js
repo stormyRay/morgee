@@ -8,7 +8,7 @@ class ImageSize extends React.Component{
 		this.state = {
 			max: 100,
 			min: 0,
-			step: 1
+			step: 50
 		};
 		this.marks = {
 			0: SMALL_SIZE,

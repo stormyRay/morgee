@@ -8,7 +8,7 @@ class ImagePosition extends React.Component{
 		this.state = {
 			max: 100,
 			min: 0,
-			step: 1
+			step: 25
 		};
 		this.marks = {
 			0: LOW_POSITION,
