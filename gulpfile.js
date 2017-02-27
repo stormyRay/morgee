@@ -37,7 +37,7 @@ var path_customize = {
     RESOURCES_DEST: 'dist/resources'
 };
 
-var path = path_customize;
+var path = path_pickimage;
 /*////////////////////////////////////////////////////////////////////////////////
  * Tasks for distribute a product, including
  *  - build: transpile jsx to js, package into 1 file & minimize the js file;

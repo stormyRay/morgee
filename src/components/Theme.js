@@ -12,7 +12,7 @@ class Theme extends React.Component{
 		return (
 			<div className="theme-container" onClick={this.handleClick}>
 				<div className="image-wrapper theme-image-wrapper">
-					<img className="theme-image" style={{backgroundImage: "url('" + src + "')"}} />
+					<div className="theme-image" style={{backgroundImage: "url('" + src + "')"}} />
 				</div>
 				<h3 className="theme-title">{title}</h3>
 			</div>

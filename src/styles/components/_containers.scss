@@ -4,6 +4,12 @@
 	@extend .common-container;
 	margin-top: 1rem;
 	box-sizing:border-box;
+	text-align: center;
+
+	&.images-list-container{
+		margin-top: 0;
+		padding-top: 1rem;
+	}
 	.header{
 		width: 100%;
 		overflow: hidden;
@@ -27,6 +33,7 @@
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	white-space: nowrap;
+	padding: 0.5rem;
 
 	&::-webkit-scrollbar {
 	    display: none;

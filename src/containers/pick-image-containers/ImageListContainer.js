@@ -42,9 +42,6 @@ class ImageList extends React.Component{
 		}
 		return (
 			<div className="container images-list-container">
-				<div className="header images-list-header">
-					<h3>{theme}</h3>
-				</div>
 				<div className="image-list-content">
 					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getImages(page, themeId))}} loader={<div className="loader">Loading ...</div>}>
 						{ShowingImages}
