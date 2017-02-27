@@ -379,7 +379,9 @@ html {
       margin-left: auto;
       margin-right: auto;
       height: 53%;
-      border: 1px dashed rgba(0, 0, 0, 0.5); }
+      border: 1px dashed transparent; }
+      .shirt-showing-area .shirt-container .image-wrapper.bordered {
+        border: 1px dashed rgba(0, 0, 0, 0.5); }
       .shirt-showing-area .shirt-container .image-wrapper .printed-image {
         background-repeat: no-repeat;
         background-position-x: center;

@@ -3,7 +3,8 @@ import TshirtSampleArea from "../../components/TshirtSampleArea";
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		settings: state.customizeSettings
+		settings: state.customizeSettings,
+		selectedSetting: state.activeCustomizeTab
 	}
 }
 

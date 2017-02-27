@@ -32,7 +32,10 @@
 			margin-left: auto;
 			margin-right: auto;
 			height: 53%;
-			border: 1px dashed rgba(0, 0, 0, 0.5);
+			border: 1px dashed rgba(0, 0, 0, 0);
+			&.bordered{
+				border: 1px dashed rgba(0, 0, 0, 0.5);
+			}
 
 			.printed-image{
 				background-repeat: no-repeat;

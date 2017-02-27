@@ -24,7 +24,8 @@ class TshirtSampleArea extends React.Component{
 
 	render(){
 		const {clothType, clothColor, imageSize, imagePosition} = this.props.settings;
-		const {imageId} = this.props;
+		const {imageId, selectedSetting} = this.props;
+
 		const shirtStyle = {
 			backgroundImage: "url(" + this.buildTshirtSrc(clothType, clothColor) +")"
 		};
@@ -32,16 +33,16 @@ class TshirtSampleArea extends React.Component{
 			backgroundSize: this.computeSize(imageSize) + " auto", 
 			backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
 			backgroundPositionY: this.computePositionY(imagePosition)
-		};
-		
+		};		
 		const wrapperStyle = this.computeWrapperSize();
+		const wrapperClass = ((selectedSetting == "size" || selectedSetting == "position")? "image-wrapper bordered" : "image-wrapper");
 		
 		return (
 			<div className="shirt-showing-area">
 				<div className="shirt-container">
 					<div className="shirt-background" style={shirtStyle} >
 						<div className="shirt-area"style={wrapperStyle}>
-							<div className="image-wrapper">
+							<div className={wrapperClass}>
 								<div className="printed-image" style={imageStyle}>
 								</div>
 							</div>

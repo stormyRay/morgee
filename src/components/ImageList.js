@@ -15,9 +15,11 @@ class ImageList extends React.Component{
 		}
 		return (
 			<div className="container hot-images-container">
+			<!--
 				<div className="header hot-image-header">
 					<h3>{HOT_PICTURE}<span className="right-arrow-icon" /></h3>
 				</div>
+			-->
 				<div className="hot-image-content">
 					{ShowingImages}
 					<div className="see-more-panel">
