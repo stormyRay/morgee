@@ -1,5 +1,119 @@
-.right-arrow-icon{
-	width: 0.5rem;
-	height: 1rem;
-	background-color: #777777;
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-color-black {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -5px;
+}
+
+.sprite-color-white {
+    width: 48px;
+    height: 48px;
+    background-position: -63px -5px;
+}
+
+.sprite-left-arrow-black {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -5px;
+}
+
+.sprite-loading {
+    width: 48px;
+    height: 48px;
+    background-position: -179px -5px;
+}
+
+.sprite-location-black {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -63px;
+}
+
+.sprite-location-white {
+    width: 48px;
+    height: 48px;
+    background-position: -63px -63px;
+}
+
+.sprite-next-black {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -63px;
+}
+
+.sprite-select-black {
+    width: 48px;
+    height: 48px;
+    background-position: -179px -63px;
+}
+
+.sprite-select-color-black {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -121px;
+}
+
+.sprite-select-color-gray {
+    width: 48px;
+    height: 48px;
+    background-position: -63px -121px;
+}
+
+.sprite-select-color-white {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -121px;
+}
+
+.sprite-select-white {
+    width: 48px;
+    height: 48px;
+    background-position: -179px -121px;
+}
+
+.sprite-selected-color-black {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -179px;
+}
+
+.sprite-selected-color-gray {
+    width: 48px;
+    height: 48px;
+    background-position: -63px -179px;
+}
+
+.sprite-selected-color-white {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -179px;
+}
+
+.sprite-size-black- {
+    width: 48px;
+    height: 48px;
+    background-position: -179px -179px;
+}
+
+.sprite-size-white {
+    width: 48px;
+    height: 48px;
+    background-position: -237px -5px;
+}
+
+.sprite-tshirt-black {
+    width: 48px;
+    height: 48px;
+    background-position: -237px -63px;
+}
+
+.sprite-tshirt-white {
+    width: 48px;
+    height: 48px;
+    background-position: -237px -121px;
 }
