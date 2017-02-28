@@ -53,9 +53,6 @@
 
 			.see-more-icon{
 				display: block;
-				width: 2.8rem;
-				height: 2.8rem;
-				background-color: #000000;
 				opacity: 0.75;
 				margin: 0 auto;
 			}
@@ -64,5 +61,12 @@
 				margin: 0.7rem auto;
 			}
 		}
+	}
+}
+
+.loading-bar{
+	vertical-align: middle;
+	*{
+		display: inline-block;
 	}
 }

@@ -15,11 +15,44 @@
 				color: #000000;
 			}
 
+			.man-normal,
+			.man-fit,
+			.woman-loose,
+			.woman-normal{
+				@extend .sprite-select-white;
+			}
+
+			.white-color{
+				@extend .sprite-select-color-white;
+			}
+
+			.black-color{
+				@extend .sprite-select-color-black;
+			}
+
+			.grey-color{
+				@extend .sprite-select-color-grey;
+			}
+
 			&.active{
-				background-color: #000000;
-				.customize-tab-wrapper{
-					font-size: 0.8rem;
-					color: #FFFFFF;
+				.man-normal,
+				.man-fit,
+				.woman-loose,
+				.woman-normal{
+					@extend .sprite-select-black;
+				}
+
+
+				.white-color{
+					@extend .sprite-selected-color-white;
+				}
+
+				.black-color{
+					@extend .sprite-selected-color-black;
+				}
+
+				.grey-color{
+					@extend .sprite-selected-color-grey;
 				}
 			}
 		}

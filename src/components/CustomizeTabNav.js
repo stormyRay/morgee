@@ -16,25 +16,25 @@ class CustomizeTabNav extends React.Component {
 				<Nav bsStyle="pills" justified activeKey={activeCustomizeTab} onSelect={swicthTab}>
 					<NavItem eventKey="type">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image cloth-type" />
+							<span className="sprite cloth-type-icon" />
 							{SELECT_CLOTH_TYPE}
 						</div>
 					</NavItem>
 					<NavItem eventKey="color">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image cloth-type" />
+							<span className="sprite cloth-color-icon" />
 							{SELECT_COLOR}
 						</div>
 					</NavItem>
 					<NavItem eventKey="size">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image cloth-type" />
+							<span className="sprite image-size-icon" />
 							{IMAGE_SIZE}
 						</div>
 					</NavItem>
 					<NavItem eventKey="position">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image cloth-type" />
+							<span className="sprite image-position-icon" />
 							{IMAGE_POSITION}
 						</div>
 					</NavItem>

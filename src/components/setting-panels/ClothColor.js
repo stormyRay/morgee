@@ -16,19 +16,19 @@ class ClothColor extends React.Component{
 				<Nav bsStyle="pills" justified activeKey={selectedColor} onSelect={switchClothColor}>
 					<NavItem eventKey="white">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image white-color" />
+							<span className="sprite white-color" />
 							{WHITE_COLOR}
 						</div>
 					</NavItem>
 					<NavItem eventKey="black">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image black-color" />
+							<span className="sprite black-color" />
 							{BLACK_COLOR}
 						</div>
 					</NavItem>
 					<NavItem eventKey="grey">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image gery-color" />
+							<span className="sprite grey-color" />
 							{GREY_COLOR}
 						</div>
 					</NavItem>

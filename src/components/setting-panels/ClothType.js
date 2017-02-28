@@ -16,25 +16,25 @@ class ClothType extends React.Component{
 				<Nav bsStyle="pills" justified activeKey={selectedType} onSelect={switchClothType}>
 					<NavItem eventKey="man_normal">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image man-normal" />
+							<span className="sprite man-normal" />
 							{MAN_NORMAL}
 						</div>
 					</NavItem>
 					<NavItem eventKey="man_fit">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image man-fit" />
+							<span className="sprite man-fit" />
 							{MAN_FIT}
 						</div>
 					</NavItem>
 					<NavItem eventKey="woman_loose">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image woman-loose" />
+							<span className="sprite woman-loose" />
 							{WOMAN_LOOSE}
 						</div>
 					</NavItem>
 					<NavItem eventKey="woman_normal">
 						<div className="customize-tab-wrapper">
-							<span className="sprite-image woman-normal" />
+							<span className="sprite woman-normal" />
 							{WOMAN_NORMAL}
 						</div>
 					</NavItem>

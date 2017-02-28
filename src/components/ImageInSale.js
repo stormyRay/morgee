@@ -8,9 +8,11 @@ class ImageInSale extends React.Component{
 	}
 
 	render() {
-		const {id, src, title, theme, price} = this.props;
+		const {id, src, title, theme, price, inList} = this.props;
+
+		const outerClass = "image-in-sale-container" + (inList ? "in-list" : "");
 		return (
-			<div className="image-in-sale-container" onClick={this.handleClick}>
+			<div className={outerClass} onClick={this.handleClick}>
 				<div className="image-wrapper image-in-sale-wrapper">
 					<div className="image-in-sale"  style={{backgroundImage: "url('" + src + "')"}} />
 				</div>

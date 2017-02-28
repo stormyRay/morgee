@@ -1,7 +1,12 @@
 $tabNavHeight : 5.5rem;
 $settingHeight : 6.2rem;
+
+body{
+	background-color: #FFFFF;
+}
 .customize-buttons-container{
 	padding: 1.2rem;
+	background-color: #FFFFFF;
 	.customize-button{
 		width: 49%;
 		height: 4rem;
@@ -22,6 +27,7 @@ $settingHeight : 6.2rem;
 		}
 	}
 }
+
 
 .customize-tab-nav-container{
 	height: $tabNavHeight;
@@ -44,15 +50,49 @@ $settingHeight : 6.2rem;
 				color: #000000;
 			}
 
+			.cloth-type-icon{
+				@extend .sprite-tshirt-black;
+			}
+
+			.cloth-color-icon{
+				@extend .sprite-color-black;
+			}
+
+			.image-size-icon{
+				@extend .sprite-size-black;
+			}
+
+			.image-position-icon{
+				@extend .sprite-location-black;
+			}
+
 			&.active{
 				background-color: #000000;
 				.customize-tab-wrapper{
 					font-size: 0.8rem;
 					color: #FFFFFF;
 				}
+
+				.cloth-type-icon{
+					@extend .sprite-tshirt-white;
+				}
+
+				.cloth-color-icon{
+					@extend .sprite-color-white;
+				}
+
+				.image-size-icon{
+					@extend .sprite-size-white;
+				}
+
+				.image-position-icon{
+					@extend .sprite-location-white;
+				}
 			}
 		}
 	}
+
+
 }
 
 .setting-panel-container{

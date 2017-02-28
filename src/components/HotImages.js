@@ -26,13 +26,13 @@ class HotImages extends React.Component{
 		return (
 			<div className="container hot-images-container">
 				<div className="header hot-image-header">
-					<h3>{HOT_PICTURE}<span className="right-arrow-icon" /></h3>
+					<h3>{HOT_PICTURE}<span className="sprite sprite-left-arrow-black" /></h3>
 				</div>
 				<div className="hot-image-content">
 					{ShowingImages}
 					<div className="see-more-panel">
 						<div className="see-more-wrapper" onClick={this.handleClickSeeMore}>
-							<span className="see-more-icon" />
+							<span className="sprite sprite-next-black" />
 							<p>{SEE_MORE}</p>
 						</div>
 					</div>

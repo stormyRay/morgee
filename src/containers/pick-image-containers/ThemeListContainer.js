@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import InfiniteScroll from "react-infinite-scroller";
 import {SEARCH_BY_THEME} from "../../constants/texts";
 import Theme from "../../components/Theme";
+import LoadingBar from "../../components/LoadingBar";
 import {imagesAndThemes} from "../../actions/pickImageIndex";
 
 class ThemeList extends React.Component{
@@ -24,7 +25,7 @@ class ThemeList extends React.Component{
 					<h3>{SEARCH_BY_THEME}</h3>
 				</div>
 				<div className="theme-list-content">
-					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getThemes(page))}} loader={<div className="loader">Loading ...</div>}>
+					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getThemes(page))}} loader={<LoadingBar />}>
 						{showingThemes}
 					</InfiniteScroll>
 				</div>

@@ -1,7 +1,24 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url("../fonts/FuturaLTBook.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FuturaMedium";
+    src: url("../fonts/FuturaLTMedium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "HanYi";
+    src: url("../fonts/HanYi.ttf") format("truetype");
+    unicode-range: U+4E00-9FFF;
+}
+
 
 html{
 	//Basic font size for em converting.
 	font-size:62.5%;
+	font-family: "HanYi", "FuturaBook";
 	body{
 		margin: 0;
 		background-color: rgba(0,0,0,0.1)

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import $ from "jquery";
 import InfiniteScroll from "react-infinite-scroller";
 import ImageInSale from "../../components/ImageInSale";
+import LoadingBar from "../../components/LoadingBar";
 import {imagesAndThemes} from "../../actions/pickImageIndex";
 
 class ImageList extends React.Component{
@@ -37,13 +38,13 @@ class ImageList extends React.Component{
 		var ShowingImages = [];
 		for(var i =0; i < imageList.length; i++){
 			ShowingImages.push(
-				<ImageInSale key={imageList[i].id} {...imageList[i]} />
+				<ImageInSale key={imageList[i].id} inList={true} {...imageList[i]} />
 				);
 		}
 		return (
 			<div className="container images-list-container">
 				<div className="image-list-content">
-					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getImages(page, themeId))}} loader={<div className="loader">Loading ...</div>}>
+					<InfiniteScroll hasMore={hasMore} loadMore={() => {dispatch(getImages(page, themeId))}} loader={<LoadingBar />}>
 						{ShowingImages}
 					</InfiniteScroll>
 				</div>

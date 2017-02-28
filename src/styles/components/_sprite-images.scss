@@ -1,119 +1,119 @@
 .sprite {
-    background-image: url(spritesheet.png);
+    background-image: url("/images/sprite-icons.png");
     background-repeat: no-repeat;
-    display: block;
+    display: inline-block;
 }
 
 .sprite-color-black {
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     background-position: -5px -5px;
 }
 
 .sprite-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -63px -5px;
+    width: 24px;
+    height: 24px;
+    background-position: -39px -5px;
 }
 
 .sprite-left-arrow-black {
-    width: 48px;
-    height: 48px;
-    background-position: -121px -5px;
+    width: 24px;
+    height: 24px;
+    background-position: -73px -5px;
 }
 
 .sprite-loading {
-    width: 48px;
-    height: 48px;
-    background-position: -179px -5px;
+    width: 24px;
+    height: 24px;
+    background-position: -107px -5px;
 }
 
 .sprite-location-black {
-    width: 48px;
-    height: 48px;
-    background-position: -5px -63px;
+    width: 24px;
+    height: 24px;
+    background-position: -5px -39px;
 }
 
 .sprite-location-white {
-    width: 48px;
-    height: 48px;
-    background-position: -63px -63px;
+    width: 24px;
+    height: 24px;
+    background-position: -39px -39px;
 }
 
 .sprite-next-black {
-    width: 48px;
-    height: 48px;
-    background-position: -121px -63px;
+    width: 24px;
+    height: 24px;
+    background-position: -73px -39px;
 }
 
 .sprite-select-black {
-    width: 48px;
-    height: 48px;
-    background-position: -179px -63px;
+    width: 24px;
+    height: 24px;
+    background-position: -107px -39px;
 }
 
 .sprite-select-color-black {
-    width: 48px;
-    height: 48px;
-    background-position: -5px -121px;
+    width: 24px;
+    height: 24px;
+    background-position: -5px -73px;
 }
 
-.sprite-select-color-gray {
-    width: 48px;
-    height: 48px;
-    background-position: -63px -121px;
+.sprite-select-color-grey {
+    width: 24px;
+    height: 24px;
+    background-position: -39px -73px;
 }
 
 .sprite-select-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -121px -121px;
+    width: 24px;
+    height: 24px;
+    background-position: -73px -73px;
 }
 
 .sprite-select-white {
-    width: 48px;
-    height: 48px;
-    background-position: -179px -121px;
+    width: 24px;
+    height: 24px;
+    background-position: -107px -73px;
 }
 
 .sprite-selected-color-black {
-    width: 48px;
-    height: 48px;
-    background-position: -5px -179px;
+    width: 24px;
+    height: 24px;
+    background-position: -5px -107px;
 }
 
-.sprite-selected-color-gray {
-    width: 48px;
-    height: 48px;
-    background-position: -63px -179px;
+.sprite-selected-color-grey {
+    width: 24px;
+    height: 24px;
+    background-position: -39px -107px;
 }
 
 .sprite-selected-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -121px -179px;
+    width: 24px;
+    height: 24px;
+    background-position: -73px -107px;
 }
 
-.sprite-size-black- {
-    width: 48px;
-    height: 48px;
-    background-position: -179px -179px;
+.sprite-size-black {
+    width: 24px;
+    height: 24px;
+    background-position: -107px -107px;
 }
 
 .sprite-size-white {
-    width: 48px;
-    height: 48px;
-    background-position: -237px -5px;
+    width: 24px;
+    height: 24px;
+    background-position: -141px -5px;
 }
 
 .sprite-tshirt-black {
-    width: 48px;
-    height: 48px;
-    background-position: -237px -63px;
+    width: 24px;
+    height: 24px;
+    background-position: -141px -39px;
 }
 
 .sprite-tshirt-white {
-    width: 48px;
-    height: 48px;
-    background-position: -237px -121px;
+    width: 24px;
+    height: 24px;
+    background-position: -141px -73px;
 }
