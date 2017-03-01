@@ -1,16 +1,28 @@
 @font-face {
     font-family: "FuturaBook";
-    src: url("../fonts/FuturaLTBook.ttf") format("truetype");
+    src: local("Futura LT Book"),
+    url('/fonts/FuturaLTBook.eot?') format('eot'),  /* IE6-IE8 */
+    url('/fonts/FuturaLTBook.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/FuturaLTBook.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/FuturaLTBook.svg') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
     font-family: "FuturaMedium";
-    src: url("../fonts/FuturaLTMedium.ttf") format("truetype");
+    src: local("Futura LT Medium"),
+    url('/fonts/FuturaLTMedium.eot?') format('eot'),  /* IE6-IE8 */
+    url('/fonts/FuturaLTMedium.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/FuturaLTMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/FuturaLTMedium.svg') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
     font-family: "HanYi";
-    src: url("../fonts/HanYi.ttf") format("truetype");
+    src: local("汉仪大简黑"),
+    url('/fonts/HYDJH.eot?') format('eot'),  /* IE6-IE8 */
+    url('/fonts/HYDJH.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/HYDJH.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/HYDJH.svg') format('svg'); /* Legacy iOS */
     unicode-range: U+4E00-9FFF;
 }
 
