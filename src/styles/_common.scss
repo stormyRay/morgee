@@ -16,24 +16,31 @@
     url('/fonts/FuturaLTMedium.svg') format('svg'); /* Legacy iOS */
 }
 
+//@font-face {
+//    font-family: "HanYi";
+//    src: local("汉仪大黑简"),
+//    url('/fonts/HYDHJ.eot?') format('eot'),  /* IE6-IE8 */
+//    url('/fonts/HYDHJ.woff') format('woff'), /* Modern Browsers */
+//    url('/fonts/HYDHJ.ttf')  format('truetype'), /* Safari, Android, iOS */
+//    url('/fonts/HYDHJ.svg') format('svg'); /* Legacy iOS */
+//    unicode-range: U+4E00-9FFF;
+//}
+
 @font-face {
-    font-family: "HanYi";
-    src: local("汉仪大黑简"),
-    url('/fonts/HYDHJ.eot?') format('eot'),  /* IE6-IE8 */
-    url('/fonts/HYDHJ.woff') format('woff'), /* Modern Browsers */
-    url('/fonts/HYDHJ.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/HYDHJ.svg') format('svg'); /* Legacy iOS */
+    font-family: "微软雅黑";
+    src: local("微软雅黑");
+    font-weight: bold;
     unicode-range: U+4E00-9FFF;
 }
 
 input, textarea, keygen, select, button{
-	font-family: "HanYi", "FuturaBook";
+	font-family: "微软雅黑", "FuturaBook";
 }
 
 html{
 	//Basic font size for em converting.
 	font-size:62.5%;
-	font-family: "HanYi", "FuturaBook";
+	font-family: "微软雅黑", "FuturaBook";
 	body{
 		margin: 0;
 		background-color: rgba(0,0,0,0.1)

@@ -10,17 +10,17 @@
   /* Legacy iOS */ }
 
 @font-face {
-  font-family: "HanYi";
-  src: local("汉仪大黑简"), url("/fonts/HYDHJ.eot?") format("eot"), url("/fonts/HYDHJ.woff") format("woff"), url("/fonts/HYDHJ.ttf") format("truetype"), url("/fonts/HYDHJ.svg") format("svg");
-  /* Legacy iOS */
+  font-family: "微软雅黑";
+  src: local("微软雅黑");
+  font-weight: bold;
   unicode-range: U+4E00-9FFF; }
 
 input, textarea, keygen, select, button {
-  font-family: "HanYi", "FuturaBook"; }
+  font-family: "微软雅黑", "FuturaBook"; }
 
 html {
   font-size: 62.5%;
-  font-family: "HanYi", "FuturaBook"; }
+  font-family: "微软雅黑", "FuturaBook"; }
   html body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.1); }
