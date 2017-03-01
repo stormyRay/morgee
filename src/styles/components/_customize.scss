@@ -2,7 +2,7 @@ $tabNavHeight : 5.5rem;
 $settingHeight : 6.2rem;
 
 body{
-	background-color: #FFFFFF;
+	background-color: #FFFFFF!important;
 }
 .customize-buttons-container{
 	padding: 1.2rem;
@@ -40,14 +40,29 @@ body{
 	ul{
 		margin: 0;
 		padding: 0;
+		height: 100%;
 
 		li{
 			display: inline-block;
 			width: 25%;
 			height: 100%;
+			overflow: hidden;
 			.customize-tab-wrapper{
 				font-size: 0.8rem;
 				color: #000000;
+
+				&>span{
+					display: block;
+					margin: 0.6rem auto;
+				}
+
+				&>div{
+					display: block;
+					margin: 0 auto;
+					line-height: 100%;
+    				text-align: center;
+    				margin: 0 auto;
+				}
 			}
 
 			.cloth-type-icon{

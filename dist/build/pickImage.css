@@ -1,15 +1,22 @@
+@charset "UTF-8";
 @font-face {
   font-family: "FuturaBook";
-  src: url("../fonts/FuturaLTBook.ttf") format("truetype"); }
+  src: local("Futura LT Book"), url("/fonts/FuturaLTBook.eot?") format("eot"), url("/fonts/FuturaLTBook.woff") format("woff"), url("/fonts/FuturaLTBook.ttf") format("truetype"), url("/fonts/FuturaLTBook.svg") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
   font-family: "FuturaMedium";
-  src: url("../fonts/FuturaLTMedium.ttf") format("truetype"); }
+  src: local("Futura LT Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
   font-family: "HanYi";
-  src: url("../fonts/HanYi.ttf") format("truetype");
+  src: local("汉仪大黑简"), url("/fonts/HYDHJ.eot?") format("eot"), url("/fonts/HYDHJ.woff") format("woff"), url("/fonts/HYDHJ.ttf") format("truetype"), url("/fonts/HYDHJ.svg") format("svg");
+  /* Legacy iOS */
   unicode-range: U+4E00-9FFF; }
+
+input, textarea, keygen, select, button {
+  font-family: "HanYi", "FuturaBook"; }
 
 html {
   font-size: 62.5%;
@@ -353,7 +360,6 @@ h3.theme-title {
   background-color: white; }
 
 .nav-pills {
-  height: 5.5rem;
   margin: 0 0 1rem 0;
   padding: 0; }
 

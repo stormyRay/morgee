@@ -9,7 +9,7 @@ class Theme extends React.Component{
 		return (
 			<div className="loading-bar" >
 				<span className="sprite sprite-loading" />
-				Loading...
+				<div>Loading...</div>
 			</div>
 		)
 	}

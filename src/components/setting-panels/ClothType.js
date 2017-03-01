@@ -17,25 +17,25 @@ class ClothType extends React.Component{
 					<NavItem eventKey="man_normal">
 						<div className="customize-tab-wrapper">
 							<span className="sprite man-normal" />
-							{MAN_NORMAL}
+							<div>{MAN_NORMAL}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="man_fit">
 						<div className="customize-tab-wrapper">
 							<span className="sprite man-fit" />
-							{MAN_FIT}
+							<div>{MAN_FIT}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="woman_loose">
 						<div className="customize-tab-wrapper">
 							<span className="sprite woman-loose" />
-							{WOMAN_LOOSE}
+							<div>{WOMAN_LOOSE}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="woman_normal">
 						<div className="customize-tab-wrapper">
 							<span className="sprite woman-normal" />
-							{WOMAN_NORMAL}
+							<div>{WOMAN_NORMAL}</div>
 						</div>
 					</NavItem>
 				</Nav>

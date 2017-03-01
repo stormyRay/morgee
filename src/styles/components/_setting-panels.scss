@@ -10,9 +10,23 @@
 			display: inline-block;
 			width: 25%;
 			height: 100%;
+			overflow:hidden;
 			.customize-tab-wrapper{
 				font-size: 0.8rem;
 				color: #000000;
+
+				&>span{
+					display: block;
+					margin: 1rem auto;
+				}
+
+				&>div{
+					display: block;
+					margin: 0 auto;
+					line-height: 100%;
+    				text-align: center;
+    				margin: 0 auto;
+				}
 			}
 
 			.man-normal,

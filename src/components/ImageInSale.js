@@ -10,7 +10,7 @@ class ImageInSale extends React.Component{
 	render() {
 		const {id, src, title, theme, price, inList} = this.props;
 
-		const outerClass = "image-in-sale-container" + (inList ? "in-list" : "");
+		const outerClass = "image-in-sale-container " + (inList ? "in-list" : "");
 		return (
 			<div className={outerClass} onClick={this.handleClick}>
 				<div className="image-wrapper image-in-sale-wrapper">

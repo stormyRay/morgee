@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .rc-slider {
   position: relative;
   height: 14px;
@@ -282,16 +283,22 @@
 
 @font-face {
   font-family: "FuturaBook";
-  src: url("../fonts/FuturaLTBook.ttf") format("truetype"); }
+  src: local("Futura LT Book"), url("/fonts/FuturaLTBook.eot?") format("eot"), url("/fonts/FuturaLTBook.woff") format("woff"), url("/fonts/FuturaLTBook.ttf") format("truetype"), url("/fonts/FuturaLTBook.svg") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
   font-family: "FuturaMedium";
-  src: url("../fonts/FuturaLTMedium.ttf") format("truetype"); }
+  src: local("Futura LT Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
   font-family: "HanYi";
-  src: url("../fonts/HanYi.ttf") format("truetype");
+  src: local("汉仪大黑简"), url("/fonts/HYDHJ.eot?") format("eot"), url("/fonts/HYDHJ.woff") format("woff"), url("/fonts/HYDHJ.ttf") format("truetype"), url("/fonts/HYDHJ.svg") format("svg");
+  /* Legacy iOS */
   unicode-range: U+4E00-9FFF; }
+
+input, textarea, keygen, select, button {
+  font-family: "HanYi", "FuturaBook"; }
 
 html {
   font-size: 62.5%;
@@ -417,7 +424,7 @@ html {
   background-position: -141px -73px; }
 
 body {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF !important; }
 
 .customize-buttons-container {
   padding: 1.2rem;
@@ -446,14 +453,25 @@ body {
   background-color: #FFFFFF; }
   .customize-tab-nav-container ul {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    height: 100%; }
     .customize-tab-nav-container ul li {
       display: inline-block;
       width: 25%;
-      height: 100%; }
+      height: 100%;
+      overflow: hidden; }
       .customize-tab-nav-container ul li .customize-tab-wrapper {
         font-size: 0.8rem;
         color: #000000; }
+        .customize-tab-nav-container ul li .customize-tab-wrapper > span {
+          display: block;
+          margin: 0.6rem auto; }
+        .customize-tab-nav-container ul li .customize-tab-wrapper > div {
+          display: block;
+          margin: 0 auto;
+          line-height: 100%;
+          text-align: center;
+          margin: 0 auto; }
       .customize-tab-nav-container ul li.active {
         background-color: #000000; }
         .customize-tab-nav-container ul li.active .customize-tab-wrapper {
@@ -517,10 +535,20 @@ body {
     .setting-panel-container ul li {
       display: inline-block;
       width: 25%;
-      height: 100%; }
+      height: 100%;
+      overflow: hidden; }
       .setting-panel-container ul li .customize-tab-wrapper {
         font-size: 0.8rem;
         color: #000000; }
+        .setting-panel-container ul li .customize-tab-wrapper > span {
+          display: block;
+          margin: 0.6rem auto; }
+        .setting-panel-container ul li .customize-tab-wrapper > div {
+          display: block;
+          margin: 0 auto;
+          line-height: 100%;
+          text-align: center;
+          margin: 0 auto; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {
@@ -625,7 +653,6 @@ h3.theme-title {
   background-color: white; }
 
 .nav-pills {
-  height: 5.5rem;
   margin: 0 0 1rem 0;
   padding: 0; }
 

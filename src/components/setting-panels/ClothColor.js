@@ -17,19 +17,19 @@ class ClothColor extends React.Component{
 					<NavItem eventKey="white">
 						<div className="customize-tab-wrapper">
 							<span className="sprite white-color" />
-							{WHITE_COLOR}
+							<div>{WHITE_COLOR}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="black">
 						<div className="customize-tab-wrapper">
 							<span className="sprite black-color" />
-							{BLACK_COLOR}
+							<div>{BLACK_COLOR}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="grey">
 						<div className="customize-tab-wrapper">
 							<span className="sprite grey-color" />
-							{GREY_COLOR}
+							<div>{GREY_COLOR}</div>
 						</div>
 					</NavItem>
 				</Nav>
