@@ -168,7 +168,7 @@ html {
     width: 100%;
     overflow: hidden;
     padding: 1.6rem 0; }
-    .container .header h3 {
+    .container .header .hot-image-title, .container .header h3 {
       width: 100%;
       text-align: center;
       font-size: 1.8rem;
@@ -176,7 +176,7 @@ html {
       color: #000000;
       margin: 0;
       vertical-align: middle; }
-      .container .header h3 span {
+      .container .header .hot-image-title span, .container .header h3 span {
         display: inline-block; }
 
 .hot-image-content {
