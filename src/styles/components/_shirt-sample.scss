@@ -34,8 +34,11 @@
 			margin-right: auto;
 			height: 53%;
 			border: 1px dashed rgba(0, 0, 0, 0);
-			&.bordered{
+			&.bordered.grey-bordered{
 				border: 1px dashed rgba(0, 0, 0, 0.5);
+			}
+			&.bordered{
+				border: 1px dashed rgba(0, 0, 0, 1);
 			}
 
 			.printed-image{

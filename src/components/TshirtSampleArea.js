@@ -35,8 +35,8 @@ class TshirtSampleArea extends React.Component{
 			backgroundPositionY: this.computePositionY(imagePosition)
 		};		
 		const wrapperStyle = this.computeWrapperSize();
-		const wrapperClass = ((selectedSetting == "size" || selectedSetting == "position")? "image-wrapper bordered" : "image-wrapper");
-		
+		const wrapperClass = ((selectedSetting == "size" || selectedSetting == "position")? (clothColor == "black" ? "image-wrapper bordered grey-bordered" : "image-wrapper bordered") : "image-wrapper");
+
 		return (
 			<div className="shirt-showing-area">
 				<div className="shirt-container">

@@ -1,4 +1,5 @@
 import React from "react";
+import {LOADING} from "../constants/texts";
 
 class Theme extends React.Component{
 	constructor(props) {
@@ -9,7 +10,7 @@ class Theme extends React.Component{
 		return (
 			<div className="loading-bar" >
 				<span className="sprite sprite-loading" />
-				<div>Loading...</div>
+				<div>{LOADING}</div>
 			</div>
 		)
 	}

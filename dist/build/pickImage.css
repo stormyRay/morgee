@@ -23,7 +23,7 @@ html {
   font-family: "微软雅黑", "FuturaBook"; }
   html body {
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.05); }
 
 .common-border-top, .container {
   border-top: 0.1em solid rgba(0, 0, 0, 0.25); }
@@ -167,8 +167,10 @@ html {
   .container .header {
     width: 100%;
     overflow: hidden;
-    padding: 1.6rem 0; }
+    padding: 1.6rem 0;
+    vertical-align: middle; }
     .container .header .hot-image-title, .container .header h3 {
+      display: inline-block;
       width: 100%;
       text-align: center;
       font-size: 1.8rem;
@@ -176,8 +178,10 @@ html {
       color: #000000;
       margin: 0;
       vertical-align: middle; }
-      .container .header .hot-image-title span, .container .header h3 span {
-        display: inline-block; }
+    .container .header span {
+      vertical-align: middle; }
+  .container.hot-images-container .header .hot-image-title {
+    width: auto; }
 
 .hot-image-content {
   overflow-x: auto;
@@ -206,7 +210,11 @@ html {
 .loading-bar {
   vertical-align: middle; }
   .loading-bar * {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 1.2rem; }
+  .loading-bar span {
+    vertical-align: middle;
+    margin: 1.2rem 0.6rem; }
 
 .image-wrapper {
   background-color: #000000;

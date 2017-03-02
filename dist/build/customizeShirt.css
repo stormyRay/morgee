@@ -305,7 +305,7 @@ html {
   font-family: "微软雅黑", "FuturaBook"; }
   html body {
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.05); }
 
 .common-border-top {
   border-top: 0.1em solid rgba(0, 0, 0, 0.25); }
@@ -518,8 +518,10 @@ body {
       margin-right: auto;
       height: 53%;
       border: 1px dashed transparent; }
-      .shirt-showing-area .shirt-container .image-wrapper.bordered {
+      .shirt-showing-area .shirt-container .image-wrapper.bordered.grey-bordered {
         border: 1px dashed rgba(0, 0, 0, 0.5); }
+      .shirt-showing-area .shirt-container .image-wrapper.bordered {
+        border: 1px dashed black; }
       .shirt-showing-area .shirt-container .image-wrapper .printed-image {
         background-repeat: no-repeat;
         background-position-x: center;

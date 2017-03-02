@@ -9,6 +9,8 @@ export const CUSTOMIZE_TSHIRT = "定制T恤";
 export const HOT_PICTURE = "热门图片";
 export const SEARCH_BY_THEME = "按主题查找";
 
+export const LOADING = "加载中…";
+
 export const SEE_MORE = "查看更多";
 
 //Customize T-shirt Page
