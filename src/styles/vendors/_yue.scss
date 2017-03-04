@@ -1,155 +1,3 @@
-// .image-wrapper.image-in-sale-wrapper {
-//     width: 12rem;
-//     height: 14rem;
-//     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.50);
-// }
-
-// .image-in-sale-container {
-// display: inline-block;
-// margin: 0 0 0 1.2rem;
-// }
-
-// .image-in-sale-container .top-info .image-title {
-// margin: 0.6rem 0;
-// font-size: 1.2rem;
-// color: black;
-// float: left;
-// }
-
-// .image-price {
-// font-size: 1.2rem;
-// margin: 0 0 1.6rem -0.2em;
-// color: rgba(218, 64, 0, 1);
-// font-family: 'Futura-Medium';
-// }
-// .image-in-sale-container .top-info .image-theme {
-// border: 0.1rem solid black;
-// border-radius: 1.5rem;
-// height: 1.4rem;
-// font-size: 0.8rem;
-// color: black;
-// padding: 0 0.5rem;
-// margin: 0.6rem 0 0 0;
-// float: right;
-// min-width: 1.5rem;
-// }
-
-// html body {
-// margin: 0;
-// background-color: #F6F6F6;
-// }
-
-// .image-in-sale-container .top-info .image-theme {
-// border: 0.1rem solid black;
-// border-radius: 1.5rem;
-// height: 1.4rem;
-// font-size: 0.8rem;
-// color: black;
-// padding: 0 0.5rem;
-// margin: 0.6rem 0 0 0;
-// float: right;
-// min-width: 1.5rem;
-// text-align: center;
-// }
-
-// //@media screen and (-webkit-min-device-pixel-ratio: 0)
-// .image-wrapper.theme-image-wrapper {
-// width: 10.9rem;
-// height: 12.7rem;
-// box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.50);
-// }
-
-// .theme-container {
-// display: inline-block;
-// margin: 0 0 0 1.2rem;
-// }
-
-// h3.theme-title {
-// font-size: 1.2em !important;
-// margin: 0.4em 0 0.8em 0 !important;
-// text-align: center;
-// }
-
-// .loader {
-// font-size: 1.4em;
-// text-align: center;
-// margin: 0.4em 0 1.4em 0;
-// }
-
-// .hot-image-content .see-more-panel .see-more-wrapper p {
-// margin: 0.6rem auto;
-// }
-
-// html body {
-// margin: 0;
-// background-color: #F6F6F6;
-// font-family: 'Hydhj','Arial';
-// }
-
-// .right-arrow-icon {
-// width: 0.5rem;
-// height: 1rem;
-// background-color: #777777;
-// margin-left: 0.4em;
-// }
-
-// .nav-pills li a {
-// height: 100%;
-// vertical-align: middle;
-// padding-bottom: 0.65rem;
-// line-height: 4.2rem;
-// font-size: 1.4rem;
-// text-decoration: none;
-// color: rgb(0, 0, 0);
-// } 
-
-// ////////
-// .container {
-// margin-top: 0rem;
-// box-sizing: border-box;
-// }
-
-// .image-wrapper.image-in-sale-wrapper {
-// width: 16.4rem;
-// height: 19rem;
-// }
-// .image-in-sale-container .top-info .image-title {
-// margin: 0.5rem 0 0 0;
-// font-size: 1.4rem;
-// color: black;
-// float: left;
-// }
-
-// .image-in-sale-container {
-// display: inline-block;
-// margin: 0 1.15rem;
-// }
-
-// .image-price {
-// font-size: 1.4rem;
-// margin: 0.4rem 0 0.8rem -0.2rem;
-// color: rgba(218, 64, 0, 1);
-// font-family: 'Futura-Medium';
-// }
-// .image-in-sale-container .top-info .image-theme {
-// border: 0.1rem solid black;
-// border-radius: 0.8rem;
-// height: 0.8rem;
-// min-width: 1.75rem;
-// font-size: 0.8rem;
-// color: black;
-// text-align: center;
-// padding: 0.3rem 0.5rem;
-// float: right;
-// margin: 1rem 0 0 0;
-// }
-
-// .image-wrapper.image-in-sale-wrapper {
-// width: 16.4rem;
-// height: 19rem;
-// box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.50);
-// } 
-
 .nav-pills li a {
 height: 100%;
 vertical-align: middle;
@@ -372,3 +220,48 @@ width: 16.4rem;
 height: 19rem;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.50);
 } 
+
+//0304
+.rc-slider-track {
+position: absolute;
+left: 0;
+height: 3px;
+border-radius: 6px;
+background-color: #000000;
+-webkit-transition: all ease-out .2s;
+transition: all ease-in-out 0.2s;
+}
+.rc-slider-handle {
+position: absolute;
+margin-left: -1.2rem;
+margin-top: -1.1rem;
+width: 2.4rem;
+height: 2.4rem;
+cursor: pointer;
+border-radius: 50%;
+border: solid 3px #000000;
+background-color: #fff;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+-webkit-transition: all ease-out .2s;
+transition: all ease-in-out 0.2s;
+}
+.rc-slider-dot {
+position: absolute;
+bottom: -2px;
+margin-left: -4px;
+width: 8px;
+height: 8px;
+border: 0px solid #000000;
+background-color: #fff;
+cursor: pointer;
+border-radius: 50%;
+vertical-align: middle;
+}
+.shirt-showing-area .shirt-container .image-wrapper .printed-image {
+background-repeat: no-repeat;
+background-position-x: center;
+height: 100%;
+width: 100%;
+-webkit-transition: all ease-in-out .2s;
+transition: all ease-in-out 0.2s;
+}

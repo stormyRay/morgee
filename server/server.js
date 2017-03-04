@@ -10,7 +10,7 @@ app.use(compression())
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, '../dist')))
 app.get('/getThemes.json', function(req, res){
-	const LIMIT = 4;
+	const LIMIT = 9;
 	var start = req.query.page * LIMIT;
 	var results = themes.slice(start, start + LIMIT);
 	setTimeout(function(){
@@ -54,7 +54,7 @@ app.get('/getImages.json', function(req, res){
 		var imageList = [];
 		var index = parseInt(theme);
 		var number = 0;
-		const LIMIT = 4;
+		const LIMIT = 9;
 		for (var i = 1; i <= LIMIT; i ++){
 			number = parseInt(theme) % 5 + i * 5 + page * 20;
 			if(number > 151)

@@ -1,8 +1,6 @@
-.sprite {
-    background-image: url("/images/sprite-icons.png");
-    background-repeat: no-repeat;
-    display: inline-block;
-}
+@import "./sprite-images-24";
+@import "./sprite-images-48";
+
 
 .sprite-color-black {
     width: 24px;
