@@ -376,7 +376,7 @@ html {
     clear: both;
     height: 0; }
   .image-in-sale-container .top-info .image-title {
-    margin: 0;
+    margin: 0.6rem 0;
     font-size: 1.2rem;
     color: black;
     float: left; }
@@ -394,6 +394,16 @@ html {
 .theme-container {
   display: inline-block;
   margin: 0 0.6rem; }
+
+.in-list.image-in-sale-container {
+  display: inline-block;
+  margin: 0 0.6rem; }
+  .in-list.image-in-sale-container .top-info .image-title {
+    margin: 0.6rem 0;
+    font-size: 1.4rem; }
+  .in-list.image-in-sale-container .top-info .image-theme {
+    height: 1.6rem;
+    font-size: 1rem; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {

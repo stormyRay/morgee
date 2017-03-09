@@ -47,7 +47,7 @@
 		}
 
 		.image-title {
-			margin: 0;
+			margin: 0.6rem 0;
 			font-size: 1.2rem;
 			color: rgba(0,0,0,1);
 			float: left;
@@ -72,4 +72,25 @@
 .theme-container{
 	display: inline-block;
 	margin: 0 0.6rem;
+}
+
+.in-list{
+	&.image-in-sale-container{
+		display: inline-block;
+	    margin: 0 0.6rem;
+
+		.top-info {
+
+			.image-title {
+				margin: 0.6rem 0;
+				font-size: 1.4rem;
+			}
+
+			.image-theme {
+				height: 1.6rem;
+				font-size: 1rem;
+			}
+		}
+	}
+
 }
