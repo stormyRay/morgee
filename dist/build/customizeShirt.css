@@ -298,11 +298,11 @@
   unicode-range: U+4E00-9FFF; }
 
 input, textarea, keygen, select, button {
-  font-family: "微软雅黑", "FuturaBook"; }
+  font-family: "FuturaMedium", "微软雅黑"; }
 
 html {
   font-size: 62.5%;
-  font-family: "微软雅黑", "FuturaBook"; }
+  font-family: "FuturaMedium", "微软雅黑"; }
   html body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.05); }
@@ -583,9 +583,14 @@ body {
       width: 25%;
       height: 100%;
       overflow: hidden; }
+      .customize-tab-nav-container ul li a {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent; }
       .customize-tab-nav-container ul li .customize-tab-wrapper {
         font-size: 0.8rem;
         color: #000000; }
+        .customize-tab-nav-container ul li .customize-tab-wrapper:active {
+          background-color: transparent; }
         .customize-tab-nav-container ul li .customize-tab-wrapper > span {
           display: block;
           margin: 0.7rem auto; }
@@ -662,9 +667,14 @@ body {
       width: 25%;
       height: 100%;
       overflow: hidden; }
+      .setting-panel-container ul li a {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent; }
       .setting-panel-container ul li .customize-tab-wrapper {
         font-size: 0.8rem;
         color: #000000; }
+        .setting-panel-container ul li .customize-tab-wrapper:active {
+          background-color: transparent; }
         .setting-panel-container ul li .customize-tab-wrapper > span {
           display: block;
           margin: 1rem auto; }

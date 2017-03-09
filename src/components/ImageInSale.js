@@ -30,7 +30,7 @@ class ImageInSale extends React.Component{
 	handleClick() {
 		const {id} = this.props;
 		const path = `/customize/image/${id}`;
-    	location.href = path;
+    	location.href = path + "?stamp=" + (new Date()).getTime();
 	}
 
 }

@@ -10,17 +10,20 @@
 		height: 100%;
 		text-align: center;
 
-		a{
+		a,
+		a:active{
 			height: 100%;
 			vertical-align: middle;
-			padding-bottom: 1.05rem;
+			padding-bottom: 0.65rem;
 			line-height: 3.5rem;
 			font-size: 1.4rem;
 			text-decoration: none;
-			color: rgba(0,0,0,0.5);
+			color: black;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-webkit-tap-highlight-color: transparent; 
 		}
 
-		&.active a{
+		&.active a,{
 			border-bottom: 0.4rem solid #000000;
 		}
 		&.disabled a {

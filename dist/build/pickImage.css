@@ -16,11 +16,11 @@
   unicode-range: U+4E00-9FFF; }
 
 input, textarea, keygen, select, button {
-  font-family: "微软雅黑", "FuturaBook"; }
+  font-family: "FuturaMedium", "微软雅黑"; }
 
 html {
   font-size: 62.5%;
-  font-family: "微软雅黑", "FuturaBook"; }
+  font-family: "FuturaMedium", "微软雅黑"; }
   html body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.05); }
@@ -267,14 +267,17 @@ html {
     width: 50%;
     height: 100%;
     text-align: center; }
-    .nav-pills li a {
+    .nav-pills li a,
+    .nav-pills li a:active {
       height: 100%;
       vertical-align: middle;
-      padding-bottom: 1.05rem;
+      padding-bottom: 0.65rem;
       line-height: 3.5rem;
       font-size: 1.4rem;
       text-decoration: none;
-      color: rgba(0, 0, 0, 0.5); }
+      color: black;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: transparent; }
     .nav-pills li.active a {
       border-bottom: 0.4rem solid #000000; }
     .nav-pills li.disabled a {
@@ -357,6 +360,10 @@ html {
     position: absolute;
     background-position: center center;
     background-size: cover; }
+
+.in-list .image-wrapper.image-in-sale-wrapper {
+  width: 17rem;
+  height: 20rem; }
 
 .image-in-sale-container {
   display: inline-block;
@@ -575,7 +582,7 @@ h3.theme-title {
 
 .image-in-sale-container.in-list {
   display: inline-block;
-  margin: 0 1.15rem; }
+  margin: 0 0.6rem; }
 
 .image-price.in-list {
   font-size: 1.4rem;
@@ -629,7 +636,10 @@ h3.theme-title {
 
 .rc-slider-dot {
   margin-left: 0px;
-  border: 1px solid #000000; }
+  border: 1px solid #000000;
+  border-radius: 0;
+  width: 1px;
+  background: #000000; }
 
 .shirt-showing-area .shirt-container .image-wrapper .printed-image {
   background-repeat: no-repeat;

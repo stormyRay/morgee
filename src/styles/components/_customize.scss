@@ -47,9 +47,17 @@ body{
 			width: 25%;
 			height: 100%;
 			overflow: hidden;
+			a{
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-tap-highlight-color: transparent; 
+			}
 			.customize-tab-wrapper{
 				font-size: 0.8rem;
 				color: #000000;
+				
+				&:active{
+					background-color: transparent;
+				}
 
 				&>span{
 					display: block;

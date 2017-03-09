@@ -18,7 +18,7 @@ class CustomizeButtons extends React.Component{
 
 	handleClick(){
 		if(!window.history.back()){
-			location.href = "/index";
+			location.href = "/index?stamp=" + (new Date()).getTime();
 		}
 	}
 }
