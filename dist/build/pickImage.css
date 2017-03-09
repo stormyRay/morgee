@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "FuturaMedium";
-  src: local("Futura LT Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
+  src: local("Futura LT Medium"), local("Futura-Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
   /* Legacy iOS */ }
 
 @font-face {
@@ -16,11 +16,11 @@
   unicode-range: U+4E00-9FFF; }
 
 input, textarea, keygen, select, button {
-  font-family: "FuturaMedium", "微软雅黑"; }
+  font-family: "FuturaMedium"; }
 
 html {
   font-size: 62.5%;
-  font-family: "FuturaMedium", "微软雅黑"; }
+  font-family: "FuturaMedium"; }
   html body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.05); }
@@ -661,3 +661,29 @@ h3.theme-title {
 
 .rc-slider-mark-text {
   color: #000000; }
+
+.in-list.image-in-sale-container .top-info .image-title {
+  margin: 1.2rem 0 0 0;
+  font-size: 1.4rem; }
+
+.image-in-sale-container .top-info .image-theme {
+  border: 0.1rem solid black;
+  border-radius: 0.8rem;
+  height: 1.4rem;
+  min-width: 1.75rem;
+  font-size: 0.8rem;
+  color: black;
+  text-align: center;
+  padding: 0 0.5rem;
+  float: right;
+  margin: 1.4rem 0 0 0; }
+
+.in-list.image-in-sale-container .top-info .image-theme {
+  height: 1.4rem;
+  font-size: 1rem; }
+
+.image-price {
+  font-size: 1.4rem;
+  margin: 0.6rem 0 1.6rem -0.3rem;
+  color: #da4000;
+  font-family: 'Futura-Medium'; }

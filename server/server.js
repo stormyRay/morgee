@@ -54,7 +54,7 @@ app.get('/getImages.json', function(req, res){
 		var imageList = [];
 		var index = parseInt(theme);
 		var number = 0;
-		const LIMIT = 9;
+		const LIMIT = 10;
 		for (var i = 1; i <= LIMIT; i ++){
 			number = parseInt(theme) % 5 + i * 5 + page * 20;
 			if(number > 151)

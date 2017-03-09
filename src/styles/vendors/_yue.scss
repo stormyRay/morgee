@@ -270,3 +270,30 @@ transition: all ease-in-out 0.2s;
 .rc-slider-mark-text{
 	color: #000000;
 }
+
+.in-list.image-in-sale-container .top-info .image-title {
+margin: 1.2rem 0 0 0;
+font-size: 1.4rem;
+}
+.image-in-sale-container .top-info .image-theme {
+border: 0.1rem solid black;
+border-radius: 0.8rem;
+height: 1.4rem;
+min-width: 1.75rem;
+font-size: 0.8rem;
+color: black;
+text-align: center;
+padding: 0 0.5rem;
+float: right;
+margin: 1.4rem 0 0 0;
+}
+.in-list.image-in-sale-container .top-info .image-theme {
+height: 1.4rem;
+font-size: 1rem;
+}
+.image-price {
+font-size: 1.4rem;
+margin: 0.6rem 0 1.6rem -0.3rem;
+color: #da4000;
+font-family: 'Futura-Medium';
+} 
