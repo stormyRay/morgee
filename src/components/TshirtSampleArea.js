@@ -72,7 +72,7 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	buildImageSrc(id){
-		return "/images/" + id + ".jpg";
+		return "/images/" + id + "_medium.png";
 	}
 
 	computeWrapperSize(){
