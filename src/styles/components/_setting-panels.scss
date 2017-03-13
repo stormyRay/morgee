@@ -39,7 +39,7 @@
 
 
 			.man-normal,
-			.man-fit,
+			.man-loose,
 			.woman-loose,
 			.woman-normal{
 				@extend .sprite-select-white;
@@ -59,7 +59,7 @@
 
 			&.active{
 				.man-normal,
-				.man-fit,
+				.man-loose,
 				.woman-loose,
 				.woman-normal{
 					@extend .sprite-select-black;

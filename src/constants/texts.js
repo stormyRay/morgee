@@ -23,7 +23,7 @@ export const IMAGE_SIZE = "图案大小";
 export const IMAGE_POSITION = "图案位置";
 
 export const MAN_NORMAL = "男性合身款";
-export const MAN_FIT = "男性修身款";
+export const MAN_LOOSE = "男性宽松款";
 export const WOMAN_LOOSE = "女性宽松款"
 export const WOMAN_NORMAL = "女性合身款";
 

@@ -481,7 +481,7 @@ html {
   background-position: -73px -39px; }
 
 .sprite-select-black, .setting-panel-container ul li.active .man-normal,
-.setting-panel-container ul li.active .man-fit,
+.setting-panel-container ul li.active .man-loose,
 .setting-panel-container ul li.active .woman-loose,
 .setting-panel-container ul li.active .woman-normal {
   width: 24px;
@@ -504,7 +504,7 @@ html {
   background-position: -73px -73px; }
 
 .sprite-select-white, .setting-panel-container ul li .man-normal,
-.setting-panel-container ul li .man-fit,
+.setting-panel-container ul li .man-loose,
 .setting-panel-container ul li .woman-loose,
 .setting-panel-container ul li .woman-normal {
   width: 24px;

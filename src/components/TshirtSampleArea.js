@@ -64,7 +64,9 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	computeSize(size){
-		return (50 + (100-50) * size / 100) + "%";
+		const minRatio = 70;
+		const maxRatio = 100;
+		return (minRatio + (maxRatio-minRatio) * size / 100) + "%";
 	}
 
 	computePositionY(position){

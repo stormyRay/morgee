@@ -14,16 +14,16 @@ class ClothColor extends React.Component{
 		return (
 			<div className="setting-panel-container">
 				<Nav bsStyle="pills" justified activeKey={selectedColor} onSelect={switchClothColor}>
-					<NavItem eventKey="white">
-						<div className="customize-tab-wrapper">
-							<span className="sprite white-color" />
-							<div>{WHITE_COLOR}</div>
-						</div>
-					</NavItem>
 					<NavItem eventKey="black">
 						<div className="customize-tab-wrapper">
 							<span className="sprite black-color" />
 							<div>{BLACK_COLOR}</div>
+						</div>
+					</NavItem>
+					<NavItem eventKey="white">
+						<div className="customize-tab-wrapper">
+							<span className="sprite white-color" />
+							<div>{WHITE_COLOR}</div>
 						</div>
 					</NavItem>
 					<NavItem eventKey="grey">
