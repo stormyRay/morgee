@@ -57,7 +57,7 @@ class TshirtSampleArea extends React.Component{
 	buildTshirtSrc(type, color){
 		var src = "/images/T-shirts/";
 		src += type.replace("_", "-");
-		src += "/" + color + ".png";
+		src += "/" + color + ".jpg";
 		this.shirtUrl = src;
 
 		return src;
