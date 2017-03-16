@@ -1,6 +1,6 @@
 import React from "react";
 import CustomerInfoArea from "./customer-info/CustomerInfoArea";
-import TshirtSummaryArea from "./TshirtSummaryArea";
+import TshirtSummaryArea from "./tshirt-summary/TshirtSummaryArea";
 import ConfirmPaymentLine from "./ConfirmPaymentLine";
 
 class OrderPage extends React.Component{
