@@ -3,6 +3,7 @@
 * [React Bootstrap slider](https://github.com/brownieboy/react-bootstrap-slider)
 * [React Infinite Scroller](https://cassetterocks.github.io/react-infinite-scroller/)
 * [Chinese Region API (Tecent Map)](http://lbs.qq.com/webservice_v1/guide-region.html)
+* [jQuery Mobile Form Select Menus](https://www.w3schools.com/jquerymobile/jquerymobile_form_select.asp)
 
 ### Different Q&A
 * [How to hide scrollbar while scrolling on mobile devices?](https://segmentfault.com/q/1010000005758786) (Chinese)
