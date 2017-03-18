@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: "FuturaMedium";
-    src: local("Futura LT Medium"),
-    local("Futura-Medium"),
+    src: local("Futura-Medium"),
+    local("Futura LT Medium"),
     url('/fonts/FuturaLTMedium.eot?') format('eot'),  /* IE6-IE8 */
     url('/fonts/FuturaLTMedium.woff') format('woff'), /* Modern Browsers */
     url('/fonts/FuturaLTMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -35,7 +35,7 @@
 }
 
 input, textarea, keygen, select, button{
-	font-family: "FuturaMedium";
+	font-family: "FuturaMedium", "微软雅黑";
 }
 
 html{

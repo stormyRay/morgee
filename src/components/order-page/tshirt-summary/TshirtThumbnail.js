@@ -1,4 +1,5 @@
 import React from "react";
+import TshirtSampleContainer from "../../../containers/customize-containers/TshirtSampleContainer";
 class TshirtThumbnail extends React.Component{
 	constructor(props) {
 		super(props);
@@ -6,8 +7,8 @@ class TshirtThumbnail extends React.Component{
 
 	render(){
 		return (
-			<div>
-			TshirtThumbnail
+			<div className="shirt-thumbnnail">
+				<TshirtSampleContainer imageId={this.props.params.imageId} />
 			</div>
 		)
 	}

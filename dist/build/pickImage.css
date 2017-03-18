@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "FuturaMedium";
-  src: local("Futura LT Medium"), local("Futura-Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
+  src: local("Futura-Medium"), local("Futura LT Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
   /* Legacy iOS */ }
 
 @font-face {
@@ -682,7 +682,7 @@ h3.theme-title {
   height: 1.4rem;
   font-size: 1rem; }
 
-.image-price {
+.in-list .image-price {
   font-size: 1.4rem;
   margin: 0.6rem 0 1.6rem -0.3rem;
   color: #da4000;
