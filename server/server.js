@@ -98,6 +98,9 @@ app.get('/theme/*', function (req, res) {
 app.get('/customize/image/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
+app.get('/order/image/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
+});
 
 
 

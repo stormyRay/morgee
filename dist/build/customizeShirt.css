@@ -288,7 +288,7 @@
 
 @font-face {
   font-family: "FuturaMedium";
-  src: local("Futura LT Medium"), local("Futura-Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
+  src: local("Futura-Medium"), local("Futura LT Medium"), url("/fonts/FuturaLTMedium.eot?") format("eot"), url("/fonts/FuturaLTMedium.woff") format("woff"), url("/fonts/FuturaLTMedium.ttf") format("truetype"), url("/fonts/FuturaLTMedium.svg") format("svg");
   /* Legacy iOS */ }
 
 @font-face {
@@ -298,7 +298,7 @@
   unicode-range: U+4E00-9FFF; }
 
 input, textarea, keygen, select, button {
-  font-family: "FuturaMedium"; }
+  font-family: "FuturaMedium", "微软雅黑"; }
 
 html {
   font-size: 62.5%;
@@ -685,6 +685,44 @@ body {
           text-align: center;
           margin: 0 auto; }
 
+.order-page-root {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.shirt-info-summary-container {
+  height: 15rem;
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #FFFFFF;
+  display: table;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; }
+
+.shirt-thumbnail {
+  display: inline-block;
+  vertical-align: middle;
+  display: table-cell; }
+  .shirt-thumbnail .shirt-showing-area {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: 11rem;
+    height: 12.8rem; }
+    .shirt-thumbnail .shirt-showing-area .shirt-container {
+      padding: 0; }
+      .shirt-thumbnail .shirt-showing-area .shirt-container .image-wrapper {
+        border: none !important; }
+
+.shirt-summary {
+  display: inline-block;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100%; }
+  .shirt-summary .summary-content .summary-label,
+  .shirt-summary .summary-content .summary-value,
+  .shirt-summary .summary-content .summary-price {
+    display: inline-block; }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {
     width: 9.06rem;
@@ -962,7 +1000,7 @@ h3.theme-title {
   height: 1.4rem;
   font-size: 1rem; }
 
-.image-price {
+.in-list .image-price {
   font-size: 1.4rem;
   margin: 0.6rem 0 1.6rem -0.3rem;
   color: #da4000;

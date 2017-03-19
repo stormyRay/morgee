@@ -5,6 +5,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import ImageInSale from "../../components/ImageInSale";
 import LoadingBar from "../../components/LoadingBar";
 import {imagesAndThemes} from "../../actions/pickImageIndex";
+import {changeTitle} from "../../constants/methods";
 
 class ImageList extends React.Component{
 	constructor(props) {
@@ -18,16 +19,7 @@ class ImageList extends React.Component{
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		document.title = nextProps.gallery.theme;
-
-		//hack for Wechat browser to change the title
-		var $body = $('body');
-		var $iframe = $('<iframe src="/favicon.ico" style="display:none;"></iframe>');
-		$iframe.on('load',function() {
-  			setTimeout(function() {
-    			$iframe.off('load').remove();
-			}, 0);
-		}).appendTo($body);
+		changeTitle(nextProps.gallery.theme);
 	}
 
 	render() {

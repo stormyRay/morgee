@@ -37,3 +37,20 @@ export const SMALL_SIZE = "小";
 
 export const HIGH_POSITION = "高";
 export const LOW_POSITION = "低";
+
+//Order Page
+export const IMAGE_LABEL = "图片：";
+export const CLOTH_LABEL = "T恤：";
+export const PRINT_LABEL = "印刷服务：";
+export const TOTAL_LABEL = "合计：";
+
+export const COUNT_LABEL = "数量";
+
+export const CUSTOMER_NAME = "收货人";
+export const TEL_NUMBER = "联系电话";
+export const MAIL_AREA = "所在地区";
+export const MAIL_DETAIL = "详细地址";
+
+export const SHIPPING_METHOD = "物流方式";
+export const COMMON_FAQ = "常见问题";
+export const CONFIRM_AND_PAY = "确认并支付";

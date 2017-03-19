@@ -1,6 +1,6 @@
 import React from "react";
 import TshirtThumbnail from "./TshirtThumbnail";
-import TshirtSummary from "./TshirtSummary";
+import TshirtSummaryContainer from "../../../containers/customize-containers/TshirtSummaryContainer";
 
 class TshirtSummaryArea extends React.Component{
 	constructor(props) {
@@ -9,12 +9,12 @@ class TshirtSummaryArea extends React.Component{
 
 	render(){
 		return (
-			<div>
-				<TshirtThumbnail />
-				<TshirtSummary />
+			<div className="shirt-info-summary-container">
+				<TshirtThumbnail imageId={this.props.imageId}/>
+				<TshirtSummaryContainer />
 			</div>
 		)
 	}
 }
 
-export default OrderPage;
+export default TshirtSummaryArea;

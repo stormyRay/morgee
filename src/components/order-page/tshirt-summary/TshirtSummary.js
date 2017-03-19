@@ -1,13 +1,40 @@
 import React from "react";
+import {IMAGE_LABEL, CLOTH_LABEL, PRINT_LABEL, TOTAL_LABEL} from "../../../constants/texts";
+import {clothNameMapping} from "../../../constants/methods";
 class TshirtSummary extends React.Component{
 	constructor(props) {
 		super(props);
 	}
 
 	render(){
+		const {imageTitle, clothType, clothDescription, imagePrice, clothPrice, printPrice} = this.props;
+		const totalPrice = imagePrice + clothPrice + printPrice;
 		return (
-			<div>
-			TshirtSummary
+			<div className="shirt-summary">
+				<div className="image-summary summary-content">
+					<div className="summary-label summary-label-image">{IMAGE_LABEL}</div>
+					<div className="summary-value">{imageTitle}</div>
+					<div className="summary-price">{"￥" + imagePrice}</div>
+				</div>
+				<div className="light-separator"></div>
+				<div className="cloth-summary">
+					<div className="summary-content">
+						<div className="summary-label summary-label-cloth">{CLOTH_LABEL}</div>
+						<div className="summary-value">{clothNameMapping(clothType)}</div>
+						<div className="summary-price">{"￥" + clothPrice}</div>
+					</div>
+					<div className="summary-description">{clothDescription}</div>
+				</div>
+				<div className="light-separator"></div>
+				<div className="print-summary summary-content">
+					<div className="summary-label summary-label-print">{PRINT_LABEL}</div>
+					<div className="summary-price">{"￥" + printPrice}</div>
+				</div>
+				<div className="dark-separator"></div>
+				<div className="total-summary summary-content">
+					<div className="summary-label summary-label_total">{TOTAL_LABEL}</div>
+					<div className="summary-price">{"￥" + totalPrice}</div>
+				</div>
 			</div>
 		)
 	}
