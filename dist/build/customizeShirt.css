@@ -549,6 +549,10 @@ html {
 body {
   background-color: #FFFFFF !important; }
 
+.order-page-root {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05); }
+
 .customize-buttons-container {
   padding: 1.2rem;
   background-color: #FFFFFF; }
@@ -685,10 +689,6 @@ body {
           text-align: center;
           margin: 0 auto; }
 
-.order-page-root {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.05); }
-
 .shirt-info-summary-container {
   height: 15rem;
   width: 100%;
@@ -699,7 +699,6 @@ body {
   box-sizing: border-box; }
 
 .shirt-thumbnail {
-  display: inline-block;
   vertical-align: middle;
   display: table-cell; }
   .shirt-thumbnail .shirt-showing-area {
@@ -714,14 +713,149 @@ body {
         border: none !important; }
 
 .shirt-summary {
-  display: inline-block;
+  padding-left: 2rem;
   vertical-align: middle;
   display: table-cell;
   width: 100%; }
+  .shirt-summary .summary-wrapper {
+    padding: 0.8rem 0; }
+    .shirt-summary .summary-wrapper.light-bottom-border {
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.12); }
+    .shirt-summary .summary-wrapper.dark-bottom-border {
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.75); }
   .shirt-summary .summary-content .summary-label,
   .shirt-summary .summary-content .summary-value,
   .shirt-summary .summary-content .summary-price {
-    display: inline-block; }
+    display: inline-block;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.75); }
+  .shirt-summary .summary-content .summary-label {
+    min-width: 4rem; }
+  .shirt-summary .summary-content .summary-price {
+    float: right; }
+  .shirt-summary .summary-content:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+  .shirt-summary .summary-content.total-summary .summary-label {
+    font-size: 1.4rem; }
+  .shirt-summary .summary-content.total-summary .summary-price {
+    font-size: 1.4rem;
+    color: #D5242E; }
+  .shirt-summary .summary-description {
+    line-height: 1.6rem;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5); }
+
+.customer-info-wrapper {
+  margin-bottom: 8rem; }
+
+.order-info-wrapper {
+  background-color: #FFFFFF;
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  margin: 0.8rem 0;
+  display: table;
+  width: 100%;
+  box-sizing: border-box; }
+
+.order-info-area {
+  padding: 1rem 1rem;
+  display: table;
+  width: 100%;
+  box-sizing: border-box; }
+  .order-info-area .order-label {
+    margin: 0 0.6rem;
+    width: 5.6rem;
+    min-width: 5.6rem;
+    line-height: 2rem;
+    display: table-cell;
+    vertical-align: middle; }
+    .order-info-area .order-label.address-label {
+      vertical-align: top; }
+  .order-info-area .order-input {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    border: none; }
+    .order-info-area .order-input.address-input {
+      resize: none;
+      overflow: hidden;
+      height: 2rem;
+      min-height: 2rem; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+.shirt-number-area .order-number-input-area {
+  display: inline-block;
+  float: right; }
+  .shirt-number-area .order-number-input-area button {
+    background-color: rgba(0, 0, 0, 0.12);
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000; }
+  .shirt-number-area .order-number-input-area .order-number-input {
+    width: 3.2rem;
+    height: 2rem;
+    margin: 0 0.4rem;
+    border: 1px solid #000000;
+    vertical-align: middle;
+    text-align: center; }
+
+.shirt-number-area:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.confirm-order-bar {
+  background-color: #FFFFFF;
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0; }
+  .confirm-order-bar .confirm-label {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    vertical-align: middle;
+    color: #D5242E; }
+  .confirm-order-bar .confirm-order-button {
+    float: right;
+    background-color: #000000;
+    border: none;
+    height: 4rem;
+    width: 11.5rem;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    vertical-align: middle;
+    padding: 0; }
+  .confirm-order-bar:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {

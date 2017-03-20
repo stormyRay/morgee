@@ -1,0 +1,90 @@
+.customer-info-wrapper{
+	margin-bottom: 8rem;
+}
+.order-info-wrapper{
+	background-color: #FFFFFF;
+	border-top: 2px solid rgba(0,0,0,0.25);
+	border-bottom: 2px solid rgba(0,0,0,0.25);
+	margin: 0.8rem 0;
+	display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.order-info-area{
+	padding: 1rem 1rem;
+	display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+	.order-label{
+		margin: 0 0.6rem;
+		width: 5.6rem;
+		min-width: 5.6rem;
+		line-height: 2rem;
+    	display: table-cell;
+    	vertical-align: middle;
+
+    	&.address-label{
+    		vertical-align: top;
+    	}
+	}
+
+	.order-input{
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+		border:none;
+
+		&.address-input{
+			resize: none;
+			overflow:hidden;
+			height: 2rem;
+			min-height: 2rem;
+		}
+	}
+}
+
+//Disable arrows for inputs in type of number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.shirt-number-area{
+	.order-number-input-area{
+		display: inline-block;
+		float: right;
+		button{
+			background-color: rgba(0,0,0,0.12);
+			border: none;
+			height: 2rem;
+			width: 2rem;
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+			text-align: center;
+			vertical-align: middle;
+			color: #000000;
+		}
+		.order-number-input{
+			width: 3.2rem;
+			height: 2rem;
+			margin: 0 0.4rem;
+			border: 1px solid #000000;
+			vertical-align: middle;
+			text-align: center;
+		}
+	}
+	&:after{
+			visibility: hidden;
+		    display: block;
+		    font-size: 0;
+		    content: " ";
+		    clear: both;
+		    height: 0;
+		}
+}

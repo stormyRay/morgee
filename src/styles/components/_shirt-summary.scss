@@ -1,0 +1,90 @@
+
+.shirt-info-summary-container{
+	height: 15rem;
+	width: 100%;
+	padding: 1.2rem;
+	background-color: #FFFFFF;
+	display: table;
+	border-bottom: 2px solid rgba(0,0,0,0.25);
+	box-sizing: border-box;
+}
+
+.shirt-thumbnail{
+	vertical-align: middle;
+	display: table-cell;
+	.shirt-showing-area{
+		position: static;
+		top: auto;
+		bottom: auto;
+		width: 11rem;
+		height: 12.8rem;
+		.shirt-container{
+			padding: 0;
+			.image-wrapper{
+				border: none!important;
+			}
+		}
+	}
+}
+
+.shirt-summary{
+	padding-left: 2rem;
+	vertical-align: middle;
+	display: table-cell;
+	width:100%;
+
+	.summary-wrapper{
+		padding: 0.8rem 0;
+		&.light-bottom-border{
+			border-bottom: 0.5px solid rgba(0,0,0,0.12);
+		}
+
+		&.dark-bottom-border{
+			border-bottom: 0.5px solid rgba(0,0,0,0.75);
+		}
+	}
+	.summary-content{
+		.summary-label,
+		.summary-value,
+		.summary-price{
+			display:inline-block;
+			line-height: 1.6rem;
+			font-size: 1.2rem;
+			color: rgba(0,0,0,0.75);
+		}
+		.summary-label{
+			min-width: 4rem;
+		}
+
+		.summary-price{
+			float: right;
+		}
+
+		&:after{
+			visibility: hidden;
+		    display: block;
+		    font-size: 0;
+		    content: " ";
+		    clear: both;
+		    height: 0;
+		}
+
+		&.total-summary{
+			.summary-label{
+				font-size: 1.4rem;
+			}
+
+			.summary-price{
+				font-size: 1.4rem;
+				color: #D5242E;
+			}
+		}
+
+	}
+
+	.summary-description{
+		line-height: 1.6rem;
+		font-size: 1rem;
+		color: rgba(0,0,0,0.5);
+	}
+}

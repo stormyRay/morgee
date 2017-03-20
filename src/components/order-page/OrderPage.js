@@ -1,12 +1,14 @@
 import React from "react";
 import CustomerInfoArea from "./customer-info/CustomerInfoArea";
 import TshirtSummaryArea from "./tshirt-summary/TshirtSummaryArea";
-import ConfirmPaymentLine from "./ConfirmPaymentLine";
+import ConfirmOrderBar from "./ConfirmOrderBar";
 import {changeTitle} from "../../constants/methods";
 
 class OrderPage extends React.Component{
 	constructor(props) {
 		super(props);
+		document.removeEventListener('touchstart', this.props.route.touchHandlers.touchstartHandler);
+		document.removeEventListener('touchmove', this.props.route.touchHandlers.touchmoveHandler);
 	}
 
 	componentDidMount() {
@@ -18,7 +20,7 @@ class OrderPage extends React.Component{
 			<div className="order-page-root">
 				<TshirtSummaryArea imageId={this.props.params.imageId}/>
 				<CustomerInfoArea />
-				<ConfirmPaymentLine />
+				<ConfirmOrderBar price={90} />
 			</div>
 		)
 	}

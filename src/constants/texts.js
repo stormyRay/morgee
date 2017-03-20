@@ -52,5 +52,6 @@ export const MAIL_AREA = "所在地区";
 export const MAIL_DETAIL = "详细地址";
 
 export const SHIPPING_METHOD = "物流方式";
+export const SHIPPING_SOLID_VALUE = "顺丰包邮";
 export const COMMON_FAQ = "常见问题";
 export const CONFIRM_AND_PAY = "确认并支付";

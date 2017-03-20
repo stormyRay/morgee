@@ -11,13 +11,12 @@ class TshirtSummary extends React.Component{
 		const totalPrice = imagePrice + clothPrice + printPrice;
 		return (
 			<div className="shirt-summary">
-				<div className="image-summary summary-content">
+				<div className="image-summary summary-wrapper summary-content light-bottom-border">
 					<div className="summary-label summary-label-image">{IMAGE_LABEL}</div>
 					<div className="summary-value">{imageTitle}</div>
 					<div className="summary-price">{"￥" + imagePrice}</div>
 				</div>
-				<div className="light-separator"></div>
-				<div className="cloth-summary">
+				<div className="cloth-summary summary-wrapper  light-bottom-border">
 					<div className="summary-content">
 						<div className="summary-label summary-label-cloth">{CLOTH_LABEL}</div>
 						<div className="summary-value">{clothNameMapping(clothType)}</div>
@@ -25,13 +24,11 @@ class TshirtSummary extends React.Component{
 					</div>
 					<div className="summary-description">{clothDescription}</div>
 				</div>
-				<div className="light-separator"></div>
-				<div className="print-summary summary-content">
+				<div className="print-summary summary-wrapper summary-content  dark-bottom-border">
 					<div className="summary-label summary-label-print">{PRINT_LABEL}</div>
 					<div className="summary-price">{"￥" + printPrice}</div>
 				</div>
-				<div className="dark-separator"></div>
-				<div className="total-summary summary-content">
+				<div className="total-summary summary-wrapper summary-content">
 					<div className="summary-label summary-label_total">{TOTAL_LABEL}</div>
 					<div className="summary-price">{"￥" + totalPrice}</div>
 				</div>

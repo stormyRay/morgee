@@ -1,0 +1,36 @@
+.confirm-order-bar{
+	background-color: #FFFFFF;
+	border-top: 2px solid rgba(0,0,0,0.25);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    .confirm-label{
+    	display: inline-block;
+    	font-size: 1.6rem;
+    	line-height: 4rem;
+    	vertical-align: middle;
+    	color: #D5242E;
+    }
+    .confirm-order-button{
+    	float: right;
+    	background-color: #000000;
+    	border: none;
+    	height: 4rem;
+    	width: 11.5rem;
+    	font-size: 1.6rem;
+    	color: #FFFFFF;
+    	vertical-align: middle;
+    	padding: 0;
+
+    }
+    &:after{
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}

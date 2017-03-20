@@ -27,14 +27,28 @@ const store = createStore(reducers, {
 class CustimuzeShirtApp extends React.Component{
 	constructor(props) {
 		super(props);
+		this.touchHandlers = {
+			//This is for add or remove listener for touchstart/touchmove event to allow/disable user scroll action in mobile device
+			touchstartHandler: function(e){
+				xStart = e.touches[0].screenX;
+		    	yStart = e.touches[0].screenY;
+			},
+			touchmoveHandler: function(e){
+				var xMovement = Math.abs(e.touches[0].screenX - xStart);
+			    var yMovement = Math.abs(e.touches[0].screenY - yStart);
+			    if((yMovement * 3) > xMovement) {
+			        e.preventDefault();
+			    }
+			}
+		}
 	}
 
 	render(){
 		return(
 			<Provider store={store} key="provider">
 		    	<Router history={browserHistory}>
-		    		<Route path="/customize/image/:imageId" component={CustomizePage}></Route>
-		    		<Route path="/order/image/:imageId" component={OrderPage}></Route>
+		    		<Route path="/customize/image/:imageId" component={CustomizePage} touchHandlers={this.touchHandlers}></Route>
+		    		<Route path="/order/image/:imageId" component={OrderPage} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>
 			)
