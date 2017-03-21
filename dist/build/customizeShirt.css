@@ -767,9 +767,10 @@ body {
   padding: 1rem 1rem;
   display: table;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 1.4rem; }
   .order-info-area .order-label {
-    margin: 0 0.6rem;
+    padding: 0 0.6rem;
     width: 5.6rem;
     min-width: 5.6rem;
     line-height: 2rem;
@@ -781,12 +782,15 @@ body {
     display: table-cell;
     width: 100%;
     vertical-align: middle;
-    border: none; }
+    border: none;
+    font-size: 1.4rem; }
     .order-info-area .order-input.address-input {
       resize: none;
       overflow: hidden;
+      outline: none;
       height: 2rem;
-      min-height: 2rem; }
+      min-height: 2rem;
+      padding: 0; }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -799,8 +803,11 @@ input[type="number"] {
 .shirt-number-area .order-number-input-area {
   display: inline-block;
   float: right; }
-  .shirt-number-area .order-number-input-area button {
+  .shirt-number-area .order-number-input-area .minus-button,
+  .shirt-number-area .order-number-input-area .plus-button {
     background-color: rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    padding: 0;
     border: none;
     height: 2rem;
     width: 2rem;
@@ -810,14 +817,55 @@ input[type="number"] {
     vertical-align: middle;
     color: #000000; }
   .shirt-number-area .order-number-input-area .order-number-input {
+    display: inline-block;
     width: 3.2rem;
     height: 2rem;
     margin: 0 0.4rem;
     border: 1px solid #000000;
     vertical-align: middle;
-    text-align: center; }
+    text-align: center;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0; }
 
 .shirt-number-area:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.district-info-wrapper {
+  width: 100%;
+  display: table; }
+  .district-info-wrapper select {
+    display: table-cell;
+    border: none;
+    background-color: #FFFFFF;
+    background-image: none;
+    text-align-last: center;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    height: 2rem; }
+  .district-info-wrapper .province-select {
+    width: 33.3%; }
+  .district-info-wrapper .city-select {
+    width: 33.3%; }
+  .district-info-wrapper .district-select {
+    width: 33.4%; }
+
+.faq-area .order-label {
+  display: inline-block; }
+
+.faq-area .right-arrow {
+  display: inline-block;
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-color: #EEEEEE; }
+
+.faq-area:after {
   visibility: hidden;
   display: block;
   font-size: 0;

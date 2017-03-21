@@ -28,14 +28,16 @@ class CustimuzeShirtApp extends React.Component{
 	constructor(props) {
 		super(props);
 		this.touchHandlers = {
+			xStart: 0,
+			yStart: 0,
 			//This is for add or remove listener for touchstart/touchmove event to allow/disable user scroll action in mobile device
 			touchstartHandler: function(e){
-				xStart = e.touches[0].screenX;
-		    	yStart = e.touches[0].screenY;
+				this.xStart = e.touches[0].screenX;
+		    	this.yStart = e.touches[0].screenY;
 			},
 			touchmoveHandler: function(e){
-				var xMovement = Math.abs(e.touches[0].screenX - xStart);
-			    var yMovement = Math.abs(e.touches[0].screenY - yStart);
+				var xMovement = Math.abs(e.touches[0].screenX - this.xStart);
+			    var yMovement = Math.abs(e.touches[0].screenY - this.yStart);
 			    if((yMovement * 3) > xMovement) {
 			        e.preventDefault();
 			    }

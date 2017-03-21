@@ -1,4 +1,5 @@
 import React from "react";
+import DistrictArea from "./DistrictArea";
 import {CUSTOMER_NAME, TEL_NUMBER, MAIL_DETAIL} from "../../../constants/texts";
 class MailInfo extends React.Component{
 	constructor(props) {
@@ -11,7 +12,8 @@ class MailInfo extends React.Component{
 		this.changeName = this.changeName.bind(this);
 		this.changeTelNumber = this.changeTelNumber.bind(this);
 		this.changeAddress = this.changeAddress.bind(this);
-		this.textAreaKeyDown = this.textAreaKeyDown.bind(this);
+		this.autoHeight = this.autoHeight.bind(this);
+		this.delayAutoHeight = this.delayAutoHeight.bind(this);
 	}
 
 	render(){
@@ -23,12 +25,12 @@ class MailInfo extends React.Component{
 				</div>
 				<div className="order-info-area">
 					<div className="order-label">{TEL_NUMBER}</div>
-					<input className="order-input tel-input" name="telNumber" type="number" value={this.state.telNumber} onChange={this.changeTelNumber}></input>
+					<input className="order-input tel-input" name="telNumber" type="tel" value={this.state.telNumber} onChange={this.changeTelNumber}></input>
 				</div>
-				DISTRICT
+				<DistrictArea />
 				<div className="order-info-area">
 					<div className="order-label address-label">{MAIL_DETAIL}</div>
-					<textarea className="order-input address-input" name="address" value={this.state.address} onChange={this.changeAddress} onKeyDown={this.textAreaKeyDown}></textarea>
+					<textarea className="order-input address-input" rows="1" name="address" value={this.state.address} onChange={this.changeAddress} onKeyDown={this.delayAutoHeight}></textarea>
 				</div>
 			</div>
 		)
@@ -50,16 +52,17 @@ class MailInfo extends React.Component{
 		this.setState({
 			address: e.target.value.trim()
 		});
+		this.autoHeight(e.target)
 	}
 
-	textAreaKeyDown(e){
+	autoHeight(el){
+		el.style.height = 'auto';
+        el.style.height = el.scrollHeight+'px';
+	}
+
+	delayAutoHeight(e){
 		var el = e.target;
-		setTimeout(function(){
-			el.style.cssText = 'height:auto; padding:0';
-    		// for box-sizing other than "content-box" use:
-    		// el.style.cssText = '-moz-box-sizing:content-box';
-    		el.style.cssText = 'height:' + el.scrollHeight + 'px';
-		},0);
+		window.setTimeout(() => this.autoHeight(el), 0);
 	}
 }
 

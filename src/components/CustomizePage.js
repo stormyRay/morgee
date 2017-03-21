@@ -11,7 +11,7 @@ class CustomizePage extends React.Component{
 
 	componentDidMount() {
 		//Disable vertical dragging in the browser
-		var xStart, yStart = 0;
+		//var xStart, yStart = 0;
  
 		// document.addEventListener('touchstart',function(e) {
 		//     xStart = e.touches[0].screenX;

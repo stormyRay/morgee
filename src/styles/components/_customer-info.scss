@@ -16,9 +16,10 @@
 	display: table;
     width: 100%;
     box-sizing: border-box;
+    font-size:1.4rem;
 
 	.order-label{
-		margin: 0 0.6rem;
+		padding: 0 0.6rem;
 		width: 5.6rem;
 		min-width: 5.6rem;
 		line-height: 2rem;
@@ -35,12 +36,15 @@
 		width: 100%;
 		vertical-align: middle;
 		border:none;
+		font-size: 1.4rem;
 
 		&.address-input{
 			resize: none;
 			overflow:hidden;
+			outline: none;
 			height: 2rem;
 			min-height: 2rem;
+			padding: 0;
 		}
 	}
 }
@@ -59,8 +63,11 @@ input[type="number"] {
 	.order-number-input-area{
 		display: inline-block;
 		float: right;
-		button{
+		.minus-button,
+		.plus-button{
 			background-color: rgba(0,0,0,0.12);
+			display: inline-block;
+			padding: 0;
 			border: none;
 			height: 2rem;
 			width: 2rem;
@@ -71,20 +78,73 @@ input[type="number"] {
 			color: #000000;
 		}
 		.order-number-input{
+			display: inline-block;
 			width: 3.2rem;
 			height: 2rem;
 			margin: 0 0.4rem;
 			border: 1px solid #000000;
 			vertical-align: middle;
 			text-align: center;
+			border-radius: 0;
+			-webkit-border-radius: 0;
+            -moz-border-radius: 0;
 		}
 	}
 	&:after{
-			visibility: hidden;
-		    display: block;
-		    font-size: 0;
-		    content: " ";
-		    clear: both;
-		    height: 0;
-		}
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+.district-info-wrapper{
+	width: 100%;
+	display: table;
+	select{
+		display: table-cell;
+		border: none;
+		background-color: #FFFFFF;
+		background-image: none;
+		text-align-last: center;
+		font-size: 1.4rem;
+		vertical-align: middle;
+		height: 2rem;
+	}
+
+	.province-select{
+		width: 33.3%;
+	}
+
+	.city-select{
+		width: 33.3%;
+	}
+
+	.district-select{
+		width: 33.4%;
+	}
+}
+
+.faq-area{
+	.order-label{
+		display: inline-block;
+	}
+
+	.right-arrow{
+		display:inline-block;
+		float: right;
+		width: 24px;
+		height: 24px;
+		background-color: #EEEEEE;
+	}
+	&:after{
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
 }
