@@ -21,7 +21,7 @@ class MailInfo extends React.Component{
 			<div className="mail-info-area order-info-wrapper">
 				<div className="order-info-area">
 					<div className="order-label">{CUSTOMER_NAME}</div>
-					<input className="order-input name-input" name="name" value={this.state.name} onChange={this.changeName}></input>
+					<input className="order-input name-input" name="customerName" value={this.state.name} onChange={this.changeName}></input>
 				</div>
 				<div className="order-info-area">
 					<div className="order-label">{TEL_NUMBER}</div>
@@ -30,7 +30,7 @@ class MailInfo extends React.Component{
 				<DistrictArea />
 				<div className="order-info-area">
 					<div className="order-label address-label">{MAIL_DETAIL}</div>
-					<textarea className="order-input address-input" rows="1" name="address" value={this.state.address} onChange={this.changeAddress} onKeyDown={this.delayAutoHeight}></textarea>
+					<textarea className="order-input address-input" rows="1" name="addressDetail" value={this.state.address} onChange={this.changeAddress} onKeyDown={this.delayAutoHeight}></textarea>
 				</div>
 			</div>
 		)

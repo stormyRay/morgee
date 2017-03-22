@@ -20,9 +20,9 @@ class DistrictArea extends React.Component{
 			<div className="district-info-area order-info-area">
 				<div className="order-label">{MAIL_AREA}</div>
 				<div className="district-info-wrapper">
-					<select className="province-select"></select>
-					<select className="city-select"></select>
-					<select className="district-select"></select>
+					<select className="province-select" name="province"></select>
+					<select className="city-select" name="city"></select>
+					<select className="district-select" name="district"></select>
 				</div>
 			</div>
 		)

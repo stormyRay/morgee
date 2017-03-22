@@ -5,22 +5,25 @@ import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizePage from "../components/CustomizePage";
-import OrderPage from "../components/order-page/OrderPage";
+import OrderPageContainer from "./customize-containers/OrderPageContainer";
+import {getParameterByName} from "../constants/methods";
 
 const store = createStore(reducers, {
 	activeCustomizeTab: "type",
 	customizeSettings: {
-		clothType: "man_normal",
-		clothColor: "black",
-		imageSize: 50,
-		imagePosition: 50
+		clothType: getParameterByName("clothType") || "man_normal",
+		clothColor: getParameterByName("clothColor") || "black",
+		imageSize: getParameterByName("imageSize") || 50,
+		imagePosition: getParameterByName("imagePosition") || 50,
+		clothSize: getParameterByName("clothSize") || "XL"
 	},
-	order: {
+	orderInfo: {
 		imageTitle: "占位",//Need to change!!!
 		clothDescription: "尺码XXL, 颜色炭黑色，材料：纯棉26支纱",
 		imagePrice: 20,
 		clothPrice: 60,
-		printPrice: 10
+		printPrice: 10,
+		number: 1
 	}
 }, applyMiddleware(thunkMiddleware));
 
@@ -50,7 +53,7 @@ class CustimuzeShirtApp extends React.Component{
 			<Provider store={store} key="provider">
 		    	<Router history={browserHistory}>
 		    		<Route path="/customize/image/:imageId" component={CustomizePage} touchHandlers={this.touchHandlers}></Route>
-		    		<Route path="/order/image/:imageId" component={OrderPage} touchHandlers={this.touchHandlers}></Route>
+		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>
 			)

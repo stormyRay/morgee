@@ -14,8 +14,8 @@ export const LOADING = "加载中…";
 export const SEE_MORE = "查看更多";
 
 //Customize T-shirt Page
-export const SELECT_OTHER_IMAGE = "选择其他图片";
-export const COMPLETE_CUSTOMIZE = "完成定制";
+export const SELECT_OTHER_IMAGE = "选 择 其 他 图 片";
+export const COMPLETE_CUSTOMIZE = "完 成 定 制";
 
 export const SELECT_CLOTH_TYPE = "选择版型";
 export const SELECT_COLOR = "选择颜色";

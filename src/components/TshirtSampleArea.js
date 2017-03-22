@@ -74,10 +74,10 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	buildImageSrc(id){
-		//return "/images/" + id + "_medium.png";
+		return "/images/" + id + "_medium.png";
 
 		//TEST ONLY
-		return "/images/" + id + ".jpg";
+		//return "/images/" + id + ".jpg";
 		//END: TEST ONLY
 	}
 

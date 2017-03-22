@@ -25,8 +25,9 @@ class CustomizeButtons extends React.Component{
 	}
 
 	handleConfirmClick(){
-		const {imageId} = this.props;
-		const path = `/order/image/${imageId}`;
+		const {imageId, settings} = this.props;
+		const {clothType, clothColor, clothSize, imageSize, imagePosition} = settings;
+		const path = `/order/image/${imageId}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&imageSize=${imageSize}&imagePosition=${imagePosition}`;
     	browserHistory.push(path);
 	}
 }

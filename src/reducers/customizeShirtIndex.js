@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 import activeCustomizeTab from "./activeCustomizeTab";
 import customizeSettings from "./customizeSettings";
-import order from "./order";
+import orderInfo from "./orderInfo";
 
 const reducers = combineReducers({
 	activeCustomizeTab,
 	customizeSettings,
-	order
+	orderInfo
 });
 
 export default reducers;

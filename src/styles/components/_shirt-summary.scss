@@ -45,12 +45,18 @@
 	}
 	.summary-content{
 		.summary-label,
-		.summary-value,
+		.summary-value{
+			display:inline-block;
+			line-height: 1.6rem;
+			font-size: 1.2rem;
+			color:(0,0,0,0.75);
+		}
+
 		.summary-price{
 			display:inline-block;
 			line-height: 1.6rem;
 			font-size: 1.2rem;
-			color: rgba(0,0,0,0.75);
+			color: rgba(223,59,60,0.85);
 		}
 		.summary-label{
 			min-width: 4rem;
