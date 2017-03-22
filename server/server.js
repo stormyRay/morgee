@@ -81,6 +81,28 @@ app.get('/getImages.json', function(req, res){
 	
 });
 
+app.get('/getOrderInfo', function(req, res){
+	var imageId = req.query.imageId;
+	var clothType = req.query.clothType;
+	var clothColor = req.query.clothColor;
+	var clothSize = req.query.clothSize;
+	var description = "尺码" + clothSize + 
+	", 颜色" + ((clothColor == "black")?"炭黑色":(clothColor == "white" ? "纯白色" : "灰黑色")) + 
+	"，材料：纯棉26支纱"
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully get order info",
+		info: {
+			imageTitle: "WHAEVER" + imageId,
+			imagePrice: 20 + parseFloat(Math.random().toFixed(2)),
+			clothPrice: 60 + parseFloat(2 * Math.random().toFixed(2)),
+			clothDescription: description,
+			printPrice: 10 + parseFloat(Math.random().toFixed(2))
+		}
+	}));
+	
+});
+
 // send all requests to index.html so browserHistory works
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
