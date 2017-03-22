@@ -103,6 +103,14 @@ app.get('/getOrderInfo', function(req, res){
 	
 });
 
+app.post('/confirm',function(req, res){
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully confirm"
+	}));
+	
+});
+
 // send all requests to index.html so browserHistory works
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
