@@ -17,6 +17,10 @@
     width: 100%;
     box-sizing: border-box;
     font-size:1.4rem;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    &.last{
+    	border-bottom: none;
+    }
 
 	.order-label{
 		padding: 0 0.6rem;
@@ -59,6 +63,7 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
 .shirt-number-area{
 	.order-number-input-area{
 		display: inline-block;
@@ -102,16 +107,20 @@ input[type="number"] {
 
 .district-info-wrapper{
 	width: 100%;
-	display: table;
 	select{
-		display: table-cell;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		display: inline-block;
 		border: none;
 		background-color: #FFFFFF;
 		background-image: none;
 		text-align-last: center;
+		text-align-last: -webkit-center;
 		font-size: 1.4rem;
 		vertical-align: middle;
 		height: 2rem;
+		box-sizing: border-box;
 	}
 
 	.province-select{
@@ -137,7 +146,7 @@ input[type="number"] {
 		float: right;
 		width: 24px;
 		height: 24px;
-		background-color: #EEEEEE;
+		background-color: #EEDDDD;
 	}
 	&:after{
 		visibility: hidden;

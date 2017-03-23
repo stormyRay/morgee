@@ -28,7 +28,7 @@ class MailInfo extends React.Component{
 					<input className="order-input tel-input" name="telNumber" type="tel" value={this.state.telNumber} onChange={this.changeTelNumber}></input>
 				</div>
 				<DistrictArea />
-				<div className="order-info-area">
+				<div className="order-info-area last">
 					<div className="order-label address-label">{MAIL_DETAIL}</div>
 					<textarea className="order-input address-input" rows="1" name="addressDetail" value={this.state.address} onChange={this.changeAddress} onKeyDown={this.delayAutoHeight}></textarea>
 				</div>

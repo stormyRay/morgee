@@ -12,7 +12,7 @@ class ExtraInfo extends React.Component{
 					<div className="order-label">{SHIPPING_METHOD}</div>
 					<div className="shipping-value order-input">{SHIPPING_SOLID_VALUE}</div>
 				</div>
-				<div className="order-info-area faq-area">
+				<div className="order-info-area faq-area last">
 					<div className="order-label">{COMMON_FAQ}</div>
 					<span className="sprite_right-arrow right-arrow" />
 				</div>

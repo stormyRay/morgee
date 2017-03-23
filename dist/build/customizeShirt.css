@@ -772,7 +772,10 @@ body {
   display: table;
   width: 100%;
   box-sizing: border-box;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  .order-info-area.last {
+    border-bottom: none; }
   .order-info-area .order-label {
     padding: 0 0.6rem;
     width: 5.6rem;
@@ -841,17 +844,21 @@ input[type="number"] {
   height: 0; }
 
 .district-info-wrapper {
-  width: 100%;
-  display: table; }
+  width: 100%; }
   .district-info-wrapper select {
-    display: table-cell;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
     border: none;
     background-color: #FFFFFF;
     background-image: none;
     text-align-last: center;
+    text-align-last: -webkit-center;
     font-size: 1.4rem;
     vertical-align: middle;
-    height: 2rem; }
+    height: 2rem;
+    box-sizing: border-box; }
   .district-info-wrapper .province-select {
     width: 33.3%; }
   .district-info-wrapper .city-select {
@@ -867,7 +874,7 @@ input[type="number"] {
   float: right;
   width: 24px;
   height: 24px;
-  background-color: #EEEEEE; }
+  background-color: #EEDDDD; }
 
 .faq-area:after {
   visibility: hidden;
