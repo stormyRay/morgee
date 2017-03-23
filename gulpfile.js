@@ -37,7 +37,8 @@ var path_customize = {
     RESOURCES_DEST: 'dist/resources'
 };
 
-var path = path_customize;
+//var path = path_pickimage;
+var paths = [path_pickimage, path_customize];
 /*////////////////////////////////////////////////////////////////////////////////
  * Tasks for distribute a product, including
  *  - build: transpile jsx to js, package into 1 file & minimize the js file;
@@ -53,69 +54,81 @@ var path = path_customize;
  *      $ gulp debug
  */////////////////////////////////////////////////////////////////////////////////
 gulp.task('build', function () {
-    browserify({
-        entries: [path.JS_ENTRY_POINT],
-        extensions: ['.js', '.jsx'],
-        //transform: [reactify],
-        debug: true
-    })
-    .transform(babelify.configure({
-                presets: ["react"]
-    }))
-    .bundle()
-    //.pipe(source(path.OUT))
-    //.pipe(gulp.dest(path.DEST))
-    .pipe(source(path.MINIFIED_OUT))
-        .pipe(streamify(uglify(path.MINIFIED_OUT)))
-        .pipe(gulp.dest(path.DEST_BUILD))
+    paths.forEach(function(path){
+        browserify({
+            entries: [path.JS_ENTRY_POINT],
+            extensions: ['.js', '.jsx'],
+            //transform: [reactify],
+            debug: true
+        })
+        .transform(babelify.configure({
+                    presets: ["react"]
+        }))
+        .bundle()
+        //.pipe(source(path.OUT))
+        //.pipe(gulp.dest(path.DEST))
+        .pipe(source(path.MINIFIED_OUT))
+            .pipe(streamify(uglify(path.MINIFIED_OUT)))
+            .pipe(gulp.dest(path.DEST_BUILD))
+    });
 });
 gulp.task('apply-prod-environment', function() {
     process.env.NODE_ENV = 'production';
 });
 
 gulp.task('build-debug', function () {
-    browserify({
-        entries: [path.JS_ENTRY_POINT],
-        extensions: ['.js', '.jsx'],
-        //transform: [reactify],
-        debug: true
-    })
-    .transform(babelify.configure({
-                presets: ["react"]
-    }))
-    .bundle()
-    .pipe(source(path.OUT))
-    .pipe(gulp.dest(path.DEST_SRC));
+    paths.forEach(function(path){
+        browserify({
+            entries: [path.JS_ENTRY_POINT],
+            extensions: ['.js', '.jsx'],
+            //transform: [reactify],
+            debug: true
+        })
+        .transform(babelify.configure({
+                    presets: ["react"]
+        }))
+        .bundle()
+        .pipe(source(path.OUT))
+        .pipe(gulp.dest(path.DEST_SRC));
+    });
 });
 
 gulp.task('replaceHTML', function(){
-    gulp.src(path.HTML)
-        .pipe(htmlreplace({
-            'css': '/build/' + path.CSS_OUT,
-            'js': '/build/' + path.MINIFIED_OUT,
-            'debug': ''
-        }))
-        .pipe(gulp.dest(path.DEST));
+    paths.forEach(function(path){
+        gulp.src(path.HTML)
+            .pipe(htmlreplace({
+                'css': '/build/' + path.CSS_OUT,
+                'js': '/build/' + path.MINIFIED_OUT,
+                'debug': ''
+            }))
+            .pipe(gulp.dest(path.DEST));
+    })
 });
 gulp.task('replaceHTML-debug', function(){
-    gulp.src(path.HTML)
-        .pipe(htmlreplace({
-            'css': '/build/' + path.CSS_OUT,
-            'js': '/build/' + path.OUT
-        }))
-        .pipe(gulp.dest(path.DEST));
+    paths.forEach(function(path){
+        gulp.src(path.HTML)
+            .pipe(htmlreplace({
+                'css': '/build/' + path.CSS_OUT,
+                'js': '/build/' + path.OUT
+            }))
+            .pipe(gulp.dest(path.DEST));
+    });
 });
 
 gulp.task('sass', function () {
-    gulp.src(path.SCSS_ENTRY_POINT)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(replace('../../resources', '../resources'))
-        .pipe(gulp.dest(path.DEST_BUILD));
+    paths.forEach(function(path){
+        gulp.src(path.SCSS_ENTRY_POINT)
+            .pipe(sass().on('error', sass.logError))
+            .pipe(replace('../../resources', '../resources'))
+            .pipe(gulp.dest(path.DEST_BUILD));
+    });
 });
 
 gulp.task('copyResources', function(){
-    gulp.src(path.RESOURCES_SRC)
-        .pipe(gulp.dest(path.RESOURCES_DEST));
+    paths.forEach(function(path){
+        gulp.src(path.RESOURCES_SRC)
+            .pipe(gulp.dest(path.RESOURCES_DEST));
+    });
 })
 /*//////////////////////////////////////////////////////////////////////////////
  * Simple copy & transpling work
