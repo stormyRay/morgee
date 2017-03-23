@@ -345,6 +345,10 @@ html {
 .image-wrapper {
   background-color: #000000;
   position: relative; }
+  .image-wrapper.white {
+    background-color: #FFFFFF; }
+  .image-wrapper.black {
+    background-color: #000000; }
   .image-wrapper.image-in-sale-wrapper {
     width: 12rem;
     height: 14rem; }

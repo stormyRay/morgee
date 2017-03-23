@@ -1,3 +1,10 @@
+input,
+textarea,
+select{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
 .customer-info-wrapper{
 	margin-bottom: 8rem;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import "distpicker";
-import {MAIL_AREA} from "../../../constants/texts";
+import {MAIL_AREA, SELECT_PROVINCE_PLACEHOLDER, SELECT_CITY_PLACEHOLDER, SELECT_DISTRICT_PLACEHOLDER} from "../../../constants/texts";
 class DistrictArea extends React.Component{
 	constructor(props) {
 		super(props);
@@ -9,9 +9,9 @@ class DistrictArea extends React.Component{
 
 	componentDidMount() {
 		$(".district-info-wrapper").distpicker({
-			province: "选择省",
-			city: "选择城市",
-			district: "选择地区"
+			province: SELECT_PROVINCE_PLACEHOLDER,
+			city: SELECT_CITY_PLACEHOLDER,
+			district: SELECT_DISTRICT_PLACEHOLDER
 		});
 	}
 

@@ -8,7 +8,8 @@ class Theme extends React.Component{
 	}
 
 	render() {
-		const {src, title} = this.props;
+		const {src, title, background} = this.props;
+		const wrapperClass = "image-wrapper theme-image-wrapper " + background;
 		return (
 			<div className="theme-container" onClick={this.handleClick}>
 				<div className="image-wrapper theme-image-wrapper">

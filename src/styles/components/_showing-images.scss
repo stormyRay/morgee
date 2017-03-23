@@ -2,6 +2,14 @@
     background-color: #000000;
     position: relative;
 
+    &.white{
+    	background-color: #FFFFFF;
+    }
+
+    &.black{
+    	background-color: #000000;
+    }
+
     &.image-in-sale-wrapper{
 	    width: 12rem;
 	    height: 14rem;

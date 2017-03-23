@@ -64,7 +64,8 @@ app.get('/getImages.json', function(req, res){
 				src: "/images/" + (number<10?("00"+ number): (number<100?("0"+number):number)) + ".jpg",
 				title: "占位",
 				theme: "占"+theme,
-				price: (0.1 * number ).toFixed(1)
+				price: (0.1 * number ).toFixed(1),
+				background: (i % 2 == 1) ? "black" : "white"
 			});
 		}
 		res.status(200).send(JSON.stringify({
@@ -142,75 +143,93 @@ app.listen(PORT, function() {
 const themes = [{
 	id: "1",
 	src: "/images/128.jpg",
-	title: "一般"
+	title: "一般",
+	background: "black"
 }, {
 	id: "2",
 	src: "/images/071.jpg",
-	title: "草"
+	title: "草",
+	background: "white"
 }, {
 	id: "3",
 	src: "/images/077.jpg",
-	title: "火"
+	title: "火",
+	background: "white"
 }, {
 	id: "4",
 	src: "/images/101.jpg",
-	title: "电"
+	title: "电",
+	background: "white"
 }, {
 	id: "5",
 	src: "/images/055.jpg",
-	title: "水"
+	title: "水",
+	background: "white"
 }, {
 	id: "6",
 	src: "/images/124.jpg",
-	title: "冰"
+	title: "冰",
+	background: "white"
 }, {
 	id: "7",
 	src: "/images/080.jpg",
-	title: "超能"
+	title: "超能",
+	background: "white"
 }, {
 	id: "8",
 	src: "/images/112.jpg",
-	title: "地面"
+	title: "地面",
+	background: "black"
 }, {
 	id: "9",
 	src: "/images/092.jpg",
-	title: "幽灵"
+	title: "幽灵",
+	background: "black"
 }, {
 	id: "10",
 	src: "/images/095.jpg",
-	title: "岩石"
+	title: "岩石",
+	background: "black"
 }, {
 	id: "11",
 	src: "/images/067.jpg",
-	title: "格斗"
+	title: "格斗",
+	background: "black"
 }, {
 	id: "12",
 	src: "/images/018.jpg",
-	title: "飞行"
+	title: "飞行",
+	background: "black"
 }, {
 	id: "13",
 	src: "/images/024.jpg",
-	title: "毒"
+	title: "毒",
+	background: "white"
 }, {
 	id: "14",
 	src: "/images/012.jpg",
-	title: "虫"
+	title: "虫",
+	background: "black"
 }, {
 	id: "15",
 	src: "/images/148.jpg",
-	title: "龙"
+	title: "龙",
+	background: "black"
 }, {
 	id: "16",
 	src: "/images/082.jpg",
-	title: "钢"
+	title: "钢",
+	background: "black"
 }, {
 	id: "17",
 	src: "/images/132.jpg",
-	title: "恶"
+	title: "恶",
+	background: "black"
 }, {
 	id: "18",
 	src: "/images/035.jpg",
-	title: "妖精"
+	title: "妖精",
+	background: "white"
 }];
 
 const hotImages = [{
@@ -218,41 +237,48 @@ const hotImages = [{
 	src: "/images/094.jpg",
 	title: "耿鬼",
 	theme: "幽灵",
-	price: 0.3
+	price: 0.3,
+	background: "white"
 }, {
 	id: "006",
 	src: "/images/006.jpg",
 	title: "喷火龙",
 	theme: "火",
-	price: 0.3
+	price: 0.3,
+	background: "white"
 }, {
 	id: "149",
 	src: "/images/149.jpg",
 	title: "快龙",
 	theme: "龙",
-	price: 0.3
+	price: 0.3,
+	background: "black"
 }, {
 	id: "025",
 	src: "/images/025.jpg",
 	title: "皮卡丘",
 	theme: "电",
-	price: 0.2
+	price: 0.2,
+	background: "black"
 }, {
 	id: "142",
 	src: "/images/142.jpg",
 	title: "化石翼龙",
 	theme: "岩石",
-	price: 0.1
+	price: 0.1,
+	background: "white"
 }, {
 	id: "130",
 	src: "/images/130.jpg",
 	title: "暴鲤龙",
 	theme: "水",
-	price: 0.2
+	price: 0.2,
+	background: "white"
 }, {
 	id: "065",
 	src: "/images/065.jpg",
 	title: "胡地",
 	theme: "超能",
-	price: 0.3
+	price: 0.3,
+	background: "black"
 }]

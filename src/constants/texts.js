@@ -55,3 +55,7 @@ export const SHIPPING_METHOD = "物流方式";
 export const SHIPPING_SOLID_VALUE = "顺丰包邮";
 export const COMMON_FAQ = "常见问题";
 export const CONFIRM_AND_PAY = "确认并支付";
+
+export const SELECT_PROVINCE_PLACEHOLDER = "选择省份";
+export const SELECT_CITY_PLACEHOLDER = "选择城市";
+export const SELECT_DISTRICT_PLACEHOLDER = "选择地区";
