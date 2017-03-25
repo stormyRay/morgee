@@ -61,5 +61,5 @@ export const SELECT_CITY_PLACEHOLDER = "选择城市";
 export const SELECT_DISTRICT_PLACEHOLDER = "选择地区";
 
 export const SUCCESSFULLY_PAID = "订 单 支 付 成 功";
-export const FOLLOW_TO_SEE_DETAIL = "关注Moregee，查看订单详情";
+export const FOLLOW_TO_SEE_DETAIL = "关 注 Moregee，查 看 订 单 详 情";
 
