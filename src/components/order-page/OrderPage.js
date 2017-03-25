@@ -25,7 +25,7 @@ class OrderPage extends React.Component{
 			<div className="order-page-root">
 				<TshirtSummaryArea imageId={this.props.params.imageId}/>
 				<CustomerInfoArea {...this.props}/>
-				<ConfirmOrderBar {...this.props}/>
+				<ConfirmOrderBar imageId={this.props.params.imageId} {...this.props}/>
 			</div>
 		)
 	}

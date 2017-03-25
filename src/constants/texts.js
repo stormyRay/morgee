@@ -59,3 +59,7 @@ export const CONFIRM_AND_PAY = "确认并支付";
 export const SELECT_PROVINCE_PLACEHOLDER = "选择省份";
 export const SELECT_CITY_PLACEHOLDER = "选择城市";
 export const SELECT_DISTRICT_PLACEHOLDER = "选择地区";
+
+export const SUCCESSFULLY_PAID = "订 单 支 付 成 功";
+export const FOLLOW_TO_SEE_DETAIL = "关注Moregee，查看订单详情";
+

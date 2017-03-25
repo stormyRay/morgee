@@ -1,5 +1,6 @@
 import React from "react";
 import $ from "jquery";
+import { browserHistory } from "react-router";
 import {TOTAL_LABEL, CONFIRM_AND_PAY} from "../../constants/texts";
 import {CONFIRM_ORDER} from "../../constants/paths";
 class ConfirmOrderBar extends React.Component{
@@ -36,16 +37,29 @@ class ConfirmOrderBar extends React.Component{
 			parameters[formData[i].name] = formData[i].value;
 		}
 
+		var errorFunc = function(msg){
+			alert(msg || "Error happened when submitting!");
+		}
+
 		$.ajax({
 			type: "POST",
 			url: CONFIRM_ORDER,
 			data: parameters,
 			dataType: "json",
-			success: function(){
-				alert("Successfully confirmed!")
+			success: function(response){
+				if(typeof response == "string")
+					var json = JSON.stringify(response.responseText);
+				else 
+					var json = response;
+				if(json.success){
+					const path = "/order/success";
+	    			browserHistory.push(path);
+	    		} else {
+	    			errorFunc(json.message);
+	    		}
 			},
 			error: function(){
-				alert("Error happened when submitting!")
+				errorFunc();
 			}
 		});
 

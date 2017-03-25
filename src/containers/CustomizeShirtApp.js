@@ -6,6 +6,7 @@ import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizePage from "../components/CustomizePage";
 import OrderPageContainer from "./customize-containers/OrderPageContainer";
+import SuccessPay from "../components/order-page/SuccessPay";
 import {getParameterByName} from "../constants/methods";
 
 const store = createStore(reducers, {
@@ -54,6 +55,7 @@ class CustimuzeShirtApp extends React.Component{
 		    	<Router history={browserHistory}>
 		    		<Route path="/customize/image/:imageId" component={CustomizePage} touchHandlers={this.touchHandlers}></Route>
 		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers}></Route>
+		    		<Route path="/order/success" component={SuccessPay} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>
 			)

@@ -12,6 +12,9 @@ class ImagePosition extends React.Component{
 		};
 		this.marks = {
 			0: LOW_POSITION,
+			25: "",
+			50: "",
+			75: "",
 			100: HIGH_POSITION
 		};
 	}
