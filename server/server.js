@@ -132,7 +132,9 @@ app.get('/customize/image/*', function (req, res) {
 app.get('/order/image/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
-
+app.get('/order/success', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
+});
 
 
 var PORT = process.env.PORT || 3000
