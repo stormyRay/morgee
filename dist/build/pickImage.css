@@ -36,17 +36,19 @@ html {
   background-color: #FFFFFF; }
 
 .sprite {
-  background-image: url("/images/sprite-icons-24.png");
+  background-image: url("/images/sprite/sprite-icons-24.png");
   background-repeat: no-repeat;
   display: inline-block;
-  background-size: 170px 136px; }
+  background-size: 170px 170px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dppx) {
   .sprite {
-    background-image: url("/images/sprite-icons-48.png");
+    background-image: url("/images/sprite/sprite-icons-48.png");
     background-repeat: no-repeat;
     display: inline-block;
-    background-size: 170px 136px; } }
+    background-size: 170px 170px; }
+  select {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAASdJREFUaAXtkLFKA0EURaMmWIsQCAiCHxFrbf0vq1RWVlZpbGzyHxYWFoIQ8Bu01XPAyGNBiUGzu3AvXGbfzHszd89gEIVACIRACIRACIRACIRACIRACPSXwCnRDzaM75zzremcl1/xPT78ZQr7nXPee7auKS++4fdPP7CO8Tqyz/7VrPdM1xn8y559LlvgVQjXRzzBP8lz++qc93jf1jXixTtcwzxRH32TxH3Pa7/z3tOahrx8i2uoZ+rjRiJr92ufc863rj0SzHENt6Q+wcp1ieu5/c51RrskucE15Av1BXat+/bZ3zntkOga17DNb8/t66wMd4Wbwa3d73R48n1pxlf9Ceve6ZLE/oRrb3XW2+QJHgIhEAIhEAIhEAIhEAIhEAL/SeADJEtQDQ1ZuucAAAAASUVORK5CYII=") !important; } }
 
 /*
 .sprite-color-black {
@@ -173,90 +175,100 @@ html {
   height: 24px;
   background-position: -39px -5px; }
 
-.sprite-left-arrow-black {
+.sprite-right-arrow-black {
   width: 24px;
   height: 24px;
   background-position: -73px -5px; }
 
-.sprite-loading {
+.sprite-linearrow-down-black {
   width: 24px;
   height: 24px;
   background-position: -107px -5px; }
 
-.sprite-location-black {
+.sprite-linearrow-right-black {
   width: 24px;
   height: 24px;
   background-position: -5px -39px; }
 
-.sprite-location-white {
+.sprite-loading {
   width: 24px;
   height: 24px;
   background-position: -39px -39px; }
 
-.sprite-next-black {
+.sprite-location-black {
   width: 24px;
   height: 24px;
   background-position: -73px -39px; }
 
-.sprite-select-black {
+.sprite-location-white {
   width: 24px;
   height: 24px;
   background-position: -107px -39px; }
 
-.sprite-select-color-black {
+.sprite-next-black {
   width: 24px;
   height: 24px;
   background-position: -5px -73px; }
 
-.sprite-select-color-grey {
+.sprite-select-black {
   width: 24px;
   height: 24px;
   background-position: -39px -73px; }
 
-.sprite-select-color-white {
+.sprite-select-color-black {
   width: 24px;
   height: 24px;
   background-position: -73px -73px; }
 
-.sprite-select-white {
+.sprite-select-color-grey {
   width: 24px;
   height: 24px;
   background-position: -107px -73px; }
 
-.sprite-selected-color-black {
+.sprite-select-color-white {
   width: 24px;
   height: 24px;
   background-position: -5px -107px; }
 
-.sprite-selected-color-grey {
+.sprite-select-white {
   width: 24px;
   height: 24px;
   background-position: -39px -107px; }
 
-.sprite-selected-color-white {
+.sprite-selected-color-black {
   width: 24px;
   height: 24px;
   background-position: -73px -107px; }
 
-.sprite-size-black {
+.sprite-selected-color-grey {
   width: 24px;
   height: 24px;
   background-position: -107px -107px; }
 
-.sprite-size-white {
+.sprite-selected-color-white {
   width: 24px;
   height: 24px;
   background-position: -141px -5px; }
 
-.sprite-tshirt-black {
+.sprite-size-black {
   width: 24px;
   height: 24px;
   background-position: -141px -39px; }
 
-.sprite-tshirt-white {
+.sprite-size-white {
   width: 24px;
   height: 24px;
   background-position: -141px -73px; }
+
+.sprite-tshirt-black {
+  width: 24px;
+  height: 24px;
+  background-position: -141px -107px; }
+
+.sprite-tshirt-white {
+  width: 24px;
+  height: 24px;
+  background-position: -5px -141px; }
 
 .nav-pills {
   height: 4rem;

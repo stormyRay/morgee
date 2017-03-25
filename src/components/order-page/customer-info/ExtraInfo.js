@@ -14,7 +14,7 @@ class ExtraInfo extends React.Component{
 				</div>
 				<div className="order-info-area faq-area last">
 					<div className="order-label">{COMMON_FAQ}</div>
-					<span className="sprite_right-arrow right-arrow" />
+					<span className="right-arrow sprite sprite-linearrow-right-black" />
 				</div>
 			</div>
 		)

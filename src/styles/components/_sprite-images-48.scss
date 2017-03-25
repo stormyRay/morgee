@@ -2,10 +2,13 @@
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 240dppx){
 .sprite {
-    background-image: url("/images/sprite-icons-48.png");
+    background-image: url("/images/sprite/sprite-icons-48.png");
     background-repeat: no-repeat;
     display: inline-block;
-    background-size: 170px 136px;
+    background-size: 170px 170px;
+}
+select{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAASdJREFUaAXtkLFKA0EURaMmWIsQCAiCHxFrbf0vq1RWVlZpbGzyHxYWFoIQ8Bu01XPAyGNBiUGzu3AvXGbfzHszd89gEIVACIRACIRACIRACIRACIRACPSXwCnRDzaM75zzremcl1/xPT78ZQr7nXPee7auKS++4fdPP7CO8Tqyz/7VrPdM1xn8y559LlvgVQjXRzzBP8lz++qc93jf1jXixTtcwzxRH32TxH3Pa7/z3tOahrx8i2uoZ+rjRiJr92ufc863rj0SzHENt6Q+wcp1ieu5/c51RrskucE15Av1BXat+/bZ3zntkOga17DNb8/t66wMd4Wbwa3d73R48n1pxlf9Ceve6ZLE/oRrb3XW2+QJHgIhEAIhEAIhEAIhEAIhEAL/SeADJEtQDQ1ZuucAAAAASUVORK5CYII=")!important;
 }
 }
 

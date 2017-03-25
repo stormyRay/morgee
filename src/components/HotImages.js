@@ -29,7 +29,7 @@ class HotImages extends React.Component{
 					<h3 className="hot-image-title" onClick={this.handleClickSeeMore}>
 						{HOT_PICTURE}
 					</h3>
-					<span className="sprite sprite-left-arrow-black" onClick={this.handleClickSeeMore} />
+					<span className="sprite sprite-right-arrow-black" onClick={this.handleClickSeeMore} />
 				</div>
 				<div className="hot-image-content">
 					{ShowingImages}
