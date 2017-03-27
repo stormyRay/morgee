@@ -707,7 +707,7 @@ body {
   padding: 1.2rem;
   background-color: #FFFFFF;
   display: table;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box; }
 
 .shirt-thumbnail {
@@ -908,7 +908,7 @@ input[type="number"] {
 
 .confirm-order-bar {
   background-color: #FFFFFF;
-  border-top: 2px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
