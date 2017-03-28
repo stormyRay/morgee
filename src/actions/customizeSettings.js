@@ -1,4 +1,4 @@
-import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION} from "../constants/actionTypes";
+import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_SIZE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION} from "../constants/actionTypes";
 
 export const changeClothType = (clothType) => {
 	return{
@@ -6,7 +6,12 @@ export const changeClothType = (clothType) => {
 		clothType
 	}
 }
-
+export const changeClothSize = (clothSize) => {
+	return{
+		type: CHANGE_CLOTH_SIZE,
+		clothSize
+	}
+}
 export const changeClothColor = (clothColor) => {
 	return{
 		type: CHANGE_CLOTH_COLOR,
@@ -25,4 +30,4 @@ export const changeImagePosition = (imagePosition) => {
 		imagePosition
 	}
 }
-export default {changeClothType, changeClothColor, changeImageSize, changeImagePosition};
+export default {changeClothType, changeClothSize, changeClothColor, changeImageSize, changeImagePosition};

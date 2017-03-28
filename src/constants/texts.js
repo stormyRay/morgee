@@ -27,6 +27,16 @@ export const MAN_LOOSE = "男性宽松款";
 export const WOMAN_LOOSE = "女性宽松款"
 export const WOMAN_NORMAL = "女性合身款";
 
+export const WOMAN_SIZE_S_TEXT = "女S";
+export const WOMAN_SIZE_M_TEXT = "女M";
+export const WOMAN_SIZE_L_TEXT = "女L";
+export const WOMAN_SIZE_XL_TEXT = "女XL";
+export const MAN_SIZE_S_TEXT = "男S";
+export const MAN_SIZE_M_TEXT = "男M";
+export const MAN_SIZE_L_TEXT = "男L";
+export const MAN_SIZE_XL_TEXT = "男XL";
+export const MAN_SIZE_XXL_TEXT = "男XXL";
+
 export const WHITE_COLOR = "白色";
 export const BLACK_COLOR = "黑色";
 export const GREY_COLOR = "灰色";
