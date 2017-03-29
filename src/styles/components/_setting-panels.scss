@@ -84,7 +84,7 @@
 	.type-size-container{
 		display: table;
 		padding: 0.5rem 0.6rem;
-		box-sizing: border-size;
+		box-sizing: border-box;
 		.selector-wrapper{
 			display: table-cell;
 			padding: 0.6rem;
@@ -109,7 +109,7 @@
 			.caret{
 				border: none;
 				position: absolute;
-			    right: 0;
+			    right: 0.9rem;
 			    top: 50%;
 			    transform: translate(0,-50%);
 				@extend .sprite;
@@ -154,11 +154,12 @@
 					height: 24px;
 					display: inline-block;
 					position: absolute;
-			    	right: 0;
+			    	right: 0.9rem;
 			    	top: 50%;
 			    	transform: translate(0,-50%);
 					&.checked{
-						background-color: #BFBFBF;
+						@extend .sprite;
+						@extend .sprite-selected-black;
 					}
 				}
 			}

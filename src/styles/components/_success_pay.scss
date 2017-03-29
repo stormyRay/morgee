@@ -3,9 +3,9 @@
 	height: 100%;
 	.center-logo{
 		margin: 5.6rem auto 0 auto;
-		width: 5.4rem;
-		height: 5.4rem;
-		background-color: #5FDFDF;
+		@extend .sprite;
+		@extend .sprite-moregee-logo;
+		display: block;
 	}
 
 	.success-pay-text{
