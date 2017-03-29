@@ -317,18 +317,18 @@ html {
   width: 100%;
   background-color: #FFFFFF; }
 
-.sprite, .setting-panel-container .type-size-container .btn.setting-panel-dropdup .caret {
+.sprite, .setting-panel-container .type-size-container .btn.setting-panel-dropdup .caret, .setting-panel-container .type-size-container li a .check-mark.checked, .success-pay-container .center-logo {
   background-image: url("/images/sprite/sprite-icons-24.png");
   background-repeat: no-repeat;
   display: inline-block;
-  background-size: 170px 170px; }
+  background-size: 204px 166px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dppx) {
-  .sprite, .setting-panel-container .type-size-container .btn.setting-panel-dropdup .caret {
+  .sprite, .setting-panel-container .type-size-container .btn.setting-panel-dropdup .caret, .setting-panel-container .type-size-container li a .check-mark.checked, .success-pay-container .center-logo {
     background-image: url("/images/sprite/sprite-icons-48.png");
     background-repeat: no-repeat;
     display: inline-block;
-    background-size: 170px 170px; }
+    background-size: 204px 166px; }
   select {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAASdJREFUaAXtkLFKA0EURaMmWIsQCAiCHxFrbf0vq1RWVlZpbGzyHxYWFoIQ8Bu01XPAyGNBiUGzu3AvXGbfzHszd89gEIVACIRACIRACIRACIRACIRACPSXwCnRDzaM75zzremcl1/xPT78ZQr7nXPee7auKS++4fdPP7CO8Tqyz/7VrPdM1xn8y559LlvgVQjXRzzBP8lz++qc93jf1jXixTtcwzxRH32TxH3Pa7/z3tOahrx8i2uoZ+rjRiJr92ufc863rj0SzHENt6Q+wcp1ieu5/c51RrskucE15Av1BXat+/bZ3zntkOga17DNb8/t66wMd4Wbwa3d73R48n1pxlf9Ceve6ZLE/oRrb3XW2+QJHgIhEAIhEAIhEAIhEAIhEAL/SeADJEtQDQ1ZuucAAAAASUVORK5CYII=") !important; } }
 
@@ -457,7 +457,7 @@ html {
   height: 24px;
   background-position: -39px -5px; }
 
-.sprite-right-arrow-black {
+.sprite-left-arrow-black {
   width: 24px;
   height: 24px;
   background-position: -73px -5px; }
@@ -467,30 +467,35 @@ html {
   height: 24px;
   background-position: -107px -5px; }
 
-.sprite-linearrow-right-black {
+.sprite-linearrow-left-black {
   width: 24px;
   height: 24px;
-  background-position: -5px -39px; }
+  background-position: -141px -5px; }
 
 .sprite-loading {
   width: 24px;
   height: 24px;
-  background-position: -39px -39px; }
+  background-position: -5px -39px; }
 
 .sprite-location-black, .customize-tab-nav-container ul li .image-position-icon {
   width: 24px;
   height: 24px;
-  background-position: -73px -39px; }
+  background-position: -39px -39px; }
 
 .sprite-location-white, .customize-tab-nav-container ul li.active .image-position-icon {
   width: 24px;
   height: 24px;
+  background-position: -73px -39px; }
+
+.sprite-moregee-logo, .success-pay-container .center-logo {
+  width: 54px;
+  height: 54px;
   background-position: -107px -39px; }
 
 .sprite-next-black {
   width: 24px;
   height: 24px;
-  background-position: -5px -73px; }
+  background-position: -5px -103px; }
 
 .sprite-select-black, .setting-panel-container ul li.active .man-normal,
 .setting-panel-container ul li.active .man-loose,
@@ -498,22 +503,22 @@ html {
 .setting-panel-container ul li.active .woman-normal {
   width: 24px;
   height: 24px;
-  background-position: -39px -73px; }
+  background-position: -39px -103px; }
 
 .sprite-select-color-black, .setting-panel-container ul li .black-color {
   width: 24px;
   height: 24px;
-  background-position: -73px -73px; }
+  background-position: -73px -103px; }
 
 .sprite-select-color-grey, .setting-panel-container ul li .grey-color {
   width: 24px;
   height: 24px;
-  background-position: -107px -73px; }
+  background-position: -107px -103px; }
 
 .sprite-select-color-white, .setting-panel-container ul li .white-color {
   width: 24px;
   height: 24px;
-  background-position: -5px -107px; }
+  background-position: -141px -103px; }
 
 .sprite-select-white, .setting-panel-container ul li .man-normal,
 .setting-panel-container ul li .man-loose,
@@ -521,42 +526,47 @@ html {
 .setting-panel-container ul li .woman-normal {
   width: 24px;
   height: 24px;
-  background-position: -39px -107px; }
+  background-position: -5px -137px; }
+
+.sprite-selected-black, .setting-panel-container .type-size-container li a .check-mark.checked {
+  width: 24px;
+  height: 24px;
+  background-position: -39px -137px; }
 
 .sprite-selected-color-black, .setting-panel-container ul li.active .black-color {
   width: 24px;
   height: 24px;
-  background-position: -73px -107px; }
+  background-position: -73px -137px; }
 
 .sprite-selected-color-grey, .setting-panel-container ul li.active .grey-color {
   width: 24px;
   height: 24px;
-  background-position: -107px -107px; }
+  background-position: -107px -137px; }
 
 .sprite-selected-color-white, .setting-panel-container ul li.active .white-color {
   width: 24px;
   height: 24px;
-  background-position: -141px -5px; }
+  background-position: -141px -137px; }
 
 .sprite-size-black, .customize-tab-nav-container ul li .image-size-icon {
   width: 24px;
   height: 24px;
-  background-position: -141px -39px; }
+  background-position: -175px -5px; }
 
 .sprite-size-white, .customize-tab-nav-container ul li.active .image-size-icon {
   width: 24px;
   height: 24px;
-  background-position: -141px -73px; }
+  background-position: -171px -39px; }
 
 .sprite-tshirt-black, .customize-tab-nav-container ul li .cloth-type-icon {
   width: 24px;
   height: 24px;
-  background-position: -141px -107px; }
+  background-position: -175px -73px; }
 
 .sprite-tshirt-white, .customize-tab-nav-container ul li.active .cloth-type-icon {
   width: 24px;
   height: 24px;
-  background-position: -5px -141px; }
+  background-position: -175px -107px; }
 
 body {
   background-color: #FFFFFF !important; }
@@ -703,7 +713,7 @@ body {
   .setting-panel-container .type-size-container {
     display: table;
     padding: 0.5rem 0.6rem;
-    box-sizing: border-size; }
+    box-sizing: border-box; }
     .setting-panel-container .type-size-container .selector-wrapper {
       display: table-cell;
       padding: 0.6rem;
@@ -724,7 +734,7 @@ body {
       .setting-panel-container .type-size-container .btn.setting-panel-dropdup .caret {
         border: none;
         position: absolute;
-        right: 0;
+        right: 0.9rem;
         top: 50%;
         transform: translate(0, -50%); }
     .setting-panel-container .type-size-container ul {
@@ -762,11 +772,9 @@ body {
           height: 24px;
           display: inline-block;
           position: absolute;
-          right: 0;
+          right: 0.9rem;
           top: 50%;
           transform: translate(0, -50%); }
-          .setting-panel-container .type-size-container li a .check-mark.checked {
-            background-color: #BFBFBF; }
       .setting-panel-container .type-size-container li:last-child {
         border-bottom: none; }
 
@@ -1012,9 +1020,7 @@ input[type="number"] {
   height: 100%; }
   .success-pay-container .center-logo {
     margin: 5.6rem auto 0 auto;
-    width: 5.4rem;
-    height: 5.4rem;
-    background-color: #5FDFDF; }
+    display: block; }
   .success-pay-container .success-pay-text {
     margin: 1.6rem auto 0 auto;
     text-align: center;
