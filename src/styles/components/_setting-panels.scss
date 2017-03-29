@@ -84,24 +84,34 @@
 	.type-size-container{
 		display: table;
 		padding: 0.5rem 0.6rem;
+		box-sizing: border-size;
 		.selector-wrapper{
 			display: table-cell;
 			padding: 0.6rem;
 			width: 50%;
+			.dropup{
+				position: relative;
+			}
 		}
 
 		.btn.setting-panel-dropdup{
 			border: 1px solid #000000;
 			background-color: #FFFFFF;
+			position: relative;
 			height: 4rem;
 			width:100%;
 			font-size: 1.4rem;
 			line-height: 4rem;
 			text-align: left;
 			vertical-align: middle;
+			padding-left: 0.9rem;
 
 			.caret{
 				border: none;
+				position: absolute;
+			    right: 0;
+			    top: 50%;
+			    transform: translate(0,-50%);
 				@extend .sprite;
 				@extend .sprite-linearrow-down-black;
 			}
@@ -110,6 +120,20 @@
 		ul{
 			width: 100%;
 			height: auto;
+			z-index: 1000;
+			position: absolute;
+			background-color: #FFFFFF;
+			border-top: 1px solid #000000;
+			border-left: 1px solid #000000;
+			border-right: 1px solid #000000;
+			border-bottom: none;
+			top: auto;
+			bottom: 100%;
+			display: none;
+			box-sizing: border-box;
+		}
+		.open ul{
+			display: block;
 		}
 		li{
 			display:block;
@@ -121,10 +145,28 @@
 				font-size: 1.4rem;
 				line-height: 3.5rem;
 				text-decoration: none;
+				display: block;
+				padding-left: 0.9rem;
+				color: #000000;
+				position: relative;
+				.check-mark{
+					width: 24px;
+					height: 24px;
+					display: inline-block;
+					position: absolute;
+			    	right: 0;
+			    	top: 50%;
+			    	transform: translate(0,-50%);
+					&.checked{
+						background-color: #BFBFBF;
+					}
+				}
 			}
 			&:last-child{
 				border-bottom: none;
 			}
+
+			
 		}
 	}
 }

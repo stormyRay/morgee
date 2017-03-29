@@ -38,10 +38,22 @@ class ClothTypeAndSize extends React.Component{
 			<div className="setting-panel-container type-size-container">
 				<ButtonToolbar bsClass="selector-wrapper btn-toolbar">
 					<DropdownButton id="cloth_type_dropdown" bsClass="setting-panel-dropdup dropdown" title={clothNameMapping(selectedType)} dropup onSelect={(eventKey, e) =>switchClothType(eventKey)}>
-						<MenuItem eventKey="man_normal">{clothNameMapping("man_normal")}</MenuItem>
-						<MenuItem eventKey="man_loose">{clothNameMapping("man_loose")}</MenuItem>
-						<MenuItem eventKey="woman_normal">{clothNameMapping("woman_normal")}</MenuItem>
-						<MenuItem eventKey="woman_loose">{clothNameMapping("woman_loose")}</MenuItem>
+						<MenuItem eventKey="man_normal">
+							{clothNameMapping("man_normal")}
+							<span className={"check-mark" + ((selectedType == "man_normal") ? " checked" : "")} />
+						</MenuItem>
+						<MenuItem eventKey="man_loose">
+							{clothNameMapping("man_loose")}
+							<span className={"check-mark" + ((selectedType == "man_loose") ? " checked" : "")} />
+						</MenuItem>
+						<MenuItem eventKey="woman_normal">
+							{clothNameMapping("woman_normal")}
+							<span className={"check-mark" + ((selectedType == "woman_normal") ? " checked" : "")} />
+						</MenuItem>
+						<MenuItem eventKey="woman_loose">
+							{clothNameMapping("woman_loose")}
+							<span className={"check-mark" + ((selectedType == "woman_loose") ? " checked" : "")} />
+						</MenuItem>
 					</DropdownButton>
 				</ButtonToolbar>
 				<ButtonToolbar bsClass="selector-wrapper btn-toolbar">
@@ -54,10 +66,14 @@ class ClothTypeAndSize extends React.Component{
 	}
 
 	generateSizeList(sex){
-		const {switchClothSize} = this.props;
+		const {selectedSize, switchClothSize} = this.props;
 		var sizeList = [];
 		this.sizeGroup[sex].map(function(key){
-			sizeList.push(<MenuItem eventKey={key} key={key}>{this.sizeMapping[sex][key]}</MenuItem>);
+			sizeList.push(
+				<MenuItem eventKey={key} key={key}>
+					{this.sizeMapping[sex][key]}
+					<span className={"check-mark" + ((selectedSize == key) ? " checked" : "")} />
+				</MenuItem>);
 		}.bind(this));
 
 		return sizeList;
