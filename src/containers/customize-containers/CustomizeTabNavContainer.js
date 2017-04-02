@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CustomizeTabNav from "../../components/CustomizeTabNav";
+import CustomizeImageTabNav from "../../components/CustomizeImageTabNav";
 import {customizeTab} from "../../actions/customizeIndex";
 
 const {switchCustomizeTab} = customizeTab;
@@ -18,9 +18,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const CustomizeTabNavContainer = connect(
+const CustomizeImageTabNavContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(CustomizeTabNav);
+)(CustomizeImageTabNav);
 
-export default CustomizeTabNavContainer;
+export default CustomizeImageTabNavContainer;

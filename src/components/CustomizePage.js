@@ -1,6 +1,6 @@
 import React from "react";
 import TshirtSampleContainer from "../containers/customize-containers/TshirtSampleContainer";
-import CustomizeTabNavContainer from "../containers/customize-containers/CustomizeTabNavContainer"
+import CustomizeImageTabNavContainer from "../containers/customize-containers/CustomizeImageTabNavContainer"
 import SettingPanelContainer from "../containers/customize-containers/SettingPanelContainer"
 import CustomizeButtonsContainer from "../containers/customize-containers/CustomizeButtonsContainer";
 
@@ -20,7 +20,7 @@ class CustomizePage extends React.Component{
 				<CustomizeButtonsContainer imageId={this.props.params.imageId} />
 				<TshirtSampleContainer imageId={this.props.params.imageId} />
 				<SettingPanelContainer />
-				<CustomizeTabNavContainer />
+				<CustomizeImageTabNavContainer />
 			</div>
 		)
 	}

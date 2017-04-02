@@ -2,9 +2,9 @@ import React from "react";
 import Nav from "react-bootstrap/lib/Nav";
 import NavItem from "react-bootstrap/lib/NavItem";
 
-import {SELECT_CLOTH_TYPE, SELECT_COLOR, IMAGE_SIZE, IMAGE_POSITION} from "../constants/texts";
+import {SELECT_CLOTH_TYPE, SELECT_COLOR, TEXT_CONTENT, TEXT_FONT, TEXT_COLOR} from "../constants/texts";
 
-class CustomizeTabNav extends React.Component {
+class CustomizeTextTabNav extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -12,7 +12,7 @@ class CustomizeTabNav extends React.Component {
 	render(){
 		const {activeCustomizeTab, swicthTab} = this.props;
 		return (
-			<div className="customize-tab-nav-container">
+			<div className="customize-text-tab-nav-container">
 				<Nav bsStyle="pills" justified activeKey={activeCustomizeTab} onSelect={swicthTab}>
 					<NavItem eventKey="type">
 						<div className="customize-tab-wrapper">
@@ -26,16 +26,22 @@ class CustomizeTabNav extends React.Component {
 							<div>{SELECT_COLOR}</div>
 						</div>
 					</NavItem>
-					<NavItem eventKey="size">
+					<NavItem eventKey="text_content">
 						<div className="customize-tab-wrapper">
-							<span className="sprite image-size-icon" />
-							<div>{IMAGE_SIZE}</div>
+							<span className="sprite image-content-icon" />
+							<div>{TEXT_CONTENT}</div>
 						</div>
 					</NavItem>
-					<NavItem eventKey="position">
+					<NavItem eventKey="text_font">
 						<div className="customize-tab-wrapper">
-							<span className="sprite image-position-icon" />
-							<div>{IMAGE_POSITION}</div>
+							<span className="sprite image-font-icon" />
+							<div>{TEXT_FONT}</div>
+						</div>
+					</NavItem>
+					<NavItem eventKey="text_color">
+						<div className="customize-tab-wrapper">
+							<span className="sprite image-color-icon" />
+							<div>{TEXT_COLOR}</div>
 						</div>
 					</NavItem>
 				</Nav>
@@ -44,4 +50,4 @@ class CustomizeTabNav extends React.Component {
 	}
 }
 
-export default CustomizeTabNav;
+export default CustomizeTextTabNav;

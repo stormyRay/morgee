@@ -18,9 +18,12 @@ export const SELECT_OTHER_IMAGE = "选 择 其 他 图 片";
 export const COMPLETE_CUSTOMIZE = "完 成 定 制";
 
 export const SELECT_CLOTH_TYPE = "选择版型";
-export const SELECT_COLOR = "选择颜色";
+export const SELECT_COLOR = "T恤颜色";
 export const IMAGE_SIZE = "图案大小";
 export const IMAGE_POSITION = "图案位置";
+export const TEXT_CONTENT = "文字内容";
+export const TEXT_FONT = "文字字体";
+export const TEXT_COLOR = "文字颜色";
 
 export const MAN_NORMAL = "男性合身款";
 export const MAN_LOOSE = "男性宽松款";
