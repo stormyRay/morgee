@@ -4,7 +4,7 @@ import CustomizeImageTabNavContainer from "../containers/customize-containers/Cu
 import SettingPanelContainer from "../containers/customize-containers/SettingPanelContainer"
 import CustomizeButtonsContainer from "../containers/customize-containers/CustomizeButtonsContainer";
 
-class CustomizePage extends React.Component{
+class CustomizeImagePage extends React.Component{
 	constructor(props) {
 		super(props);
 	}
@@ -26,4 +26,4 @@ class CustomizePage extends React.Component{
 	}
 }
 
-export default CustomizePage;
+export default CustomizeImagePage;
