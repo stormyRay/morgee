@@ -1,4 +1,5 @@
 import React from "react";
+import {TEXT_CONTENT} from "../../constants/texts";
 
 class TextContent extends React.Component{
 	constructor(props) {
@@ -6,9 +7,10 @@ class TextContent extends React.Component{
 	}
 
 	render(){
+		const {textValue} = this.props;
 		return (
 			<div className="setting-panel-container">
-				TextContent
+				<input className="text-content" value={textValue} placeholder={TEXT_CONTENT}/>
 			</div>
 			)
 	}
