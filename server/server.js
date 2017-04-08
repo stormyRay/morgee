@@ -82,6 +82,26 @@ app.get('/getImages.json', function(req, res){
 	
 });
 
+app.get('/getSrc/image', function(req, res){
+	var imageId = req.query.imageId;
+
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully get hot images",
+		src: "/images/" + imageId + ".jpg";
+	}));
+	
+});
+
+app.get('/getSrc/text', function(req, res){
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully get hot images",
+		src: "/images/001.jpg";
+	}));
+	
+});
+
 app.get('/getOrderInfo', function(req, res){
 	var imageId = req.query.imageId;
 	var clothType = req.query.clothType;
