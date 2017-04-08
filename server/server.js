@@ -88,7 +88,7 @@ app.get('/getSrc/image', function(req, res){
 	res.status(200).send(JSON.stringify({
 		success: true,
 		message: "Successfully get hot images",
-		src: "/images/" + imageId + ".jpg";
+		src: "/images/" + imageId + ".jpg"
 	}));
 	
 });
@@ -97,7 +97,7 @@ app.get('/getSrc/text', function(req, res){
 	res.status(200).send(JSON.stringify({
 		success: true,
 		message: "Successfully get hot images",
-		src: "/images/001.jpg";
+		src: "/images/001.jpg"
 	}));
 	
 });
