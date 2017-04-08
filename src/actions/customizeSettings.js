@@ -55,7 +55,7 @@ export const changeTextColor = (textColor) => {
 export const getThumbnailSrc = (type, opts) => {
 	var params = $.param(opts);
 	return dispatch => {
-    return fetch(GET_THUMBNAIL_SRC + "/" + type + params)
+    return fetch(GET_THUMBNAIL_SRC + "/" + type + "?" + params)
       .then(response => response.json())
       .then(json => dispatch(changeThumbnailSrc(json.src)))
   }

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import TshirtSampleArea from "../../components/TshirtSampleArea";
 import {customizeSettings} from "../../actions/customizeIndex";
 
-const {changeImageSize} = customizeSettings;
+const {getThumbnailSrc} = customizeSettings;
 
 const mapStateToProps = (state, ownProps) => {
 	return {

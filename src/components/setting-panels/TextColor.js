@@ -32,6 +32,7 @@ class TextColor extends React.Component{
 							<div>{GREY_COLOR}</div>
 						</div>
 					</NavItem>
+				</Nav>
 			</div>
 			)
 	}

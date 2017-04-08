@@ -12,7 +12,7 @@ class CustomizeTextTabNav extends React.Component {
 	render(){
 		const {activeCustomizeTab, swicthTab} = this.props;
 		return (
-			<div className="customize-text-tab-nav-container">
+			<div className="customize-tab-nav-container text">
 				<Nav bsStyle="pills" justified activeKey={activeCustomizeTab} onSelect={swicthTab}>
 					<NavItem eventKey="type">
 						<div className="customize-tab-wrapper">

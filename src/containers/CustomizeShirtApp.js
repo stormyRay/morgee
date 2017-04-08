@@ -19,7 +19,10 @@ const store = createStore(reducers, {
 		imagePosition: getParameterByName("imagePosition") || 50,
 		clothSize: getParameterByName("clothSize") || "XL",
 		textContent: getParameterByName("textContent") || "",
-		textFont: getParameterByName("textFont") || "1",
+		textFont: {
+			id: getParameterByName("textFontId") || "1",
+			text: getParameterByName("textFontValue") || "字体1"
+		},
 		textColor: getParameterByName("textColor") || "white",
 		thumbnailSrc: ""
 	},

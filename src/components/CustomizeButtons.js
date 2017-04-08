@@ -27,10 +27,11 @@ class CustomizeButtons extends React.Component{
 	handleConfirmClick(){
 		const {imageId, settings, customizeType} = this.props;
 		const {clothType, clothColor, clothSize, imageSize, imagePosition, textContent, textFont, textColor} = settings;
+		var path;
 		if(customizeType == "image")
-			const path = `/order/image/${imageId}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&imageSize=${imageSize}&imagePosition=${imagePosition}`;
+			path = `/order/image/${imageId}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&imageSize=${imageSize}&imagePosition=${imagePosition}`;
 		else if(customizeType == "text")
-			const path = `/order/text/${textContent}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&textFont=${textFont}&textColor=${textColor}`;
+			path = `/order/text/${textContent}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&textFont=${textFont}&textColor=${textColor}`;
     	browserHistory.push(path);
 	}
 }

@@ -12,7 +12,7 @@ class CustomizeImageTabNav extends React.Component {
 	render(){
 		const {activeCustomizeTab, swicthTab} = this.props;
 		return (
-			<div className="customize-tab-nav-container">
+			<div className="customize-tab-nav-container image">
 				<Nav bsStyle="pills" justified activeKey={activeCustomizeTab} onSelect={swicthTab}>
 					<NavItem eventKey="type">
 						<div className="customize-tab-wrapper">

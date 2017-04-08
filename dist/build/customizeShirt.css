@@ -600,13 +600,16 @@ body {
   bottom: 0;
   border-top: 1px solid #000000;
   background-color: #FFFFFF; }
+  .customize-tab-nav-container.text > ul > li {
+    width: 20%; }
+  .customize-tab-nav-container.image > ul > li {
+    width: 25%; }
   .customize-tab-nav-container ul {
     margin: 0;
     padding: 0;
     height: 100%; }
     .customize-tab-nav-container ul li {
       display: inline-block;
-      width: 25%;
       height: 100%;
       overflow: hidden; }
       .customize-tab-nav-container ul li a {

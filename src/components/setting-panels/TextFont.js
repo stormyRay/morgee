@@ -21,7 +21,7 @@ class TextFont extends React.Component{
 		const {selectedFont, switchTextFont} = this.props;
 		var menuList = [];
 		for(var i = 0; i < this.fontList.length; i++){
-			var item = this.List[i];
+			var item = this.fontList[i];
 			menuList.push(
 				<MenuItem eventKey={item} key={item.id}>
 					{item.text}
