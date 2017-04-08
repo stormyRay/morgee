@@ -16,14 +16,31 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	componentDidMount() {
-		this.forceUpdate();
-		window.onresize = function(event) {
-			this.forceUpdate();
-		}.bind(this);
+		// this.forceUpdate();
+		// window.onresize = function(event) {
+		// 	this.forceUpdate();
+		// }.bind(this);
+		const {changeThumbnail, customizeType} = this.props;
+		const {thumbnailSrc} = this.props.settings;
+		var opts = {};
+		if(!thumbnailSrc){
+			if(customizeType == "text"){
+				opts = {
+					textContent: this.props.settings.textContent,
+					textFont: this.props.settings.textFont,
+					textColor: this.props.settings.textColor
+				};
+			} else if(customizeType == "image"){
+				opts = {
+					imageId: this.props.imageId
+				}
+			}
+			changeThumbnail(customizeType, opts);
+		}
 	}
 
 	render(){
-		const {clothType, clothColor, imageSize, imagePosition} = this.props.settings;
+		const {clothType, clothColor, imageSize, imagePosition, thumbnailSrc} = this.props.settings;
 		const {imageId, selectedSetting} = this.props;
 
 		const shirtStyle = {
@@ -31,7 +48,8 @@ class TshirtSampleArea extends React.Component{
 		};
 		const imageStyle = {
 			backgroundSize: this.computeSize(imageSize) + " auto", 
-			backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
+			//backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
+			backgroundImage: "url(" + thumbnailSrc + ")",
 			backgroundPositionY: this.computePositionY(imagePosition)
 		};		
 		const wrapperStyle = this.computeWrapperSize();

@@ -17,7 +17,11 @@ const store = createStore(reducers, {
 		clothColor: getParameterByName("clothColor") || "black",
 		imageSize: getParameterByName("imageSize") || 50,
 		imagePosition: getParameterByName("imagePosition") || 50,
-		clothSize: getParameterByName("clothSize") || "XL"
+		clothSize: getParameterByName("clothSize") || "XL",
+		textContent: getParameterByName("textContent") || "",
+		textFont: getParameterByName("textFont") || "1",
+		textColor: getParameterByName("textColor") || "white",
+		thumbnailSrc: ""
 	},
 	orderInfo: {
 		imageTitle: "占位",//Need to change!!!
@@ -56,7 +60,8 @@ class CustimuzeShirtApp extends React.Component{
 		    	<Router history={browserHistory}>
 		    		<Route path="/customize/image/:imageId" component={CustomizeImagePage} touchHandlers={this.touchHandlers}></Route>
 		    		<Route path="/customize/text" component={CustomizeTextPage} touchHandlers={this.touchHandlers}></Route>
-		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers}></Route>
+		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="image"></Route>
+		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="text"></Route>
 		    		<Route path="/order/success" component={SuccessPay} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>

@@ -17,8 +17,8 @@ class CustomizeImagePage extends React.Component{
 	render() {
 		return (
 			<div className="customize-root">
-				<CustomizeButtonsContainer imageId={this.props.params.imageId} />
-				<TshirtSampleContainer imageId={this.props.params.imageId} />
+				<CustomizeButtonsContainer imageId={this.props.params.imageId} customizeType="image"/>
+				<TshirtSampleContainer imageId={this.props.params.imageId} customizeType="image"/>
 				<SettingPanelContainer />
 				<CustomizeImageTabNavContainer />
 			</div>

@@ -1,5 +1,8 @@
 import { connect } from "react-redux";
 import TshirtSampleArea from "../../components/TshirtSampleArea";
+import {customizeSettings} from "../../actions/customizeIndex";
+
+const {changeImageSize} = customizeSettings;
 
 const mapStateToProps = (state, ownProps) => {
 	return {
@@ -8,8 +11,17 @@ const mapStateToProps = (state, ownProps) => {
 	}
 }
 
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    changeThumbnail: (type, opts) => {
+      dispatch(getThumbnailSrc(type, opts))
+    }
+  }
+}
+
 const TshirtSampleContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(TshirtSampleArea);
 
 export default TshirtSampleContainer;
