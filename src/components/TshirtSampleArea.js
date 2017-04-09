@@ -27,7 +27,7 @@ class TshirtSampleArea extends React.Component{
 			if(customizeType == "text"){
 				opts = {
 					textContent: this.props.settings.textContent,
-					textFont: this.props.settings.textFont,
+					textFont: this.props.settings.textFont.id,
 					textColor: this.props.settings.textColor
 				};
 			} else if(customizeType == "image"){

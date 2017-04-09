@@ -12,6 +12,7 @@ import TextFontSetting from "../containers/customize-containers/TextFontSetting"
 class SettingPanel extends React.Component{
 	constructor(props) {
 		super(props);
+		this.updateTextSrc = this.updateTextSrc.bind(this);
 	}
 
 	render(){
@@ -22,9 +23,9 @@ class SettingPanel extends React.Component{
 			case "color" : setting = (<ClothColorSetting />); break;
 			case "size" : setting = (<ImageSizeSetting />); break;
 			case "position" : setting = (<ImagePositionSetting />); break;
-			case "text_content": setting = (<TextContentSetting />); break;
-			case "text_font": setting = (<TextFontSetting />); break;
-			case "text_color": setting = (<TextColorSetting />); break;
+			case "text_content": setting = (<TextContentSetting updateThumbnail={this.updateTextSrc}/>); break;
+			case "text_font": setting = (<TextFontSetting updateThumbnail={this.updateTextSrc}/>); break;
+			case "text_color": setting = (<TextColorSetting updateThumbnail={this.updateTextSrc}/>); break;
 			default: setting = null;
 		}
 		return (
@@ -32,6 +33,16 @@ class SettingPanel extends React.Component{
 				{setting}
 			</div>
 			)
+	}
+
+	updateTextSrc(content, font, color){
+		const {settings, updateThumbnail} = this.props
+		const {textContent, textFont, textColor} = settings;
+		updateThumbnail({
+			textContent: content || textContent,
+			textFont: font || textFont.id,
+			textColor: color || textColor
+		});
 	}
 }
 

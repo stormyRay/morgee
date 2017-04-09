@@ -35,7 +35,7 @@ class ClothTypeAndSize extends React.Component{
 		const {selectedType, selectedSize, switchClothType, switchClothSize} = this.props;
 		const typeInSex = selectedType.substring(0, selectedType.indexOf("_"));
 		return (
-			<div className="setting-panel-container type-size-container">
+			<div className="setting-panel-container dropup-container type-size-container">
 				<ButtonToolbar bsClass="selector-wrapper btn-toolbar">
 					<DropdownButton id="cloth_type_dropdown" bsClass="setting-panel-dropdup dropdown" title={clothNameMapping(selectedType)} dropup onSelect={(eventKey, e) =>switchClothType(eventKey)}>
 						<MenuItem eventKey="man_normal">

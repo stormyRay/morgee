@@ -16,7 +16,7 @@ const store = createStore(reducers, {
 		clothType: getParameterByName("clothType") || "man_normal",
 		clothColor: getParameterByName("clothColor") || "black",
 		imageSize: getParameterByName("imageSize") || 50,
-		imagePosition: getParameterByName("imagePosition") || 50,
+		imagePosition: getParameterByName("imagePosition") || 50, 
 		clothSize: getParameterByName("clothSize") || "XL",
 		textContent: getParameterByName("textContent") || "",
 		textFont: {
@@ -64,7 +64,7 @@ class CustimuzeShirtApp extends React.Component{
 		    		<Route path="/customize/image/:imageId" component={CustomizeImagePage} touchHandlers={this.touchHandlers}></Route>
 		    		<Route path="/customize/text" component={CustomizeTextPage} touchHandlers={this.touchHandlers}></Route>
 		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="image"></Route>
-		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="text"></Route>
+		    		<Route path="/order/text" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="text"></Route>
 		    		<Route path="/order/success" component={SuccessPay} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>

@@ -10,7 +10,7 @@ class TshirtSummaryArea extends React.Component{
 	render(){
 		return (
 			<div className="shirt-info-summary-container">
-				<TshirtThumbnail imageId={this.props.imageId}/>
+				<TshirtThumbnail imageId={this.props.imageId} customizeType={this.props.customizeType}/>
 				<TshirtSummaryContainer />
 			</div>
 		)

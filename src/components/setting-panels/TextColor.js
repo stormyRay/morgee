@@ -7,13 +7,14 @@ import {WHITE_COLOR, BLACK_COLOR, GREY_COLOR} from "../../constants/texts";
 class TextColor extends React.Component{
 	constructor(props) {
 		super(props);
+		this.updateSrc = this.updateSrc.bind(this);
 	}
 
 	render(){
 		const {selectedTextColor, switchTextColor} = this.props;
 		return (
 			<div className="setting-panel-container">
-				<Nav bsStyle="pills" justified activeKey={selectedTextColor} onSelect={switchTextColor}>
+				<Nav bsStyle="pills" justified activeKey={selectedTextColor} onSelect={(eKey) => {switchTextColor(eKey); this.updateSrc(null, null, eKey);}}>
 					<NavItem eventKey="black">
 						<div className="customize-tab-wrapper">
 							<span className="sprite black-color" />
@@ -35,6 +36,10 @@ class TextColor extends React.Component{
 				</Nav>
 			</div>
 			)
+	}
+
+	updateSrc(content, font, color){
+		this.props.updateThumbnail(content, font, color);
 	}
 }
 

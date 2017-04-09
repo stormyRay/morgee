@@ -6,6 +6,7 @@ import MenuItem from "react-bootstrap/lib/MenuItem";
 class TextFont extends React.Component{
 	constructor(props) {
 		super(props);
+		this.updateSrc = this.updateSrc.bind(this);
 		this.fontList = [{
 			id: "1", text: "字体1"
 		},{
@@ -29,14 +30,18 @@ class TextFont extends React.Component{
 				</MenuItem>);
 		}
 		return (
-			<div className="setting-panel-container">
+			<div className="setting-panel-container dropup-container text-font-container">
 				<ButtonToolbar bsClass="selector-wrapper btn-toolbar">
-					<DropdownButton id="text_font_dropdown" bsClass="setting-panel-dropdup dropdown" title={selectedFont.text} dropup onSelect={(eventKey, e) =>switchTextFont(eventKey)}>
+					<DropdownButton id="text_font_dropdown" bsClass="setting-panel-dropdup dropdown" title={selectedFont.text} dropup onSelect={(eventKey, e) => {switchTextFont(eventKey); this.updateSrc(null, eventKey.id, null);}}>
 						{menuList}
 					</DropdownButton>
 				</ButtonToolbar>
 			</div>
 			)
+	}
+
+	updateSrc(content, font, color){
+		this.props.updateThumbnail(content, font, color);
 	}
 }
 

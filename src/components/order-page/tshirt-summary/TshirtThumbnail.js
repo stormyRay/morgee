@@ -8,7 +8,7 @@ class TshirtThumbnail extends React.Component{
 	render(){
 		return (
 			<div className="shirt-thumbnail">
-				<TshirtSampleContainer imageId={this.props.imageId} />
+				<TshirtSampleContainer imageId={this.props.imageId} customizeType={this.props.customizeType}/>
 			</div>
 		)
 	}

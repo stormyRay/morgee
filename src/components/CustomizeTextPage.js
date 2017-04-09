@@ -17,7 +17,7 @@ class CustomizeTextPage extends React.Component{
 	render() {
 		return (
 			<div className="customize-root">
-				<CustomizeButtonsContainer customizeType="text"/>
+				<CustomizeButtonsContainer textContent={this.props.params.textContent} customizeType="text"/>
 				<TshirtSampleContainer customizeType="text"/>
 				<SettingPanelContainer />
 				<CustomizeTextTabNavContainer />
