@@ -16,10 +16,10 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	componentDidMount() {
-		// this.forceUpdate();
-		// window.onresize = function(event) {
-		// 	this.forceUpdate();
-		// }.bind(this);
+		this.forceUpdate();
+		window.onresize = function(event) {
+			this.forceUpdate();
+		}.bind(this);
 		const {changeThumbnail, customizeType} = this.props;
 		const {thumbnailSrc} = this.props.settings;
 		var opts = {};
