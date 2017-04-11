@@ -16,6 +16,7 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	componentDidMount() {
+		//forceUpdate is the method from React to update the component
 		this.forceUpdate();
 		window.onresize = function(event) {
 			this.forceUpdate();
