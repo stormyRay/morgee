@@ -37,6 +37,11 @@ class CategoryPage extends React.Component{
 		}];
 	}
 
+	componentDidMount() {
+		const {getCategories} = this.props;
+		getCategories(); 
+	}
+
 	render(){
 		const {categories} = this.props;
 		var list = [];

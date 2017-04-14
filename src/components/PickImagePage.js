@@ -17,7 +17,6 @@ class PickImagePage extends React.Component{
 	render(){
 		return (
 			<div>
-				<TypeNavContainer />
 				<HotImagesContainer />
 				<ThemeListContainer />
 				{this.props.children}

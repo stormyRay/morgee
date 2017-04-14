@@ -1,5 +1,6 @@
 import React from "react";
 import { browserHistory } from "react-router";
+import {mapCategoryPath} from "../constants/methods";
 
 class Category extends React.Component{
 	constructor(props) {
@@ -8,7 +9,7 @@ class Category extends React.Component{
 	}
 
 	render() {
-		const {id, src, title, buyInfo, price} = this.props;
+		const {src, title, buyInfo, price} = this.props;
 
 		return (
 			<div className="category-container" onClick={this.handleClick}>
@@ -27,8 +28,8 @@ class Category extends React.Component{
 	}
 
 	handleClick() {
-		const {path} = this.props;
-    	location.href = path + "?stamp=" + (new Date()).getTime();
+		const {id} = this.props;
+    	location.href = mapCategoryPath(id) + "?stamp=" + (new Date()).getTime();
 	}
 
 }

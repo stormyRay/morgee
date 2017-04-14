@@ -1,6 +1,18 @@
 import $ from "jquery";
 import {MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
 
+//Mapping from category ID to its according path
+export const mapCategoryPath = function(id) {
+	switch(id) {
+		case "image": return "/gallery/index";
+		case "single_cn":
+		case "multiple_cn":
+		case "single_en":
+		case "multiple_en": return "/customize/text";
+		default: return "/";
+	}
+}
+
 //Method for change HTML title with workaround for Wechat browser
 export const changeTitle = function(title) {
 	document.title = title;

@@ -3,9 +3,8 @@ import {Provider} from "react-redux";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
-import reducers from "../reducers/pickImageIndex";
-import PickImagePage from "../components/PickImagePage";
-import ImageListContainer from "../containers/pick-image-containers/ImageListContainer";
+import reducers from "../reducers/categories";
+import CategoryPageContainer from "../containers/categories-containers/CategoryPageContainer";
 
 const store = createStore(reducers, {
 		categories: []
@@ -13,7 +12,7 @@ const store = createStore(reducers, {
     applyMiddleware(thunkMiddleware)
     );
 
-class PickImageApp extends React.Component{
+class CategoriesApp extends React.Component{
 	constructor(props) {
 		super(props);
 	}
@@ -25,11 +24,11 @@ class PickImageApp extends React.Component{
 		    		<Route path="/">
 		    			<IndexRedirect to="/index" />
 		    		</Route>
-		    		<Route path="/index" component={PickImagePage}></Route>
+		    		<Route path="/index" component={CategoryPageContainer}></Route>
 		    	</Router>
 			</Provider>
 			)
 	}
 }
 
-export default PickImageApp;
+export default CategoriesApp;
