@@ -9,6 +9,16 @@ app.use(compression())
 
 // serve our static stuff like index.css
 app.use(express.static(path.join(__dirname, '../dist')))
+
+app.get('/categories', function(req, res){
+	res.status(200).send(JSON.stringify({
+		success: true,
+		message: "Successfully get categories",
+		categories: categoryList
+	}));
+	
+})
+
 app.get('/getThemes.json', function(req, res){
 	const LIMIT = 9;
 	var start = req.query.page * LIMIT;
@@ -134,15 +144,18 @@ app.post('/confirm',function(req, res){
 
 // send all requests to index.html so browserHistory works
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
+  res.sendFile(path.join(__dirname, '../dist', 'categories.html'))
 });
 app.get('/index', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist', 'categories.html'))
+});
+app.get('/gallery/index', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
-app.get('/hot', function (req, res) {
+app.get('/gallery/hot', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
-app.get('/theme/*', function (req, res) {
+app.get('/gallery/theme/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'pickimage.html'))
 });
 
@@ -167,6 +180,38 @@ var PORT = process.env.PORT || 3000
 app.listen(PORT, function() {
   console.log('Production Express server running at localhost:' + PORT)
 });
+
+const categoryList = [{
+	id: "image",
+	title: "T恤+图片",
+	src: "/images/001.jpg",
+	buyInfo: "200人购买",
+	price: "40 + 图片价格"
+},{
+	id: "single_cn",
+	title: "单字中文",
+	src: "/images/052.jpg",
+	buyInfo: "200人购买",
+	price: "70"
+},{
+	id: "multiple_cn",
+	title: "多字中文",
+	src: "/images/068.jpg",
+	buyInfo: "200人购买",
+	price: "70"
+},{
+	id: "multiple_en",
+	title: "多词英文",
+	src: "/images/140.jpg",
+	buyInfo: "200人购买",
+	price: "70"
+},{
+	id: "single_en",
+	title: "单词英文",
+	src: "/images/096.jpg",
+	buyInfo: "200人购买",
+	price: "70"
+}];
 
 const themes = [{
 	id: "1",
