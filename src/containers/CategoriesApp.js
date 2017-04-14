@@ -8,18 +8,7 @@ import PickImagePage from "../components/PickImagePage";
 import ImageListContainer from "../containers/pick-image-containers/ImageListContainer";
 
 const store = createStore(reducers, {
-		activeType: "image",
-		themes:{
-			themeList: [],
-			page: 0,
-			hasMore: true
-		},
-		gallery: {
-			imageList: [],
-			page: 0,
-			theme: "选择图片",
-			hasMore: true
-		}
+		categories: []
 	},
     applyMiddleware(thunkMiddleware)
     );
@@ -36,9 +25,7 @@ class PickImageApp extends React.Component{
 		    		<Route path="/">
 		    			<IndexRedirect to="/index" />
 		    		</Route>
-		    		<Route path="/gallery/index" component={PickImagePage}></Route>
-		    		<Route path="/gallery/theme/:theme" component={ImageListContainer} />
-		    		<Route path="/gallery/hot" component={ImageListContainer} theme="hot"/>
+		    		<Route path="/index" component={PickImagePage}></Route>
 		    	</Router>
 			</Provider>
 			)
