@@ -13,13 +13,13 @@ class Category extends React.Component{
 
 		return (
 			<div className="category-container" onClick={this.handleClick}>
-				<div className="category-image-wrapper">
-					<div className="image-in-sale"  style={{backgroundImage: "url('" + src + "')"}} />
+				<div className="image-wrapper category-image-wrapper">
+					<div className="category-thumbnail"  style={{backgroundImage: "url('" + src + "')"}} />
 				</div>
 				<div className="category-information">
 					<div className="top-info">
 						<h3 className="category-title">{title}</h3>
-						<div className="category-theme">{"("+ buyInfo +")"}</div>
+						<div className="category-buy-info">{"("+ buyInfo +")"}</div>
 					</div>
 					<div className="category-price">{"￥" + price}</div>
 				</div>

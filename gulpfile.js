@@ -10,6 +10,19 @@ var babelify = require('babelify');
 var reactify = require('reactify');
 var streamify = require('gulp-streamify');
 
+var path_categories = {
+    HTML: 'src/categories.html',
+    MINIFIED_OUT: 'customizeShirt.build.min.js',
+    OUT: 'categories.build.js',
+    DEST: 'dist',
+    DEST_BUILD: 'dist/build',
+    DEST_SRC: 'dist/build',
+    JS_ENTRY_POINT: './src/entries/categories.js',
+    SCSS_ENTRY_POINT: './src/styles/categories.scss',
+    CSS_OUT: 'categories.css',
+    RESOURCES_SRC: ['resources/**/*'],
+    RESOURCES_DEST: 'dist/resources'
+};
 var path_pickimage = {
     HTML: 'src/pickimage.html',
     MINIFIED_OUT: 'pickImage.build.min.js',
@@ -38,7 +51,7 @@ var path_customize = {
 };
 
 //var path = path_pickimage;
-var paths = [path_pickimage, path_customize];
+var paths = [path_categories, path_pickimage, path_customize];
 /*////////////////////////////////////////////////////////////////////////////////
  * Tasks for distribute a product, including
  *  - build: transpile jsx to js, package into 1 file & minimize the js file;
