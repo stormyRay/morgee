@@ -7,6 +7,7 @@ class TshirtSampleArea extends React.Component{
 
 		this.shirtUrl = "";
 		this.wrapperStyle = {};
+		this.mounted = false;
 
 		this.buildImageSrc = this.buildImageSrc.bind(this);
 		this.buildTshirtSrc = this.buildTshirtSrc.bind(this);
@@ -16,10 +17,12 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	componentDidMount() {
+		this.mounted = true;
 		//forceUpdate is the method from React to update the component
 		this.forceUpdate();
 		window.onresize = function(event) {
-			this.forceUpdate();
+			if(this.mounted)
+				this.forceUpdate();
 		}.bind(this);
 		const {changeThumbnail, customizeType} = this.props;
 		const {thumbnailSrc} = this.props.settings;
@@ -38,6 +41,10 @@ class TshirtSampleArea extends React.Component{
 			}
 			changeThumbnail(customizeType, opts);
 		}
+	}
+
+	componentWillUnmount() {
+		this.mounted = false;
 	}
 
 	render(){
