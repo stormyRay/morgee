@@ -1,140 +1,180 @@
-@import "./sprite-images-24";
-@import "./sprite-images-48";
+.sprite {
+    background-image: url("/images/sprite/sprite-icons-24.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 204px 170px;
+}
 
-.sprite-color-black {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dppx){
+.sprite {
+    background-image: url("/images/sprite/sprite-icons-48.png");
+}
+select{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAASdJREFUaAXtkLFKA0EURaMmWIsQCAiCHxFrbf0vq1RWVlZpbGzyHxYWFoIQ8Bu01XPAyGNBiUGzu3AvXGbfzHszd89gEIVACIRACIRACIRACIRACIRACPSXwCnRDzaM75zzremcl1/xPT78ZQr7nXPee7auKS++4fdPP7CO8Tqyz/7VrPdM1xn8y559LlvgVQjXRzzBP8lz++qc93jf1jXixTtcwzxRH32TxH3Pa7/z3tOahrx8i2uoZ+rjRiJr92ufc863rj0SzHENt6Q+wcp1ieu5/c51RrskucE15Av1BXat+/bZ3zntkOga17DNb8/t66wMd4Wbwa3d73R48n1pxlf9Ceve6ZLE/oRrb3XW2+QJHgIhEAIhEAIhEAIhEAIhEAL/SeADJEtQDQ1ZuucAAAAASUVORK5CYII=")!important;
+}
+}
+
+
+.sprite-select-fontfamily-black {
     width: 24px;
     height: 24px;
     background-position: -5px -5px;
 }
 
-.sprite-color-white {
+.sprite-color-black {
     width: 24px;
     height: 24px;
     background-position: -39px -5px;
 }
 
-.sprite-right-arrow-black {
+.sprite-color-white {
     width: 24px;
     height: 24px;
     background-position: -73px -5px;
 }
 
-.sprite-linearrow-down-black {
+.sprite-input-text-black {
     width: 24px;
     height: 24px;
     background-position: -107px -5px;
 }
 
-.sprite-linearrow-right-black {
+.sprite-input-text-white {
     width: 24px;
     height: 24px;
     background-position: -141px -5px;
 }
 
-.sprite-loading {
+.sprite-linearrow-down-black {
     width: 24px;
     height: 24px;
     background-position: -5px -39px;
 }
 
-.sprite-location-black {
+.sprite-linearrow-right-black {
     width: 24px;
     height: 24px;
     background-position: -39px -39px;
 }
 
-.sprite-location-white {
+.sprite-loading {
     width: 24px;
     height: 24px;
     background-position: -73px -39px;
 }
 
+.sprite-location-black {
+    width: 24px;
+    height: 24px;
+    background-position: -107px -39px;
+}
+
+.sprite-location-white {
+    width: 24px;
+    height: 24px;
+    background-position: -141px -39px;
+}
+
 .sprite-moregee-logo {
     width: 54px;
     height: 54px;
-    background-position: -107px -39px;
+    background-position: -5px -73px;
 }
 
 .sprite-next-black {
     width: 24px;
     height: 24px;
-    background-position: -5px -103px;
+    background-position: -69px -73px;
+}
+
+.sprite-right-arrow-black {
+    width: 24px;
+    height: 24px;
+    background-position: -103px -73px;
 }
 
 .sprite-select-black {
     width: 24px;
     height: 24px;
-    background-position: -39px -103px;
+    background-position: -137px -73px;
 }
 
 .sprite-select-color-black {
     width: 24px;
     height: 24px;
-    background-position: -73px -103px;
+    background-position: -69px -107px;
 }
 
 .sprite-select-color-grey {
     width: 24px;
     height: 24px;
-    background-position: -107px -103px;
+    background-position: -103px -107px;
 }
 
 .sprite-select-color-white {
     width: 24px;
     height: 24px;
-    background-position: -141px -103px;
+    background-position: -137px -107px;
+}
+
+.sprite-select-fontfamily-white {
+    width: 24px;
+    height: 24px;
+    background-position: -5px -141px;
 }
 
 .sprite-select-white {
     width: 24px;
     height: 24px;
-    background-position: -5px -137px;
+    background-position: -39px -141px;
 }
 
 .sprite-selected-black {
     width: 24px;
     height: 24px;
-    background-position: -39px -137px;
+    background-position: -73px -141px;
 }
 
 .sprite-selected-color-black {
     width: 24px;
     height: 24px;
-    background-position: -73px -137px;
+    background-position: -107px -141px;
 }
 
 .sprite-selected-color-grey {
     width: 24px;
     height: 24px;
-    background-position: -107px -137px;
+    background-position: -141px -141px;
 }
 
 .sprite-selected-color-white {
     width: 24px;
     height: 24px;
-    background-position: -141px -137px;
+    background-position: -175px -5px;
 }
 
 .sprite-size-black {
     width: 24px;
     height: 24px;
-    background-position: -175px -5px;
+    background-position: -175px -39px;
 }
 
 .sprite-size-white {
     width: 24px;
     height: 24px;
-    background-position: -171px -39px;
+    background-position: -171px -73px;
 }
 
 .sprite-tshirt-black {
     width: 24px;
     height: 24px;
-    background-position: -175px -73px;
+    background-position: -171px -107px;
 }
 
 .sprite-tshirt-white {
     width: 24px;
     height: 24px;
-    background-position: -175px -107px;
+    background-position: -175px -141px;
 }

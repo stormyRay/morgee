@@ -89,7 +89,8 @@ body{
 				@extend .sprite-tshirt-black;
 			}
 
-			.cloth-color-icon{
+			.cloth-color-icon,
+			.text-color-icon{
 				@extend .sprite-color-black;
 			}
 
@@ -99,6 +100,14 @@ body{
 
 			.image-position-icon{
 				@extend .sprite-location-black;
+			}
+
+			.text-content-icon{
+				@extend .sprite-input-text-black;
+			}
+
+			.text-font-icon{
+				@extend .sprite-select-fontfamily-black;
 			}
 
 			&.active{
@@ -112,7 +121,8 @@ body{
 					@extend .sprite-tshirt-white;
 				}
 
-				.cloth-color-icon{
+				.cloth-color-icon,
+				.text-color-icon{
 					@extend .sprite-color-white;
 				}
 
@@ -122,6 +132,14 @@ body{
 
 				.image-position-icon{
 					@extend .sprite-location-white;
+				}
+
+				.text-content-icon{
+					@extend .sprite-input-text-white;
+				}
+
+				.text-font-icon{
+					@extend .sprite-select-fontfamily-white;
 				}
 			}
 		}
