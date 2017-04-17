@@ -12,7 +12,7 @@ var streamify = require('gulp-streamify');
 
 var path_categories = {
     HTML: 'src/categories.html',
-    MINIFIED_OUT: 'customizeShirt.build.min.js',
+    MINIFIED_OUT: 'categories.build.min.js',
     OUT: 'categories.build.js',
     DEST: 'dist',
     DEST_BUILD: 'dist/build',
