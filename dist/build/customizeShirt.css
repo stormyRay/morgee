@@ -321,181 +321,80 @@ html {
   background-image: url("/images/sprite/sprite-icons-24.png");
   background-repeat: no-repeat;
   display: inline-block;
-  background-size: 204px 166px; }
+  background-size: 204px 170px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dppx) {
   .sprite, .setting-panel-container .dropup-container .btn.setting-panel-dropdup .caret, .setting-panel-container .dropup-container li a .check-mark.checked, .success-pay-container .center-logo {
-    background-image: url("/images/sprite/sprite-icons-48.png");
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: 204px 166px; }
+    background-image: url("/images/sprite/sprite-icons-48.png"); }
   select {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAASdJREFUaAXtkLFKA0EURaMmWIsQCAiCHxFrbf0vq1RWVlZpbGzyHxYWFoIQ8Bu01XPAyGNBiUGzu3AvXGbfzHszd89gEIVACIRACIRACIRACIRACIRACPSXwCnRDzaM75zzremcl1/xPT78ZQr7nXPee7auKS++4fdPP7CO8Tqyz/7VrPdM1xn8y559LlvgVQjXRzzBP8lz++qc93jf1jXixTtcwzxRH32TxH3Pa7/z3tOahrx8i2uoZ+rjRiJr92ufc863rj0SzHENt6Q+wcp1ieu5/c51RrskucE15Av1BXat+/bZ3zntkOga17DNb8/t66wMd4Wbwa3d73R48n1pxlf9Ceve6ZLE/oRrb3XW2+QJHgIhEAIhEAIhEAIhEAIhEAL/SeADJEtQDQ1ZuucAAAAASUVORK5CYII=") !important; } }
 
-/*
-.sprite-color-black {
-    width: 48px;
-    height: 48px;
-    background-position: -10px -10px;
-}
-
-.sprite-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -78px -10px;
-}
-
-.sprite-left-arrow-black {
-    width: 48px;
-    height: 48px;
-    background-position: -146px -10px;
-}
-
-.sprite-loading {
-    width: 48px;
-    height: 48px;
-    background-position: -214px -10px;
-}
-
-.sprite-location-black {
-    width: 48px;
-    height: 48px;
-    background-position: -10px -78px;
-}
-
-.sprite-location-white {
-    width: 48px;
-    height: 48px;
-    background-position: -78px -78px;
-}
-
-.sprite-next-black {
-    width: 48px;
-    height: 48px;
-    background-position: -146px -78px;
-}
-
-.sprite-select-black {
-    width: 48px;
-    height: 48px;
-    background-position: -214px -78px;
-}
-
-.sprite-select-color-black {
-    width: 48px;
-    height: 48px;
-    background-position: -10px -146px;
-}
-
-.sprite-select-color-gray {
-    width: 48px;
-    height: 48px;
-    background-position: -78px -146px;
-}
-
-.sprite-select-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -146px -146px;
-}
-
-.sprite-select-white {
-    width: 48px;
-    height: 48px;
-    background-position: -214px -146px;
-}
-
-.sprite-selected-color-black {
-    width: 48px;
-    height: 48px;
-    background-position: -10px -214px;
-}
-
-.sprite-selected-color-gray {
-    width: 48px;
-    height: 48px;
-    background-position: -78px -214px;
-}
-
-.sprite-selected-color-white {
-    width: 48px;
-    height: 48px;
-    background-position: -146px -214px;
-}
-
-.sprite-size-black- {
-    width: 48px;
-    height: 48px;
-    background-position: -214px -214px;
-}
-
-.sprite-size-white {
-    width: 48px;
-    height: 48px;
-    background-position: -282px -10px;
-}
-
-.sprite-tshirt-black {
-    width: 48px;
-    height: 48px;
-    background-position: -282px -78px;
-}
-
-.sprite-tshirt-white {
-    width: 48px;
-    height: 48px;
-    background-position: -282px -146px;
-}
-*/
-.sprite-color-black, .customize-tab-nav-container ul li .cloth-color-icon {
+.sprite-select-fontfamily-black, .customize-tab-nav-container ul li .text-font-icon {
   width: 24px;
   height: 24px;
   background-position: -5px -5px; }
 
-.sprite-color-white, .customize-tab-nav-container ul li.active .cloth-color-icon {
+.sprite-color-black, .customize-tab-nav-container ul li .cloth-color-icon,
+.customize-tab-nav-container ul li .text-color-icon {
   width: 24px;
   height: 24px;
   background-position: -39px -5px; }
 
-.sprite-right-arrow-black {
+.sprite-color-white, .customize-tab-nav-container ul li.active .cloth-color-icon,
+.customize-tab-nav-container ul li.active .text-color-icon {
   width: 24px;
   height: 24px;
   background-position: -73px -5px; }
 
-.sprite-linearrow-down-black, .setting-panel-container .dropup-container .btn.setting-panel-dropdup .caret {
+.sprite-input-text-black, .customize-tab-nav-container ul li .text-content-icon {
   width: 24px;
   height: 24px;
   background-position: -107px -5px; }
 
-.sprite-linearrow-right-black {
+.sprite-input-text-white, .customize-tab-nav-container ul li.active .text-content-icon {
   width: 24px;
   height: 24px;
   background-position: -141px -5px; }
 
-.sprite-loading {
+.sprite-linearrow-down-black, .setting-panel-container .dropup-container .btn.setting-panel-dropdup .caret {
   width: 24px;
   height: 24px;
   background-position: -5px -39px; }
 
-.sprite-location-black, .customize-tab-nav-container ul li .image-position-icon {
+.sprite-linearrow-right-black {
   width: 24px;
   height: 24px;
   background-position: -39px -39px; }
 
-.sprite-location-white, .customize-tab-nav-container ul li.active .image-position-icon {
+.sprite-loading {
   width: 24px;
   height: 24px;
   background-position: -73px -39px; }
 
+.sprite-location-black, .customize-tab-nav-container ul li .image-position-icon {
+  width: 24px;
+  height: 24px;
+  background-position: -107px -39px; }
+
+.sprite-location-white, .customize-tab-nav-container ul li.active .image-position-icon {
+  width: 24px;
+  height: 24px;
+  background-position: -141px -39px; }
+
 .sprite-moregee-logo, .success-pay-container .center-logo {
   width: 54px;
   height: 54px;
-  background-position: -107px -39px; }
+  background-position: -5px -73px; }
 
 .sprite-next-black {
   width: 24px;
   height: 24px;
-  background-position: -5px -103px; }
+  background-position: -69px -73px; }
+
+.sprite-right-arrow-black {
+  width: 24px;
+  height: 24px;
+  background-position: -103px -73px; }
 
 .sprite-select-black, .setting-panel-container ul li.active .man-normal,
 .setting-panel-container ul li.active .man-loose,
@@ -503,22 +402,27 @@ html {
 .setting-panel-container ul li.active .woman-normal {
   width: 24px;
   height: 24px;
-  background-position: -39px -103px; }
+  background-position: -137px -73px; }
 
 .sprite-select-color-black, .setting-panel-container ul li .black-color {
   width: 24px;
   height: 24px;
-  background-position: -73px -103px; }
+  background-position: -69px -107px; }
 
 .sprite-select-color-grey, .setting-panel-container ul li .grey-color {
   width: 24px;
   height: 24px;
-  background-position: -107px -103px; }
+  background-position: -103px -107px; }
 
 .sprite-select-color-white, .setting-panel-container ul li .white-color {
   width: 24px;
   height: 24px;
-  background-position: -141px -103px; }
+  background-position: -137px -107px; }
+
+.sprite-select-fontfamily-white, .customize-tab-nav-container ul li.active .text-font-icon {
+  width: 24px;
+  height: 24px;
+  background-position: -5px -141px; }
 
 .sprite-select-white, .setting-panel-container ul li .man-normal,
 .setting-panel-container ul li .man-loose,
@@ -526,47 +430,47 @@ html {
 .setting-panel-container ul li .woman-normal {
   width: 24px;
   height: 24px;
-  background-position: -5px -137px; }
+  background-position: -39px -141px; }
 
 .sprite-selected-black, .setting-panel-container .dropup-container li a .check-mark.checked {
   width: 24px;
   height: 24px;
-  background-position: -39px -137px; }
+  background-position: -73px -141px; }
 
 .sprite-selected-color-black, .setting-panel-container ul li.active .black-color {
   width: 24px;
   height: 24px;
-  background-position: -73px -137px; }
+  background-position: -107px -141px; }
 
 .sprite-selected-color-grey, .setting-panel-container ul li.active .grey-color {
   width: 24px;
   height: 24px;
-  background-position: -107px -137px; }
+  background-position: -141px -141px; }
 
 .sprite-selected-color-white, .setting-panel-container ul li.active .white-color {
   width: 24px;
   height: 24px;
-  background-position: -141px -137px; }
+  background-position: -175px -5px; }
 
 .sprite-size-black, .customize-tab-nav-container ul li .image-size-icon {
   width: 24px;
   height: 24px;
-  background-position: -175px -5px; }
+  background-position: -175px -39px; }
 
 .sprite-size-white, .customize-tab-nav-container ul li.active .image-size-icon {
   width: 24px;
   height: 24px;
-  background-position: -171px -39px; }
+  background-position: -171px -73px; }
 
 .sprite-tshirt-black, .customize-tab-nav-container ul li .cloth-type-icon {
   width: 24px;
   height: 24px;
-  background-position: -175px -73px; }
+  background-position: -171px -107px; }
 
 .sprite-tshirt-white, .customize-tab-nav-container ul li.active .cloth-type-icon {
   width: 24px;
   height: 24px;
-  background-position: -175px -107px; }
+  background-position: -175px -141px; }
 
 body {
   background-color: #FFFFFF !important; }
