@@ -57,7 +57,7 @@ class TshirtSampleArea extends React.Component{
 		const imageStyle = {
 			backgroundSize: this.computeSize(imageSize) + " auto", 
 			//backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
-			backgroundImage: "url(" + thumbnailSrc + ")",
+			backgroundImage: "url(" + thumbnailSrc || "/images/001.jpg" + ")",
 			backgroundPositionY: this.computePositionY(imagePosition)
 		};		
 		const wrapperStyle = this.computeWrapperSize();

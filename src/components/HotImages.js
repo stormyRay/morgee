@@ -45,7 +45,7 @@ class HotImages extends React.Component{
 	}
 
 	handleClickSeeMore() {
-		const path = "/hot";
+		const path = "/gallery/hot";
     	browserHistory.push(path);
 	}
 }

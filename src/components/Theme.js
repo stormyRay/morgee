@@ -22,7 +22,7 @@ class Theme extends React.Component{
 
 	handleClick() {
 		const {id} = this.props;
-		const path = `/theme/${id}`;
+		const path = `/gallery/theme/${id}`;
     	browserHistory.push(path);
 	}
 }
