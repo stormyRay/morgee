@@ -5,10 +5,10 @@ import {MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
 export const mapCategoryPath = function(id) {
 	switch(id) {
 		case "image": return "/gallery/index";
-		case "single_cn":
-		case "multiple_cn":
-		case "single_en":
-		case "multiple_en": return "/customize/text";
+		case "single_cn": return "/customize/text/single_cn";
+		case "multiple_cn": return "/customize/text/multiple_cn";
+		case "single_en": return "/customize/text/single_en";
+		case "multiple_en": return "/customize/text/multiple_en";
 		default: return "/";
 	}
 }

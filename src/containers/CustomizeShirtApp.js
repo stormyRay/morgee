@@ -62,9 +62,9 @@ class CustimuzeShirtApp extends React.Component{
 			<Provider store={store} key="provider">
 		    	<Router history={browserHistory}>
 		    		<Route path="/customize/image/:imageId" component={CustomizeImagePage} touchHandlers={this.touchHandlers}></Route>
-		    		<Route path="/customize/text" component={CustomizeTextPage} touchHandlers={this.touchHandlers}></Route>
+		    		<Route path="/customize/text/:textType" component={CustomizeTextPage} touchHandlers={this.touchHandlers}></Route>
 		    		<Route path="/order/image/:imageId" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="image"></Route>
-		    		<Route path="/order/text" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="text"></Route>
+		    		<Route path="/order/text/:textType" component={OrderPageContainer} touchHandlers={this.touchHandlers} customizeType="text"></Route>
 		    		<Route path="/order/success" component={SuccessPay} touchHandlers={this.touchHandlers}></Route>
 		    	</Router>
 			</Provider>

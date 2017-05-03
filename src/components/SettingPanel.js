@@ -41,7 +41,8 @@ class SettingPanel extends React.Component{
 		updateThumbnail({
 			textContent: content || textContent,
 			textFont: font || textFont.id,
-			textColor: color || textColor
+			textColor: color || textColor,
+			textType: this.props.textType
 		});
 	}
 }

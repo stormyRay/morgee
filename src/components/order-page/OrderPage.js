@@ -23,7 +23,7 @@ class OrderPage extends React.Component{
 		const {orderNumber, imagePrice, clothPrice, printPrice} = this.props;
 		return (
 			<div className="order-page-root">
-				<TshirtSummaryArea imageId={this.props.params.imageId} customizeType={this.props.route.customizeType}/>
+				<TshirtSummaryArea imageId={this.props.params.imageId} customizeType={this.props.route.customizeType} textType={this.props.params.textType}/>
 				<CustomerInfoArea {...this.props}/>
 				<ConfirmOrderBar imageId={this.props.params.imageId} {...this.props}/>
 			</div>
