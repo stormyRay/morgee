@@ -162,13 +162,13 @@ app.get('/gallery/theme/*', function (req, res) {
 app.get('/customize/image/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
-app.get('/customize/text', function (req, res) {
+app.get('/customize/text/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
 app.get('/order/image/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
-app.get('/order/text', function (req, res) {
+app.get('/order/text/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist', 'customizeshirt.html'))
 });
 app.get('/order/success', function (req, res) {
