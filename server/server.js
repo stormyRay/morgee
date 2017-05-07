@@ -182,33 +182,27 @@ app.listen(PORT, function() {
 });
 
 const categoryList = [{
-	id: "image",
-	title: "T恤+图片",
-	src: "/images/001.jpg",
-	buyInfo: "200人购买",
-	price: "40 + 图片价格"
-},{
 	id: "single_cn",
 	title: "单字中文",
-	src: "/images/052.jpg",
+	src: "/images/T-shirts/categories/single_cn.png",
 	buyInfo: "200人购买",
 	price: "70"
 },{
 	id: "multiple_cn",
 	title: "多字中文",
-	src: "/images/068.jpg",
+	src: "/images/T-shirts/categories/multiple_cn.png",
 	buyInfo: "200人购买",
 	price: "70"
 },{
 	id: "multiple_en",
 	title: "多词英文",
-	src: "/images/140.jpg",
+	src: "/images/T-shirts/categories/multiple_en.png",
 	buyInfo: "200人购买",
 	price: "70"
 },{
 	id: "single_en",
 	title: "单词英文",
-	src: "/images/096.jpg",
+	src: "/images/T-shirts/categories/single_en.png",
 	buyInfo: "200人购买",
 	price: "70"
 }];
