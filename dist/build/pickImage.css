@@ -39,7 +39,7 @@ html {
   background-image: url("/images/sprite/sprite-icons-24.png");
   background-repeat: no-repeat;
   display: inline-block;
-  background-size: 204px 170px; }
+  background-size: 216px 204px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dppx) {
   .sprite {
@@ -62,125 +62,130 @@ html {
   height: 24px;
   background-position: -73px -5px; }
 
+.sprite-complete-black {
+  width: 36px;
+  height: 38px;
+  background-position: -107px -5px; }
+
 .sprite-input-text-black {
   width: 24px;
   height: 24px;
-  background-position: -107px -5px; }
+  background-position: -153px -5px; }
 
 .sprite-input-text-white {
   width: 24px;
   height: 24px;
-  background-position: -141px -5px; }
+  background-position: -5px -39px; }
 
 .sprite-linearrow-down-black {
   width: 24px;
   height: 24px;
-  background-position: -5px -39px; }
+  background-position: -39px -39px; }
 
 .sprite-linearrow-right-black {
   width: 24px;
   height: 24px;
-  background-position: -39px -39px; }
+  background-position: -73px -39px; }
 
 .sprite-loading {
   width: 24px;
   height: 24px;
-  background-position: -73px -39px; }
+  background-position: -153px -39px; }
 
 .sprite-location-black {
   width: 24px;
   height: 24px;
-  background-position: -107px -39px; }
+  background-position: -5px -73px; }
 
 .sprite-location-white {
   width: 24px;
   height: 24px;
-  background-position: -141px -39px; }
+  background-position: -39px -73px; }
 
 .sprite-moregee-logo {
   width: 54px;
   height: 54px;
-  background-position: -5px -73px; }
+  background-position: -73px -73px; }
 
 .sprite-next-black {
   width: 24px;
   height: 24px;
-  background-position: -69px -73px; }
+  background-position: -137px -73px; }
 
-.sprite-right-arrow-black {
+.sprite-rightt-arrow-black {
   width: 24px;
   height: 24px;
-  background-position: -103px -73px; }
+  background-position: -5px -107px; }
 
 .sprite-select-black {
   width: 24px;
   height: 24px;
-  background-position: -137px -73px; }
+  background-position: -39px -107px; }
 
 .sprite-select-color-black {
   width: 24px;
   height: 24px;
-  background-position: -69px -107px; }
+  background-position: -137px -107px; }
 
 .sprite-select-color-grey {
   width: 24px;
   height: 24px;
-  background-position: -103px -107px; }
+  background-position: -5px -141px; }
 
 .sprite-select-color-white {
   width: 24px;
   height: 24px;
-  background-position: -137px -107px; }
+  background-position: -39px -141px; }
 
 .sprite-select-fontfamily-white {
   width: 24px;
   height: 24px;
-  background-position: -5px -141px; }
+  background-position: -73px -141px; }
 
 .sprite-select-white {
   width: 24px;
   height: 24px;
-  background-position: -39px -141px; }
+  background-position: -107px -141px; }
 
 .sprite-selected-black {
   width: 24px;
   height: 24px;
-  background-position: -73px -141px; }
+  background-position: -141px -141px; }
 
 .sprite-selected-color-black {
   width: 24px;
   height: 24px;
-  background-position: -107px -141px; }
+  background-position: -187px -5px; }
 
 .sprite-selected-color-grey {
   width: 24px;
   height: 24px;
-  background-position: -141px -141px; }
+  background-position: -187px -39px; }
 
 .sprite-selected-color-white {
   width: 24px;
   height: 24px;
-  background-position: -175px -5px; }
+  background-position: -171px -73px; }
 
 .sprite-size-black {
   width: 24px;
   height: 24px;
-  background-position: -175px -39px; }
+  background-position: -171px -107px; }
 
 .sprite-size-white {
   width: 24px;
   height: 24px;
-  background-position: -171px -73px; }
+  background-position: -175px -141px; }
 
 .sprite-tshirt-black {
   width: 24px;
   height: 24px;
-  background-position: -171px -107px; }
+  background-position: -5px -175px; }
 
 .sprite-tshirt-white {
   width: 24px;
   height: 24px;
-  background-position: -175px -141px; }
+  background-position: -39px -175px; }
 
 .nav-pills {
   height: 4rem;
@@ -281,7 +286,7 @@ html {
     width: 10.9rem;
     height: 12.7rem; }
   .image-wrapper.category-image-wrapper {
-    width: 17rem;
+    max-width: 17rem;
     height: 20rem; }
   .image-wrapper div, .image-wrapper img {
     width: 100%;
