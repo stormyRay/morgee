@@ -1,6 +1,6 @@
 import React from "react";
 import { browserHistory } from "react-router";
-import {SELECT_OTHER_IMAGE, COMPLETE_CUSTOMIZE} from "../constants/texts";
+import {SELECT_OTHER_IMAGE, SELECT_OTHER_TEMPLATE, COMPLETE_CUSTOMIZE} from "../constants/texts";
 
 class CustomizeButtons extends React.Component{
 	constructor(props) {
@@ -10,17 +10,22 @@ class CustomizeButtons extends React.Component{
 	}
 
 	render(){
+		const {customizeType} = this.props;
 		return (
 			<div className="customize-buttons-container">
-				<button className="customize-button customize-button-back" onClick={this.handleBackClick}>{SELECT_OTHER_IMAGE}</button>
+				<button className="customize-button customize-button-back" onClick={this.handleBackClick}>{(customizeType == "image")? SELECT_OTHER_IMAGE : SELECT_OTHER_TEMPLATE}</button>
 				<button className="customize-button customize-button-complete" onClick={this.handleConfirmClick}>{COMPLETE_CUSTOMIZE}</button>
 			</div>
 			)
 	}
 
 	handleBackClick(){
+		const {customizeType} = this.props;
 		if(!window.history.back()){
-			location.href = "/index?stamp=" + (new Date()).getTime();
+			if(customizeType == "text")
+				location.href = "/index?stamp=" + (new Date()).getTime();
+			else if(customizeType == "image")
+				location.href = "gallery/index?stamp=" + (new Date()).getTime();
 		}
 	}
 

@@ -4,10 +4,12 @@ import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 import reducers from "../reducers/categories";
-import CategoryPageContainer from "../containers/categories-containers/CategoryPageContainer";
+import CategoryPage from "../components/CategoryPage";
+
 
 const store = createStore(reducers, {
-		categories: []
+		categories: [],
+		activeType: "text"
 	},
     applyMiddleware(thunkMiddleware)
     );
@@ -24,7 +26,7 @@ class CategoriesApp extends React.Component{
 		    		<Route path="/">
 		    			<IndexRedirect to="/index" />
 		    		</Route>
-		    		<Route path="/index" component={CategoryPageContainer}></Route>
+		    		<Route path="/index" component={CategoryPage}></Route>
 		    	</Router>
 			</Provider>
 			)

@@ -14,7 +14,9 @@ export const LOADING = "加载中…";
 export const SEE_MORE = "查看更多";
 
 //Customize T-shirt Page
+
 export const SELECT_OTHER_IMAGE = "选 择 其 他 图 片";
+export const SELECT_OTHER_TEMPLATE = "选 择 其 他 模 板";
 export const COMPLETE_CUSTOMIZE = "完 成 定 制";
 
 export const SELECT_CLOTH_TYPE = "选择版型";
@@ -30,15 +32,15 @@ export const MAN_LOOSE = "男性宽松款";
 export const WOMAN_LOOSE = "女性宽松款"
 export const WOMAN_NORMAL = "女性合身款";
 
-export const WOMAN_SIZE_S_TEXT = "女S";
-export const WOMAN_SIZE_M_TEXT = "女M";
-export const WOMAN_SIZE_L_TEXT = "女L";
-export const WOMAN_SIZE_XL_TEXT = "女XL";
-export const MAN_SIZE_S_TEXT = "男S";
-export const MAN_SIZE_M_TEXT = "男M";
-export const MAN_SIZE_L_TEXT = "男L";
-export const MAN_SIZE_XL_TEXT = "男XL";
-export const MAN_SIZE_XXL_TEXT = "男XXL";
+export const WOMAN_SIZE_S_TEXT = "S  (155-160)";
+export const WOMAN_SIZE_M_TEXT = "M  (160-165)";
+export const WOMAN_SIZE_L_TEXT = "L  (165-170)";
+export const WOMAN_SIZE_XL_TEXT = "XL (170-175)";
+export const MAN_SIZE_S_TEXT = "S   (160-165)";
+export const MAN_SIZE_M_TEXT = "M   (165-170)";
+export const MAN_SIZE_L_TEXT = "L   (170-180)";
+export const MAN_SIZE_XL_TEXT = "XL  (180-185)";
+export const MAN_SIZE_XXL_TEXT = "XXL (185+)";
 
 export const WHITE_COLOR = "白色";
 export const BLACK_COLOR = "黑色";

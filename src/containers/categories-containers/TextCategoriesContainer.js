@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CategoryPage from "../../components/CategoryPage";
+import TextCategories from "../../components/TextCategories";
 import {getCategories} from "../../actions/categories";
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,9 +16,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const CategoryPageContainer = connect(
+const TextCategoriesContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(CategoryPage);
+)(TextCategories);
 
-export default CategoryPageContainer;
+export default TextCategoriesContainer;

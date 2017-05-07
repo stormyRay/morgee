@@ -1,6 +1,6 @@
 import React from "react";
 import $ from "jquery";
-import TypeNavContainer from "../containers/pick-image-containers/TypeNavContainer";
+import TypeNavContainer from "../containers/TypeNavContainer";
 import HotImagesContainer from "../containers/pick-image-containers/HotImagesContainer";
 import ThemeListContainer from "../containers/pick-image-containers/ThemeListContainer";
 import {changeTitle} from "../constants/methods"
@@ -17,6 +17,7 @@ class PickImagePage extends React.Component{
 	render(){
 		return (
 			<div>
+				<TypeNavContainer selected="image" />
 				<HotImagesContainer />
 				<ThemeListContainer />
 				{this.props.children}

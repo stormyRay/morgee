@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import TypeNav from "../../components/TypeNav";
-import {typeNav} from "../../actions/pickImageIndex";
+import TypeNav from "../components/TypeNav";
+import {typeNav} from "../actions/pickImageIndex";
 
 const {switchType} = typeNav;
 
