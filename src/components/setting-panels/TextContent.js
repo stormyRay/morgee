@@ -22,7 +22,7 @@ class TextContent extends React.Component{
 		const {textValue, changeTextContent} = this.props;
 		return (
 			<div className="setting-panel-container input-container">
-				<input className="text-content setting-input" value={textValue} placeholder={TEXT_CONTENT} onChange={(e) => changeTextContent(e.target.value)} onBlur={this.handleBlur} onKeyDown={this.handleKeyDown}/>
+					<input className="text-content setting-input" value={textValue} placeholder={TEXT_CONTENT} onChange={(e) => changeTextContent(e.target.value)} onBlur={this.handleBlur} onKeyDown={this.handleKeyDown}/>
 				<div className="confirm-content-button-wrapper">
 					<div className="confirm-content-button" onClick={this.handleClick}/>
 				</div>

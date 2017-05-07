@@ -114,13 +114,17 @@ input{
 			}
 		}
 
+		
+
 		.confirm-content-button-wrapper{
 			display: table-cell;
 			padding-left: 1.1rem;
-			width: 3.6rem;
+			height: 3.8rem;
+			width: 4.7rem;
+			box-sizing: border-box;
+			vertical-align: top;
 			.confirm-content-button{
 				display: table-cell;
-				width: 3.6rem;
 				height: 3.8rem;
 				background-color: #000000;
 				@extend .sprite;

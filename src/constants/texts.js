@@ -1,7 +1,7 @@
 // Pick Image Page
 // types
-export const IMAGE_AND_TSHIRT = "图片+T恤";
-export const TEXT_AND_TSHIRT = "文字+T恤";
+export const IMAGE_AND_TSHIRT = "图片T恤";
+export const TEXT_AND_TSHIRT = "文字T恤";
 
 export const SELECT_IMAGE = "选择图片";
 export const CUSTOMIZE_TSHIRT = "定制T恤";
