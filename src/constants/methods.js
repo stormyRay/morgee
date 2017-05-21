@@ -1,5 +1,6 @@
 import $ from "jquery";
 import {MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
+import {GET_WECHAT_OPENID, AUTHENTICATE_WECHAT_OPENID} from "./path";
 
 //Mapping from category ID to its according path
 export const mapCategoryPath = function(id) {
@@ -48,4 +49,53 @@ export const getParameterByName = function(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+//wechat user auth interface
+export const wechatAuthorize = function(){
+	var wechatOpenid = window.locaStorage.getItem("wechatOpenid")
+	if(!wechatOpenid){
+		var urlCode = getParameterByName(code);
+		if(urlCode){
+			getOpenidByCode(urlCode);
+		} else {
+			jumpBackToAucthoriztionPage();
+		}
+	} else {
+		authenticateOpenid(wechatOpenid);
+	}
+}
+
+const jumpBackToAucthoriztionPage = function(){
+	const appid = "wxfacdd63743cbcc18";
+	const authUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?" +
+					"appid=" + appid +
+					"&redirect_uri=" + encodeURIComponent(location.href) +
+					"&response_type=code" + 
+					"&scope=snsapi_userinfo" + 
+					"#wechat_redirect";
+	location.href = authUrl;
+}
+
+const getOpenidByCode = function(code){
+	$.ajax({
+		url: GET_WECHAT_OPENID + "?code=" + code,
+		success: function(response){
+			var json = response;//TO DO
+			window.localStorage.setItem("wechatOpenid", json.openid);
+		},
+		error: function(){
+			jumpBackToAucthoriztionPage();
+		}
+	});
+}
+
+const authenticateOpenid = function(openid){
+	$.ajax({
+		url: AUTHENTICATE_WECHAT_OPENID + "?openid=" + openid,
+		success: function(response){},
+		error: function(){
+			jumpBackToAucthoriztionPage();
+		}
+	});
 }
