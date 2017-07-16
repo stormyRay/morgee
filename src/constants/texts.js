@@ -1,3 +1,6 @@
+//appid for wechat public account
+export const appid = "wxfacdd63743cbcc18";
+
 // Pick Image Page
 // types
 export const IMAGE_AND_TSHIRT = "图片T恤";

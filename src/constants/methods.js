@@ -1,5 +1,6 @@
 import $ from "jquery";
-import {MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
+import { browserHistory } from "react-router";
+import {appid, MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
 import {GET_WECHAT_OPENID, AUTHENTICATE_WECHAT_OPENID} from "./path";
 
 //Mapping from category ID to its according path
@@ -67,7 +68,6 @@ export const wechatAuthorize = function(){
 }
 
 const jumpBackToAucthoriztionPage = function(){
-	const appid = "wxfacdd63743cbcc18";
 	const authUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?" +
 					"appid=" + appid +
 					"&redirect_uri=" + encodeURIComponent(location.href) +
@@ -98,4 +98,37 @@ const authenticateOpenid = function(openid){
 			jumpBackToAucthoriztionPage();
 		}
 	});
+}
+
+//Wechat Pay interfaces
+export const lauchWechatPay = function(res){
+	//Refer to http://dditblog.com/itshare_553.html
+	var param = res.data;
+	wx.config({
+		debug: false, 
+		appId: appid,
+		timestamp: param.timestamp,
+		nonceStr: param.noncestr,
+		signature: param.signJs,
+		jsApiList: [´chooseWXPay´]
+	});
+	wx.chooseWXPay({
+		timestamp: param.timestamp,
+		nonceStr: param.noncestr,
+		package: "prepay_id=" param.transNo,
+		signType: "MD5",
+		paySign: param.sign,
+		success: function (res) {
+			if(res.errMsg == "chooseWXPay:ok"){
+				//alert("支付成功");
+				const path = "/order/success";
+	    		browserHistory.push(path);
+			}else{
+				alert(res.errMsg);
+			}
+		},
+		cancel: function(res){
+                            //alert(´取消支付´);
+            }
+    });
 }

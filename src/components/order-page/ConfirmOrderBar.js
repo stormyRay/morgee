@@ -1,8 +1,10 @@
 import React from "react";
 import $ from "jquery";
 import { browserHistory } from "react-router";
-import {TOTAL_LABEL, CONFIRM_AND_PAY} from "../../constants/texts";
+import {appid, TOTAL_LABEL, CONFIRM_AND_PAY} from "../../constants/texts";
 import {CONFIRM_ORDER} from "../../constants/paths";
+import {getParameterByName, lauchWechatPay} from "../../constants/methods";
+
 class ConfirmOrderBar extends React.Component{
 	constructor(props) {
 		super(props);
@@ -31,7 +33,8 @@ class ConfirmOrderBar extends React.Component{
 			clothColor: clothColor,
 			clothSize: clothSize,
 			orderNumber: orderNumber,
-			totalPrice: parseFloat((imagePrice + clothPrice + printPrice) * orderNumber).toFixed(2)
+			totalPrice: parseFloat((imagePrice + clothPrice + printPrice) * orderNumber).toFixed(2),
+			accessToken: getParameterByName("access_token")
 		};
 		for(var i = 0; i < formData.length; i++){
 			parameters[formData[i].name] = formData[i].value;
@@ -52,14 +55,15 @@ class ConfirmOrderBar extends React.Component{
 				else 
 					var json = response;
 				if(json.success){
-					const path = "/order/success";
-	    			browserHistory.push(path);
+					// const path = "/order/success";
+	    // 			browserHistory.push(path);
+	    			lauchWechatPay(response);
 	    		} else {
-	    			errorFunc(json.message);
+	    			alert(json.message);
 	    		}
 			},
 			error: function(){
-				errorFunc();
+				alert("Pay error! Try again!")
 			}
 		});
 
