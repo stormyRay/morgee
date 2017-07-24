@@ -3,6 +3,7 @@ import {Provider} from "react-redux";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
+import {wechatAuthorize} from "../constants/methods";
 import reducers from "../reducers/categories";
 import CategoryPage from "../components/CategoryPage";
 
@@ -17,6 +18,8 @@ const store = createStore(reducers, {
 class CategoriesApp extends React.Component{
 	constructor(props) {
 		super(props);
+		//Every page entry should do the authorization with Wechat
+		wechatAuthorize();
 	}
 
 	render(){

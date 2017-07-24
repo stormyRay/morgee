@@ -34,7 +34,7 @@ class ConfirmOrderBar extends React.Component{
 			clothSize: clothSize,
 			orderNumber: orderNumber,
 			totalPrice: parseFloat((imagePrice + clothPrice + printPrice) * orderNumber).toFixed(2),
-			accessToken: getParameterByName("access_token")
+			openid: window.locaStorage.getItem("wechatOpenid")
 		};
 		for(var i = 0; i < formData.length; i++){
 			parameters[formData[i].name] = formData[i].value;

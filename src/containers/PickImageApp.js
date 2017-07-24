@@ -3,6 +3,7 @@ import {Provider} from "react-redux";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
+import {wechatAuthorize} from "../constants/methods";
 import reducers from "../reducers/pickImageIndex";
 import PickImagePage from "../components/PickImagePage";
 import ImageListContainer from "../containers/pick-image-containers/ImageListContainer";
@@ -27,6 +28,8 @@ const store = createStore(reducers, {
 class PickImageApp extends React.Component{
 	constructor(props) {
 		super(props);
+		//Every page entry should do the authorization with Wechat
+		wechatAuthorize();
 	}
 
 	render(){

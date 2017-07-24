@@ -52,9 +52,21 @@ export const getParameterByName = function(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+//Check browser in in Wechat or not
+export const isWechat = function (){
+	var ua = navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i)=="micromessenger") {
+		return true;
+ 	} else {
+		return false;
+	}
+}
+
 //wechat user auth interface
 export const wechatAuthorize = function(){
-	var wechatOpenid = window.locaStorage.getItem("wechatOpenid")
+	if(!isWechat())
+		return;
+	var wechatOpenid = window.locaStorage.getItem("wechatOpenid");
 	if(!wechatOpenid){
 		var urlCode = getParameterByName(code);
 		if(urlCode){
@@ -121,6 +133,7 @@ export const lauchWechatPay = function(res){
 		success: function (res) {
 			if(res.errMsg == "chooseWXPay:ok"){
 				//alert("支付成功");
+				//可以进行后台轮询。
 				const path = "/order/success";
 	    		browserHistory.push(path);
 			}else{
@@ -128,7 +141,7 @@ export const lauchWechatPay = function(res){
 			}
 		},
 		cancel: function(res){
-                            //alert(´取消支付´);
-            }
+            //alert(´取消支付´);
+        }
     });
 }

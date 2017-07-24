@@ -3,6 +3,7 @@ import {Provider} from "react-redux";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
+import {wechatAuthorize} from "../constants/methods";
 import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizeImagePage from "../components/CustomizeImagePage";
 import CustomizeTextPage from "../components/CustomizeTextPage";
@@ -39,6 +40,8 @@ const store = createStore(reducers, {
 class CustimuzeShirtApp extends React.Component{
 	constructor(props) {
 		super(props);
+		//Every page entry should do the authorization with Wechat
+		wechatAuthorize();
 		this.touchHandlers = {
 			xStart: 0,
 			yStart: 0,
