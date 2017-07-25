@@ -10,14 +10,14 @@ class CustomerInfoArea extends React.Component{
 	}
 
 	render(){
-		const {imagePrice, clothPrice, printPrice, imageId, orderNumber, clothType, clothColor, clothSize} = this.props;
+		const {contentPrice, clothPrice, printPrice, imageId, orderNumber, clothType, clothColor, clothSize} = this.props;
 		var parameters = {
 			imageId: imageId,
 			clothType: clothType,
 			clothColor: clothColor,
 			clothSize: clothSize,
 			orderNumber: orderNumber,
-			totalPrice: parseFloat((imagePrice + clothPrice + printPrice) * orderNumber)
+			totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber)
 		}
 		var url = CONFIRM_ORDER + "?" + $.param(parameters)
 		return (

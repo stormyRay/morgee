@@ -30,7 +30,7 @@ const store = createStore(reducers, {
 	orderInfo: {
 		imageTitle: "占位",//Need to change!!!
 		clothDescription: "尺码XXL, 颜色炭黑色，材料：纯棉26支纱",
-		imagePrice: 20,
+		contentPrice: 20,
 		clothPrice: 60,
 		printPrice: 10,
 		number: 1

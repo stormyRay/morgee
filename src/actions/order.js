@@ -3,12 +3,24 @@ import {GET_ORDER_INFO} from "../constants/paths";
 import fetch from "isomorphic-fetch";
 import $ from "jquery";
 
-export const getOrderInfo = (imageId, clothType, clothColor, clothSize) => {
-	var parameters = {
-		imageId: imageId,
-		clothType: clothType,
-		clothColor: clothColor,
-		clothSize: clothSize
+export const getOrderInfo = (clothInfo, customType, imageId, textInfo) => {
+	if(customType == "image"){
+		var parameters = {
+			imageId: imageId,
+			clothType: clothInfo.clothType,
+			clothColor: clothInfo.clothColor,
+			clothSize: clothInfo.clothSize
+		};
+	} else {
+		var parameters = {
+			textType: textInfo.textType,
+			textContent: textInfo.textContent,
+			textFontId: textInfo.textFont.id,
+			textColor: textInfo.textColor,
+			clothType: clothInfo.clothType,
+			clothColor: clothInfo.clothColor,
+			clothSize: clothInfo.clothSize
+		};
 	}
 	var params = $.param(parameters);
 	return dispatch => {

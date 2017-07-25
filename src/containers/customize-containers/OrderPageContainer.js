@@ -6,20 +6,23 @@ const {getOrderInfo} = order;
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		imagePrice: state.orderInfo.imagePrice,
+		contentPrice: state.orderInfo.contentPrice,
 		clothPrice: state.orderInfo.clothPrice,
 		printPrice: state.orderInfo.printPrice,
 		clothType: state.customizeSettings.clothType,
 		clothColor: state.customizeSettings.clothColor,
 		clothSize: state.customizeSettings.clothSize,
+		textContent: state.customizeSettings.textContent,
+		textFont: state.customizeSettings.textFont,
+		textColor: state.customizeSettings.textColor,
 		orderNumber: state.orderInfo.number
 	}
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    getOrderInfo: (imageId, clothType, clothColor, clothSize) => {
-      dispatch(getOrderInfo(imageId, clothType, clothColor, clothSize))
+    getOrderInfo: (clothInfo, customType, imageId, textInfo) => {
+      dispatch(getOrderInfo(clothInfo, customType, imageId, textInfo))
     }
   }
 }

@@ -1,7 +1,7 @@
 import $ from "jquery";
 import { browserHistory } from "react-router";
 import {appid, MAN_NORMAL, MAN_LOOSE, WOMAN_LOOSE, WOMAN_NORMAL} from "./texts";
-import {GET_WECHAT_OPENID, AUTHENTICATE_WECHAT_OPENID} from "./path";
+import {GET_WECHAT_OPENID, AUTHENTICATE_WECHAT_OPENID} from "./paths";
 
 //Mapping from category ID to its according path
 export const mapCategoryPath = function(id) {
@@ -66,7 +66,7 @@ export const isWechat = function (){
 export const wechatAuthorize = function(){
 	if(!isWechat())
 		return;
-	var wechatOpenid = window.locaStorage.getItem("wechatOpenid");
+	var wechatOpenid = window.localStorage.getItem("wechatOpenid");
 	if(!wechatOpenid){
 		var urlCode = getParameterByName(code);
 		if(urlCode){
@@ -122,12 +122,12 @@ export const lauchWechatPay = function(res){
 		timestamp: param.timestamp,
 		nonceStr: param.noncestr,
 		signature: param.signJs,
-		jsApiList: [´chooseWXPay´]
+		jsApiList: ["chooseWXPay"]
 	});
 	wx.chooseWXPay({
 		timestamp: param.timestamp,
 		nonceStr: param.noncestr,
-		package: "prepay_id=" param.transNo,
+		package: "prepay_id=" + param.transNo,
 		signType: "MD5",
 		paySign: param.sign,
 		success: function (res) {

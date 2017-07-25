@@ -58,6 +58,7 @@ export const LOW_POSITION = "低";
 
 //Order Page
 export const IMAGE_LABEL = "图片：";
+export const TEXT_LABEL = "文字：";
 export const CLOTH_LABEL = "T恤：";
 export const PRINT_LABEL = "印刷服务：";
 export const TOTAL_LABEL = "合计：";

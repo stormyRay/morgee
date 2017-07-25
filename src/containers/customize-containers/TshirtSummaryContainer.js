@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
 		imageTitle: state.orderInfo.imageTitle,
 		clothType: state.customizeSettings.clothType,
 		clothDescription: state.orderInfo.clothDescription,
-		imagePrice: state.orderInfo.imagePrice,
+		contentPrice: state.orderInfo.contentPrice,
 		clothPrice: state.orderInfo.clothPrice,
 		printPrice: state.orderInfo.printPrice
 	};

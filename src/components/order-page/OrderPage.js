@@ -11,8 +11,19 @@ class OrderPage extends React.Component{
 		document.removeEventListener('touchmove', this.props.route.touchHandlers.touchmoveHandler);
 	}
 	componentWillMount() {
-		const {getOrderInfo, clothType, clothColor, clothSize} = this.props;
-		getOrderInfo(this.props.params.imageId, clothType, clothColor, clothSize);
+		const {getOrderInfo, clothType, clothColor, clothSize, textContent, textColor, textFont} = this.props;
+		getOrderInfo({
+			clothType,
+			clothColor,
+			clothType,
+			clothSize
+		}, this.props.route.customizeType, 
+		this.props.params.imageId, {
+			textType: this.props.params.textType,
+			textContent,
+			textColor,
+			textFont
+		});
 	}
 
 	componentDidMount() {
@@ -20,12 +31,12 @@ class OrderPage extends React.Component{
 	}
 
 	render(){
-		const {orderNumber, imagePrice, clothPrice, printPrice} = this.props;
+		const {orderNumber, contentPrice, clothPrice, printPrice} = this.props;
 		return (
 			<div className="order-page-root">
-				<TshirtSummaryArea imageId={this.props.params.imageId} customizeType={this.props.route.customizeType} textType={this.props.params.textType}/>
+				<TshirtSummaryArea imageId={this.props.params.imageId} customizeType={this.props.route.customizeType} textType={this.props.params.textType} {...this.props}/>
 				<CustomerInfoArea {...this.props}/>
-				<ConfirmOrderBar imageId={this.props.params.imageId} {...this.props}/>
+				<ConfirmOrderBar imageId={this.props.params.imageId} customizeType={this.props.route.customizeType} textType={this.props.params.textType} {...this.props}/>
 			</div>
 		)
 	}

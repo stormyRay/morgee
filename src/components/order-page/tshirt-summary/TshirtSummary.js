@@ -1,5 +1,5 @@
 import React from "react";
-import {IMAGE_LABEL, CLOTH_LABEL, PRINT_LABEL, TOTAL_LABEL} from "../../../constants/texts";
+import {IMAGE_LABEL, TEXT_LABEL, CLOTH_LABEL, PRINT_LABEL, TOTAL_LABEL} from "../../../constants/texts";
 import {clothNameMapping} from "../../../constants/methods";
 class TshirtSummary extends React.Component{
 	constructor(props) {
@@ -7,14 +7,15 @@ class TshirtSummary extends React.Component{
 	}
 
 	render(){
-		const {imageTitle, clothType, clothDescription, imagePrice, clothPrice, printPrice} = this.props;
-		const totalPrice = imagePrice + clothPrice + printPrice;
+		const {customizeType, imageTitle, textContent, textFont, clothType, clothDescription, contentPrice, clothPrice, printPrice} = this.props;
+		const contentText = (customizeType == "image") ? imageTitle : (textContent + " (" + textFont.text + ")");
+		const totalPrice = contentPrice + clothPrice + printPrice;
 		return (
 			<div className="shirt-summary">
 				<div className="image-summary summary-wrapper summary-content light-bottom-border">
-					<div className="summary-label summary-label-image">{IMAGE_LABEL}</div>
-					<div className="summary-value">{imageTitle}</div>
-					<div className="summary-price">{"￥" + imagePrice.toFixed(2)}</div>
+					<div className="summary-label summary-label-image">{customizeType == "image" ? IMAGE_LABEL : TEXT_LABEL}</div>
+					<div className="summary-value">{contentText}</div>
+					<div className="summary-price">{"￥" + contentPrice.toFixed(2)}</div>
 				</div>
 				<div className="cloth-summary summary-wrapper  light-bottom-border">
 					<div className="summary-content">

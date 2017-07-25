@@ -12,9 +12,9 @@ class ConfirmOrderBar extends React.Component{
 	}
 
 	render(){
-		const {imagePrice, clothPrice, printPrice, orderNumber} = this.props;
+		const {contentPrice, clothPrice, printPrice, orderNumber} = this.props;
 		var number = parseInt(orderNumber) || 1;
-		var totalPrice = parseFloat((imagePrice + clothPrice + printPrice) * number).toFixed(2);
+		var totalPrice = parseFloat((contentPrice + clothPrice + printPrice) * number).toFixed(2);
 		return (
 			<div className="confirm-order-bar">
 				<div className="confirm-label">{TOTAL_LABEL}</div>
@@ -25,16 +25,17 @@ class ConfirmOrderBar extends React.Component{
 	}
 
 	handleConfirm(e) {
-		const {imagePrice, clothPrice, printPrice, imageId, orderNumber, clothType, clothColor, clothSize} = this.props;
+		const {customizeType, contentPrice, clothPrice, printPrice, imageId, textType, orderNumber, clothType, clothColor, clothSize, textContent, textColor, textFont} = this.props;
 		var formData = $("#customer_info_form").serializeArray();
+		var contentData = (customizeType == "image") ? { imageId } : { textType, textContent, textColor, textFont };
 		var parameters = {
-			imageId: imageId,
+			content: contentData,
 			clothType: clothType,
 			clothColor: clothColor,
 			clothSize: clothSize,
 			orderNumber: orderNumber,
-			totalPrice: parseFloat((imagePrice + clothPrice + printPrice) * orderNumber).toFixed(2),
-			openid: window.locaStorage.getItem("wechatOpenid")
+			totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
+			openid: window.localStorage.getItem("wechatOpenid") || ""
 		};
 		for(var i = 0; i < formData.length; i++){
 			parameters[formData[i].name] = formData[i].value;

@@ -11,7 +11,7 @@ class TshirtSummaryArea extends React.Component{
 		return (
 			<div className="shirt-info-summary-container">
 				<TshirtThumbnail imageId={this.props.imageId} customizeType={this.props.customizeType} textType={this.props.textType}/>
-				<TshirtSummaryContainer />
+				<TshirtSummaryContainer customizeType={this.props.customizeType} {...this.props}/>
 			</div>
 		)
 	}
