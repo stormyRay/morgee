@@ -125,7 +125,7 @@ app.get('/getOrderInfo', function(req, res){
 		message: "Successfully get order info",
 		info: {
 			imageTitle: "WHAEVER" + imageId,
-			imagePrice: 20 + parseFloat(Math.random().toFixed(2)),
+			contentPrice: 20 + parseFloat(Math.random().toFixed(2)),
 			clothPrice: 60 + parseFloat(2 * Math.random().toFixed(2)),
 			clothDescription: description,
 			printPrice: 10 + parseFloat(Math.random().toFixed(2))
