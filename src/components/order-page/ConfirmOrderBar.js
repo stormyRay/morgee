@@ -43,7 +43,7 @@ class ConfirmOrderBar extends React.Component{
 				textContent,
 				textColor,
 				textFontId: textFont.id,
-				textFontValue: textFont.text
+				textFontValue: textFont.text,
 				clothType,
 				clothColor,
 				clothSize,
