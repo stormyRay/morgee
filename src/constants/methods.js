@@ -68,7 +68,7 @@ export const wechatAuthorize = function(){
 		return;
 	var wechatOpenid = window.localStorage.getItem("wechatOpenid");
 	if(!wechatOpenid){
-		var urlCode = getParameterByName(code);
+		var urlCode = getParameterByName("code");
 		if(urlCode){
 			getOpenidByCode(urlCode);
 		} else {

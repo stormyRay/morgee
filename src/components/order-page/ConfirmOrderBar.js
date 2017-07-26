@@ -27,6 +27,31 @@ class ConfirmOrderBar extends React.Component{
 	handleConfirm(e) {
 		const {customizeType, contentPrice, clothPrice, printPrice, imageId, textType, orderNumber, clothType, clothColor, clothSize, textContent, textColor, textFont} = this.props;
 		var formData = $("#customer_info_form").serializeArray();
+		if(customizeType == "image"){
+			var parameters = {
+				imageId,
+				clothType,
+				clothColor,
+				clothSize,
+				orderNumber,
+				totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
+				openid: window.localStorage.getItem("wechatOpenid") || ""
+			};
+		} else {
+			var parameters = {
+				textType,
+				textContent,
+				textColor,
+				textFontId: textFont.id,
+				textFontValue: textFont.text
+				clothType,
+				clothColor,
+				clothSize,
+				orderNumber,
+				totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
+				openid: window.localStorage.getItem("wechatOpenid") || ""
+			};
+		}
 		var contentData = (customizeType == "image") ? { imageId } : { textType, textContent, textColor, textFont };
 		var parameters = {
 			content: contentData,
