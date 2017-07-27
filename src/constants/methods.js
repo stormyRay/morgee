@@ -52,6 +52,31 @@ export const getParameterByName = function(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+export const removeURLParameters = function(names, url){
+	if(typeof names == "string"){
+		return removeParameterFromURL(names, url);
+	} else{
+		var newUrl = url;
+		for(var i = 0; i < names.length; i ++){
+			newUrl = removeParameterFromURL(names[i], newUrl);
+		}
+		return newUrl;
+	}
+}
+
+export const removeParameterFromURL = function(name, url){
+	if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp(name + "(=([^&#]*)|&|#|$)[&]?");
+    var newUrl = url.replace(regex, "");
+    if(newUrl[newUrl.length - 1] == "&")
+    	return newUrl.slice(0, newUrl.length - 1);
+    else
+        return newUrl;
+}
+
 //Check browser in in Wechat or not
 export const isWechat = function (){
 	var ua = navigator.userAgent.toLowerCase();
@@ -82,7 +107,7 @@ export const wechatAuthorize = function(){
 const jumpBackToAucthoriztionPage = function(){
 	const authUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?" +
 					"appid=" + appid +
-					"&redirect_uri=" + encodeURIComponent(location.href) +
+					"&redirect_uri=" + encodeURIComponent(removeParameters(["code", "state"])) +
 					"&response_type=code" + 
 					"&scope=snsapi_userinfo" + 
 					"#wechat_redirect";
@@ -93,7 +118,10 @@ const getOpenidByCode = function(code){
 	$.ajax({
 		url: GET_WECHAT_OPENID + "?code=" + code,
 		success: function(response){
-			var json = response;//TO DO
+			if(typeof response == "string")
+				var json = JSON.parse(response);
+			else
+				var json = response;
 			window.localStorage.setItem("wechatOpenid", json.openid);
 		},
 		error: function(){
