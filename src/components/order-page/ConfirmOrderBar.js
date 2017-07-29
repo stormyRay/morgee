@@ -52,16 +52,6 @@ class ConfirmOrderBar extends React.Component{
 				openid: window.localStorage.getItem("wechatOpenid") || ""
 			};
 		}
-		var contentData = (customizeType == "image") ? { imageId } : { textType, textContent, textColor, textFont };
-		var parameters = {
-			content: contentData,
-			clothType: clothType,
-			clothColor: clothColor,
-			clothSize: clothSize,
-			orderNumber: orderNumber,
-			totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
-			openid: window.localStorage.getItem("wechatOpenid") || ""
-		};
 		for(var i = 0; i < formData.length; i++){
 			parameters[formData[i].name] = formData[i].value;
 		}

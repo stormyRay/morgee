@@ -144,32 +144,53 @@ const authenticateOpenid = function(openid){
 export const lauchWechatPay = function(res){
 	//Refer to http://dditblog.com/itshare_553.html
 	var param = res.data;
-	wx.config({
-		debug: false, 
-		appId: appid,
-		timestamp: param.timestamp,
-		nonceStr: param.noncestr,
-		signature: param.signJs,
-		jsApiList: ["chooseWXPay"]
-	});
-	wx.chooseWXPay({
-		timestamp: param.timestamp,
-		nonceStr: param.noncestr,
-		package: "prepay_id=" + param.transNo,
-		signType: "MD5",
-		paySign: param.sign,
-		success: function (res) {
-			if(res.errMsg == "chooseWXPay:ok"){
-				//alert("支付成功");
-				//可以进行后台轮询。
-				const path = "/order/success";
-	    		browserHistory.push(path);
-			}else{
-				alert(res.errMsg);
-			}
-		},
-		cancel: function(res){
-            //alert(´取消支付´);
-        }
-    });
+	if (typeof WeixinJSBridge == "undefined"){  
+		if( document.addEventListener ){  
+			document.addEventListener('WeixinJSBridgeReady', onBridgeReady.bind(this, param), false);  
+		}else if (document.attachEvent){  
+			document.attachEvent('WeixinJSBridgeReady', onBridgeReady.bind(this, param));   
+			document.attachEvent('onWeixinJSBridgeReady', onBridgeReady.bind(this, param));  
+		}  
+	}else{  
+		onBridgeReady(param);  
+	}   
+	// wx.config({
+	// 	debug: false, 
+	// 	appId: appid,
+	// 	timestamp: param.timestamp,
+	// 	nonceStr: param.noncestr,
+	// 	signature: param.signJs,
+	// 	jsApiList: ["chooseWXPay"]
+	// });
+	// wx.chooseWXPay({
+	// 	timestamp: param.timestamp,
+	// 	nonceStr: param.noncestr,
+	// 	package: "prepay_id=" + param.transNo,
+	// 	signType: "MD5",
+	// 	paySign: param.sign,
+	// 	success: function (res) {
+	// 		if(res.errMsg == "chooseWXPay:ok"){
+	// 			//alert("支付成功");
+	// 			//可以进行后台轮询。
+	// 			const path = "/order/success";
+	//     		browserHistory.push(path);
+	// 		}else{
+	// 			alert(res.errMsg);
+	// 		}
+	// 	},
+	// 	cancel: function(res){
+ //            //alert(´取消支付´);
+ //        }
+ //    });
 }
+
+export const onBridgeReady =  function(param){  
+	WeixinJSBridge.invoke(  
+		'getBrandWCPayRequest', param,  function(res){       
+            if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+            	alert("支付成功");  
+               	const path = "/order/success";
+               	browserHistory.push(path);
+            }     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。   
+        });   
+}  
