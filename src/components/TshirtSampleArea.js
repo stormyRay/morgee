@@ -68,7 +68,7 @@ class TshirtSampleArea extends React.Component{
 			<div className="shirt-showing-area">
 				<div className="shirt-container">
 					<div className="shirt-background" style={shirtStyle} >
-						<div className="shirt-area"style={wrapperStyle}>
+						<div className="shirt-area" style={wrapperStyle}>
 							<div className={wrapperClass}>
 								<div className="printed-image" style={imageStyle}>
 								</div>

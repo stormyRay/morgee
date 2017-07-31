@@ -20,7 +20,7 @@ class SettingPanel extends React.Component{
 		let setting = null;
 		switch(activeCustomizeTab) {
 			case "type" : setting = (<ClothTypeAndSizeSetting />); break;
-			case "color" : setting = (<ClothColorSetting />); break;
+			case "color" : setting = (<ClothColorSetting  updateThumbnail={this.updateTextSrc}/>); break;
 			case "size" : setting = (<ImageSizeSetting />); break;
 			case "position" : setting = (<ImagePositionSetting />); break;
 			case "text_content": setting = (<TextContentSetting updateThumbnail={this.updateTextSrc}/>); break;

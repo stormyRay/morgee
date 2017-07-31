@@ -38,12 +38,12 @@ class CustomizeTextTabNav extends React.Component {
 							<div>{TEXT_FONT}</div>
 						</div>
 					</NavItem>
-					<NavItem eventKey="text_color">
+					{/*<NavItem eventKey="text_color">
 						<div className="customize-tab-wrapper">
 							<span className="sprite text-color-icon" />
 							<div>{TEXT_COLOR}</div>
 						</div>
-					</NavItem>
+					</NavItem>*/}
 				</Nav>
 			</div>
 			)
