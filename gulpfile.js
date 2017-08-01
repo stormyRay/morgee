@@ -121,8 +121,8 @@ gulp.task('replaceHTML-debug', function(){
     paths.forEach(function(path){
         gulp.src(path.HTML)
             .pipe(htmlreplace({
-                'css': '/build/' + path.CSS_OUT,
-                'js': '/build/' + path.OUT
+                'css': '/build/' + path.CSS_OUT + '?stamp=' +  (new Date()).getTime(),
+                'js': '/build/' + path.OUT + '?stamp='
             }))
             .pipe(gulp.dest(path.DEST));
     });
