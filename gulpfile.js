@@ -110,7 +110,7 @@ gulp.task('replaceHTML', function(){
     paths.forEach(function(path){
         gulp.src(path.HTML)
             .pipe(htmlreplace({
-                'css': '/build/' + path.CSS_OUT,
+                'css': '/build/' + path.CSS_OUT + '?stamp=' +  (new Date()).getTime(),
                 'js': '/build/' + path.MINIFIED_OUT,
                 'debug': ''
             }))
@@ -122,7 +122,7 @@ gulp.task('replaceHTML-debug', function(){
         gulp.src(path.HTML)
             .pipe(htmlreplace({
                 'css': '/build/' + path.CSS_OUT + '?stamp=' +  (new Date()).getTime(),
-                'js': '/build/' + path.OUT + '?stamp='
+                'js': '/build/' + path.OUT
             }))
             .pipe(gulp.dest(path.DEST));
     });
