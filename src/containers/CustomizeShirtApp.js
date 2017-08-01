@@ -10,7 +10,7 @@ import CustomizeImagePage from "../components/CustomizeImagePage";
 import CustomizeTextPage from "../components/CustomizeTextPage";
 import OrderPageContainer from "./customize-containers/OrderPageContainer";
 import SuccessPay from "../components/order-page/SuccessPay";
-import {getParameterByName} from "../constants/methods";
+import {getParameterByName, isWechat} from "../constants/methods";
 
 const store = createStore(reducers, {
 	activeCustomizeTab: "type",
@@ -58,6 +58,20 @@ class CustimuzeShirtApp extends React.Component{
 			    if((yMovement * 3) > xMovement) {
 			        e.preventDefault();
 			    }
+			}
+		}
+	}
+
+	componentWillMount() {
+		if(isWechat()){
+			//Simulate an alert without URL of default style in the wechat browser
+			window.alert = function(name){
+				var iframe = document.createElement("IFRAME");
+				iframe.style.display="none";
+				iframe.setAttribute("src", 'data:text/plain,');
+				document.documentElement.appendChild(iframe);
+				window.frames[0].window.alert(name);
+				iframe.parentNode.removeChild(iframe);
 			}
 		}
 	}

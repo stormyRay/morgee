@@ -57,7 +57,8 @@ export const HIGH_POSITION = "高";
 export const LOW_POSITION = "低";
 
 export const WARNING_MORE_THAN_ONE_CN = "单字中文模式仅可输入1个汉字。";
-export const WARNING_HAS_CHAR_OTHER_THAN_CN = "单字中文模式中仅可输入中文汉字。";
+export const WARNING_HAS_CHAR_OTHER_THAN_CN = "单字中文模式下仅可输入中文汉字。";
+export const WARNING_TOO_MANY_CHAR = "该模式下最多可输入7个字。";
 
 //Order Page
 export const IMAGE_LABEL = "图片：";

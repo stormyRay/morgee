@@ -1,9 +1,10 @@
 import React from "react";
-import {TEXT_CONTENT, WARNING_MORE_THAN_ONE_CN, WARNING_HAS_CHAR_OTHER_THAN_CN} from "../../constants/texts";
+import {TEXT_CONTENT, WARNING_MORE_THAN_ONE_CN, WARNING_HAS_CHAR_OTHER_THAN_CN, WARNING_TOO_MANY_CHAR} from "../../constants/texts";
 
 class TextContent extends React.Component{
 	constructor(props) {
 		super(props);
+		this.blurUpdated = false;
 		this.updateSrc = this.updateSrc.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handleBlur = this.handleBlur.bind(this);
@@ -38,19 +39,24 @@ class TextContent extends React.Component{
 	handleBlur(e){
 		if(e.target.value != this.props.thumbnailTextValue){
 			this.updateSrc(e.target.value);
+			this.blurUpdated = true;
 		}
 	}
 
 	handleClick(e){
 		const {textValue, thumbnailTextValue, changeTextContent} = this.props;
-		if(textValue != thumbnailTextValue)
-			this.updateSrc(textValue);
+		if(this.blurUpdated){
+			this.blurUpdated = false;
+			return;
+		}
+		this.updateSrc(textValue);
 	}
 
 	updateSrc(content){
-		if(this.validateText(content)){
-			this.props.updateThumbnail(content, null, null);
-			this.props.changeTumbnailText(content);
+		var validatedText = this.validateText(content);
+		if(validatedText && validatedText != this.props.thumbnailTextValue){
+			this.props.updateThumbnail(validatedText, null, null);
+			this.props.changeTumbnailText(validatedText);
 		}
 	}
 
@@ -64,15 +70,29 @@ class TextContent extends React.Component{
 						changeTextContent(pureCH.at(0));
 						alert(WARNING_MORE_THAN_ONE_CN);
 					}
-					return true
-				} else {
+					return pureCH.at(0);
+				} else if(content){
+					changeTextContent("");
 					alert(WARNING_HAS_CHAR_OTHER_THAN_CN);
 					return false;
 				}
 			case "multiple_cn":
+				var charNum = 0;
+				var shortText = "";
+				for(let ch of content){
+					charNum ++;
+					if(charNum > 7){
+						alert(WARNING_TOO_MANY_CHAR);
+						break;
+					}
+
+					shortText += ch;
+				}
+				changeTextContent(shortText);
+				return shortText;
 			case "single_en":
 			case "multiple_en":
-			default: return  true;
+			default: return  content;
 		};
 	}
 
