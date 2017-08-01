@@ -1,52 +1,52 @@
-import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_SIZE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION, CHANGE_TEXT_CONTENT, CHANGE_TEXT_FONT, CHANGE_TEXT_COLOR, CHANGE_THUMBNAIL_SRC} from "../constants/actionTypes";
+import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_SIZE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION, CHANGE_TEXT_CONTENT, CHANGE_TEXT_FONT, CHANGE_TEXT_COLOR, CHANGE_THUMBNAIL_SRC, CHANGE_THUMBNAIL_TEXT} from "../constants/actionTypes";
 import {GET_THUMBNAIL_SRC} from "../constants/paths";
 import fetch from "isomorphic-fetch";
 import $ from "jquery";
 
 export const changeClothType = (clothType) => {
-	return{
+	return {
 		type: CHANGE_CLOTH_TYPE,
 		clothType
 	}
 }
 export const changeClothSize = (clothSize) => {
-	return{
+	return {
 		type: CHANGE_CLOTH_SIZE,
 		clothSize
 	}
 }
 export const changeClothColor = (clothColor) => {
-	return{
+	return {
 		type: CHANGE_CLOTH_COLOR,
 		clothColor
 	}
 }
 export const changeImageSize = (imageSize) => {
-	return{
+	return {
 		type: CHANGE_IMAGE_SIZE,
 		imageSize
 	}
 }
 export const changeImagePosition = (imagePosition) => {
-	return{
+	return {
 		type: CHANGE_IMAGE_POSITION,
 		imagePosition
 	}
 }
 export const changeTextContent = (textContent) => {
-	return{
+	return {
 		type: CHANGE_TEXT_CONTENT,
 		textContent
 	}
 }
 export const changeTextFont = (textFont) => {
-	return{
+	return {
 		type: CHANGE_TEXT_FONT,
 		textFont
 	}
 }
 export const changeTextColor = (textColor) => {
-	return{
+	return {
 		type: CHANGE_TEXT_COLOR,
 		textColor
 	}
@@ -62,9 +62,16 @@ export const getThumbnailSrc = (type, opts) => {
 }
 
 export const changeThumbnailSrc = (src) => {
-	return{
+	return {
 		type: CHANGE_THUMBNAIL_SRC,
 		src
 	}
 }
-export default {changeClothType, changeClothSize, changeClothColor, changeImageSize, changeImagePosition, changeTextContent, changeTextFont, changeTextColor, getThumbnailSrc};
+
+export const changeThumbnailText = (content) => {
+	return {
+		type: CHANGE_THUMBNAIL_TEXT,
+		content
+	}
+}
+export default {changeClothType, changeClothSize, changeClothColor, changeImageSize, changeImagePosition, changeTextContent, changeTextFont, changeTextColor, getThumbnailSrc, changeThumbnailText};

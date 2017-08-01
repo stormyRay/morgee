@@ -3,6 +3,7 @@ import {Provider} from "react-redux";
 import { Router, Route, IndexRedirect, browserHistory } from "react-router";
 import {createStore, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
+import "babel-polyfill";
 import {wechatAuthorize} from "../constants/methods";
 import reducers from "../reducers/CustomizeShirtIndex";
 import CustomizeImagePage from "../components/CustomizeImagePage";
@@ -25,7 +26,8 @@ const store = createStore(reducers, {
 			text: getParameterByName("textFontValue") || "字体1"
 		},
 		textColor: getParameterByName("textColor") || "white",
-		thumbnailSrc: ""
+		thumbnailSrc: "",
+		thumbnailContent: ""
 	},
 	orderInfo: {
 		imageTitle: "占位",//Need to change!!!

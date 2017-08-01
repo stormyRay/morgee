@@ -56,6 +56,9 @@ export const SMALL_SIZE = "小";
 export const HIGH_POSITION = "高";
 export const LOW_POSITION = "低";
 
+export const WARNING_MORE_THAN_ONE_CN = "单字中文模式仅可输入1个汉字。";
+export const WARNING_HAS_CHAR_OTHER_THAN_CN = "单字中文模式中仅可输入中文汉字。";
+
 //Order Page
 export const IMAGE_LABEL = "图片：";
 export const TEXT_LABEL = "文字：";

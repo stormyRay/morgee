@@ -1,4 +1,4 @@
-import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_SIZE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION, CHANGE_TEXT_CONTENT, CHANGE_TEXT_FONT, CHANGE_TEXT_COLOR, CHANGE_THUMBNAIL_SRC} from "../constants/actionTypes";
+import {CHANGE_CLOTH_TYPE, CHANGE_CLOTH_SIZE, CHANGE_CLOTH_COLOR, CHANGE_IMAGE_SIZE, CHANGE_IMAGE_POSITION, CHANGE_TEXT_CONTENT, CHANGE_TEXT_FONT, CHANGE_TEXT_COLOR, CHANGE_THUMBNAIL_SRC, CHANGE_THUMBNAIL_TEXT} from "../constants/actionTypes";
 
 const customizeSettings = (state = {}, action) => {
   switch (action.type) {
@@ -37,6 +37,10 @@ const customizeSettings = (state = {}, action) => {
     case CHANGE_THUMBNAIL_SRC:
         return Object.assign({}, state, {
           thumbnailSrc: action.src
+        });
+    case CHANGE_THUMBNAIL_TEXT:
+        return Object.assign({}, state, {
+          thumbnailContent: action.content
         });
     default:
         return state;

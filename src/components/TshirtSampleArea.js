@@ -49,18 +49,28 @@ class TshirtSampleArea extends React.Component{
 	}
 
 	render(){
-		const {clothType, clothColor, imageSize, imagePosition, thumbnailSrc} = this.props.settings;
+		const {customizeType, clothType, clothColor, imageSize, imagePosition, thumbnailSrc} = this.props.settings;
 		const {imageId, selectedSetting} = this.props;
 
 		const shirtStyle = {
 			backgroundImage: "url(" + this.buildTshirtSrc(clothType, clothColor) +")"
 		};
-		const imageStyle = {
-			backgroundSize: this.computeSize(imageSize) + " auto", 
-			//backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
-			backgroundImage: "url(" + thumbnailSrc || "/images/001.jpg" + ")",
-			backgroundPositionY: this.computePositionY(imagePosition)
-		};		
+		let imageStyle = {};
+		if(customizeType == "image"){
+			imageStyle = {
+				backgroundSize: this.computeSize(imageSize), 
+				//backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
+				backgroundImage: "url(" + thumbnailSrc || "/images/001.jpg" + ")",
+				backgroundPositionY: this.computePositionY(imagePosition)
+			};
+		} else {
+			imageStyle = {
+				backgroundSize: this.computeTextSize(this.computeTextChars(this.props.settings.thumbnailContent)), 
+				//backgroundImage: "url(" + this.buildImageSrc(imageId) +")", 
+				backgroundImage: "url(" + thumbnailSrc || "/images/001.jpg" + ")",
+				backgroundPositionY: this.computeTextPositionY(this.computeTextChars(this.props.settings.thumbnailContent))
+			};
+		}
 		const wrapperStyle = this.computeWrapperSize();
 		const wrapperClass = ((selectedSetting == "size" || selectedSetting == "position")? (clothColor == "black" ? "image-wrapper bordered grey-bordered" : "image-wrapper bordered") : "image-wrapper");
 
@@ -93,7 +103,7 @@ class TshirtSampleArea extends React.Component{
 	computeSize(size){
 		const minRatio = 70;
 		const maxRatio = 100;
-		return (minRatio + (maxRatio-minRatio) * size / 100) + "%";
+		return (minRatio + (maxRatio-minRatio) * size / 100) + "%" + " auto";
 	}
 
 	computePositionY(position){
@@ -106,6 +116,78 @@ class TshirtSampleArea extends React.Component{
 		//TEST ONLY
 		//return "/images/" + id + ".jpg";
 		//END: TEST ONLY
+	}
+
+	computeTextChars(string){
+		const isCH = (this.props.textType == "single_cn" || this.props.textType == "multiple_cn");
+		var charNum = 0;
+		string = string || "";
+		if(isCH){
+			for(let ch of string){
+				charNum ++;
+			}
+			return charNum;
+		} else {
+			for(let ch of string){
+				if(ch == " ")
+					charNum ++;
+			}
+			return ++charNum;
+		}
+	}
+
+	computeTextSize(chNum){
+		const {textType} = this.props;
+		switch(textType){
+			case "single_cn":
+			case "multiple_cn":
+				switch(chNum){
+					case 1: return "80%";
+					case 2: return "60%";
+					case 3: return "40%";
+					case 4: return "30%";
+					case 5: return "25%";
+					case 6: return "22%";
+					case 7: return "20%";
+					default: return "contain";
+				};
+			case "single_en": return "80%";
+			case "multiple_en":
+				switch(chNum){
+					case 1: return "80%";
+					case 2: return "60%";
+					case 3: return "50%";
+					case 4: return "40%";
+					default: return "35%";
+				}
+			default: return "contain";
+		};
+	}
+
+	computeTextPositionY(chNum){
+		const {textType} = this.props;
+		switch(textType){
+			case "single_cn":
+			case "multiple_cn":
+				switch(chNum){
+					case 1: return "15%";
+					case 2: return "20%";
+					case 3: return "25%";
+					case 4: return "35%";
+					case 5: return "50%";
+					default: return "22%";
+				};
+			case "single_en": return "22%";
+			case "multiple_en":
+				switch(chNum){
+					case 1: 
+					case 2: return "20%";
+					case 3: return "25%";
+					case 4: return "30%";
+					default: return "35%";
+				}
+			default: return "25%";
+		};
 	}
 
 	computeWrapperSize(){
