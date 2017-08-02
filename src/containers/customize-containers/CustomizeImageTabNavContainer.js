@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    swicthTab: (selectedTab) => {
+    switchTab: (selectedTab) => {
       dispatch(switchCustomizeTab(selectedTab))
     }
   }

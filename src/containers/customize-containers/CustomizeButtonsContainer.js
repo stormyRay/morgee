@@ -1,5 +1,8 @@
 import { connect } from "react-redux";
 import CustomizeButtons from "../../components/CustomizeButtons";
+import {customizeTab} from "../../actions/customizeIndex";
+
+const {switchCustomizeTab} = customizeTab;
 
 const mapStateToProps = (state, ownProps) => {
 	return {
@@ -8,8 +11,17 @@ const mapStateToProps = (state, ownProps) => {
 	}
 }
 
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    switchTab: (selectedTab) => {
+      dispatch(switchCustomizeTab(selectedTab))
+    }
+  }
+}
+
 const CustomizeButtonsContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(CustomizeButtons);
 
 export default CustomizeButtonsContainer;

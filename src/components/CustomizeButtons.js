@@ -1,6 +1,6 @@
 import React from "react";
 import { browserHistory } from "react-router";
-import {SELECT_OTHER_IMAGE, SELECT_OTHER_TEMPLATE, COMPLETE_CUSTOMIZE} from "../constants/texts";
+import {SELECT_OTHER_IMAGE, SELECT_OTHER_TEMPLATE, COMPLETE_CUSTOMIZE, WARNING_EMPTY_TEXT} from "../constants/texts";
 
 class CustomizeButtons extends React.Component{
 	constructor(props) {
@@ -30,13 +30,18 @@ class CustomizeButtons extends React.Component{
 	}
 
 	handleConfirmClick(){
-		const {imageId, settings, customizeType, textType} = this.props;
+		const {imageId, settings, customizeType, textType, switchTab} = this.props;
 		const {clothType, clothColor, clothSize, imageSize, imagePosition, textContent, textFont, textColor} = settings;
 		var path;
 		if(customizeType == "image")
 			path = `/order/image/${imageId}?clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&imageSize=${imageSize}&imagePosition=${imagePosition}`;
-		else if(customizeType == "text")
+		else if(customizeType == "text"){
+			if(!textContent){
+				switchTab("text_content");
+				alert(WARNING_EMPTY_TEXT);
+			}
 			path = `/order/text/${textType}?textContent=${textContent}&clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&textFontId=${textFont.id}&textFontValue=${textFont.text}&textColor=${textColor}`;
+		}
     	browserHistory.push(path);
 	}
 }

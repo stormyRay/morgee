@@ -1,7 +1,8 @@
 import React from "react";
 import $ from "jquery";
+import "jquery-validation";
 import { browserHistory } from "react-router";
-import {appid, TOTAL_LABEL, CONFIRM_AND_PAY} from "../../constants/texts";
+import {appid, TOTAL_LABEL, CONFIRM_AND_PAY, WARNING_LACK_OF_INFORMATION} from "../../constants/texts";
 import {CONFIRM_ORDER} from "../../constants/paths";
 import {getParameterByName, lauchWechatPay} from "../../constants/methods";
 
@@ -25,32 +26,30 @@ class ConfirmOrderBar extends React.Component{
 	}
 
 	handleConfirm(e) {
+		if(!$("#customer_info_form").valid()){
+			alert(WARNING_LACK_OF_INFORMATION);
+			return;
+		}
 		const {customizeType, contentPrice, clothPrice, printPrice, imageId, textType, orderNumber, clothType, clothColor, clothSize, textContent, textColor, textFont} = this.props;
 		var formData = $("#customer_info_form").serializeArray();
+		var parameters = {
+			clothType,
+			clothColor,
+			clothSize,
+			orderNumber,
+			totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
+			openid: window.localStorage.getItem("wechatOpenid") || ""
+		}
 		if(customizeType == "image"){
-			var parameters = {
-				imageId,
-				clothType,
-				clothColor,
-				clothSize,
-				orderNumber,
-				totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
-				openid: window.localStorage.getItem("wechatOpenid") || ""
-			};
+			parameters = Object.assign(parameters, {imageId});
 		} else {
-			var parameters = {
+			parameters = Object.assign(parameters, {
 				textType,
 				textContent,
 				textColor,
 				textFontId: textFont.id,
-				textFontValue: textFont.text,
-				clothType,
-				clothColor,
-				clothSize,
-				orderNumber,
-				totalPrice: parseFloat((contentPrice + clothPrice + printPrice) * orderNumber).toFixed(2),
-				openid: window.localStorage.getItem("wechatOpenid") || ""
-			};
+				textFontValue: textFont.text
+			});
 		}
 		for(var i = 0; i < formData.length; i++){
 			parameters[formData[i].name] = formData[i].value;

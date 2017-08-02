@@ -61,6 +61,15 @@ button{
 			padding: 0;
     		line-height: 2rem;
 		}
+
+		&.error{
+			outline-color: #D5242E;
+			box-shadow: 0 0 5px #D5242E;
+		}
+	}
+
+	label.error{
+		display:none;
 	}
 }
 

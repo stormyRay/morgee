@@ -1,5 +1,6 @@
 import React from "react";
 import $ from "jquery";
+import "jquery-validation";
 import TshirtNumberContainer from "../../../containers/customize-containers/TshirtNumberContainer";
 import MailInfo from "./MailInfo";
 import ExtraInfo from "./ExtraInfo";
@@ -7,6 +8,19 @@ import {CONFIRM_ORDER} from "../../../constants/paths";
 class CustomerInfoArea extends React.Component{
 	constructor(props) {
 		super(props);
+	}
+
+	componentDidMount() {
+		$("#customer_info_form").validate({
+			rules: {
+				customerName: "required",
+				telNumber: "required",
+				province: "required",
+				city: "required",
+				district: "required",
+				addressDetail: "required"
+			}
+		})
 	}
 
 	render(){
