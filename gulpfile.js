@@ -178,5 +178,7 @@ return watcher.on('update', function () {
  * gulp task binding
  */////////////////////////////////////////////////////////////////////////////////
 gulp.task('default', ['debug']);
+gulp.task('css', ['replaceHTML-debug', 'sass']);
+gulp.task('css-production', ['replaceHTML', 'sass']);
 gulp.task('production', ['apply-prod-environment', 'copyResources', 'replaceHTML', 'sass', 'build']);
 gulp.task('debug', ['copyResources', 'replaceHTML-debug', 'sass', 'build-debug']);
