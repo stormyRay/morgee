@@ -39,6 +39,7 @@ class CustomizeButtons extends React.Component{
 			if(!textContent){
 				switchTab("text_content");
 				alert(WARNING_EMPTY_TEXT);
+				return;
 			}
 			path = `/order/text/${textType}?textContent=${textContent}&clothType=${clothType}&clothColor=${clothColor}&clothSize=${clothSize}&textFontId=${textFont.id}&textFontValue=${textFont.text}&textColor=${textColor}`;
 		}
