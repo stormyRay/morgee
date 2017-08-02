@@ -60,16 +60,16 @@ button{
 			min-height: 2rem;
 			padding: 0;
     		line-height: 2rem;
+    		padding-left: 2px;
 		}
 
 		&.error{
-			outline-color: #D5242E;
-			box-shadow: 0 0 5px #D5242E;
+			box-shadow: inset 0 0 3px #D5242E;
 		}
 	}
 
 	label.error{
-		display:none;
+		display:none!important;
 	}
 }
 
@@ -143,8 +143,12 @@ input[type="number"] {
 		background-repeat: no-repeat;
 		background-size: 24px 24px;
 		background-position: 100% 50%;
-		padding:0 24px 0 0 !important;
+		padding:0 24px 0 2px !important;
     	-webkit-padding-end: 24px !important;
+
+    	&.error{
+			box-shadow: inset 0 0 3px #D5242E;
+		}
 	}
 
 	.province-select{
