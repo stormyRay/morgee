@@ -27,7 +27,7 @@ const store = createStore(reducers, {
 		},
 		textColor: getParameterByName("textColor") || "white",
 		thumbnailSrc: "",
-		thumbnailContent: ""
+		thumbnailContent: getParameterByName("textContent") || ""
 	},
 	orderInfo: {
 		imageTitle: "占位",//Need to change!!!
