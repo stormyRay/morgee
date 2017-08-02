@@ -19,7 +19,7 @@ class CategoryPage extends React.Component{
 	render(){
 		return(
 			<div className="categories-container">
-				<TypeNavContainer selected="text"/>
+				{/*<TypeNavContainer selected="text"/>*/}
 				<TextCategoriesContainer />
 			</div>
 		)
