@@ -60,7 +60,7 @@ export const WARNING_MORE_THAN_ONE_CN = "单字中文模式仅可输入1个汉�
 export const WARNING_HAS_CHAR_OTHER_THAN_CN = "单字中文模式下仅可输入中文汉字。";
 export const WARNING_TOO_MANY_CHAR = "该模式下最多可输入7个字。";
 export const WARNING_EMPTY_TEXT = "定制文字内容不能为空。";
-export const WARNING_LACK_OF_INFORMATION = "请根据提示，补全订单中的必要信息。";
+export const WARNING_LACK_OF_INFORMATION = "请补全订单中的必要信息。";
 
 //Order Page
 export const IMAGE_LABEL = "图片：";
