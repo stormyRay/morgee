@@ -11,6 +11,10 @@ body{
 }
 
 .customize-buttons-container{
+	position: fixed;
+	top: 0;
+	width: 100%;
+    box-sizing: border-box;
 	padding: 1.2rem;
 	background-color: #FFFFFF;
 	.customize-button{
@@ -33,7 +37,6 @@ body{
 		}
 	}
 }
-
 
 .customize-tab-nav-container{
 	height: $tabNavHeight;

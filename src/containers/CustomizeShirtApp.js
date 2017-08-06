@@ -11,6 +11,7 @@ import CustomizeTextPage from "../components/CustomizeTextPage";
 import OrderPageContainer from "./customize-containers/OrderPageContainer";
 import SuccessPay from "../components/order-page/SuccessPay";
 import {getParameterByName, isWechat} from "../constants/methods";
+import {fontList} from "../constants/fonts";
 
 const store = createStore(reducers, {
 	activeCustomizeTab: "type",
@@ -22,8 +23,8 @@ const store = createStore(reducers, {
 		clothSize: getParameterByName("clothSize") || "XL",
 		textContent: getParameterByName("textContent") || "",
 		textFont: {
-			id: getParameterByName("textFontId") || "1",
-			text: getParameterByName("textFontValue") || "字体1"
+			id: getParameterByName("textFontId") || fontList[0].id,
+			text: getParameterByName("textFontValue") || fontList[0].text
 		},
 		textColor: getParameterByName("textColor") || "white",
 		thumbnailSrc: "",
@@ -55,6 +56,14 @@ class CustimuzeShirtApp extends React.Component{
 			touchmoveHandler: function(e){
 				var xMovement = Math.abs(e.touches[0].screenX - this.xStart);
 			    var yMovement = Math.abs(e.touches[0].screenY - this.yStart);
+
+			    const ddUlCls = "setting-panel-dropdup dropdown-menu";
+			    if(e.target.className == ddUlCls ||
+			    	e.target.parentNode.className == ddUlCls ||
+			    	e.target.parentNode.parentNode.className == ddUlCls ||
+			    	e.target.parentNode.parentNode.parentNode.className == ddUlCls)
+			    	return;
+
 			    if((yMovement * 3) > xMovement) {
 			        e.preventDefault();
 			    }

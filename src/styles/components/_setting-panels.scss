@@ -193,6 +193,13 @@ input{
 		}
 		.open ul{
 			display: block;
+			max-height: 20rem;
+    		overflow-y: auto;
+		}
+		.font-list-preview{
+			background-repeat: no-repeat;
+			height: 100%;
+			background-position: 0 50%;
 		}
 		li{
 			display:block;
