@@ -485,6 +485,10 @@ body {
   background-color: rgba(0, 0, 0, 0.05); }
 
 .customize-buttons-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
   padding: 1.2rem;
   background-color: #FFFFFF; }
   .customize-buttons-container .customize-button {
@@ -703,7 +707,13 @@ input {
       display: none;
       box-sizing: border-box; }
     .setting-panel-container .dropup-container .open ul {
-      display: block; }
+      display: block;
+      max-height: 20rem;
+      overflow-y: auto; }
+    .setting-panel-container .dropup-container .font-list-preview {
+      background-repeat: no-repeat;
+      height: 100%;
+      background-position: 0 50%; }
     .setting-panel-container .dropup-container li {
       display: block;
       width: 100%;
