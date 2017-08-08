@@ -19,6 +19,9 @@ const store = createStore(reducers, {
 class CategoriesApp extends React.Component{
 	constructor(props) {
 		super(props);
+	}
+
+	componentWillMount() {
 		//Every page entry should do the authorization with Wechat
 		wechatAuthorize();
 	}

@@ -43,8 +43,6 @@ const store = createStore(reducers, {
 class CustimuzeShirtApp extends React.Component{
 	constructor(props) {
 		super(props);
-		//Every page entry should do the authorization with Wechat
-		wechatAuthorize();
 		this.touchHandlers = {
 			xStart: 0,
 			yStart: 0,
@@ -72,6 +70,8 @@ class CustimuzeShirtApp extends React.Component{
 	}
 
 	componentWillMount() {
+		//Every page entry should do the authorization with Wechat
+		wechatAuthorize();
 		if(isWechat()){
 			//Simulate an alert without URL of default style in the wechat browser
 			window.alert = function(name){
