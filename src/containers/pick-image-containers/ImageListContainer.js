@@ -28,7 +28,7 @@ class ImageList extends React.Component{
 		const {getImages} = imagesAndThemes;
 		const themeId = this.props.params.theme || this.props.route.theme;
 		var ShowingImages = [];
-		for(var i =0; i < imageList.length; i++){
+		for(var i = 0; i < imageList.length; i++){
 			ShowingImages.push(
 				<ImageInSale key={imageList[i].id} inList={true} {...imageList[i]} />
 				);
