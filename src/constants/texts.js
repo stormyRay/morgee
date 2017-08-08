@@ -69,6 +69,11 @@ export const CLOTH_LABEL = "T恤：";
 export const PRINT_LABEL = "印刷服务：";
 export const TOTAL_LABEL = "合计：";
 
+export const ORDER_NUMBER = "订单编号：";
+export const SHIPPING_INFORMATION = "物流信息：";
+export const SHIPPING_NUMBER = "单号";
+export const SHIPPING_STATUS = "状态查询";
+
 export const COUNT_LABEL = "数量";
 
 export const CUSTOMER_NAME = "收货人";
