@@ -477,6 +477,61 @@ html {
   height: 24px;
   background-position: -39px -175px; }
 
+.sprite-font {
+  background-image: url("/images/sprite/sprite-font-20.png");
+  background-repeat: no-repeat;
+  display: block;
+  background-size: 250px 270px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dppx) {
+  .sprite-font {
+    background-image: url("/images/sprite/sprite-font-40.png"); } }
+
+.sprite-font-NotoSansSChinese-ExtraHeavy {
+  width: 214px;
+  height: 20px;
+  background-position: -5px -5px; }
+
+.sprite-font-NotoSansSChinese-Light {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -35px; }
+
+.sprite-font-SourceHanSerifSC-ExtraLight {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -65px; }
+
+.sprite-font-SourceHanSerifSC-Heavy {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -95px; }
+
+.sprite-font-whz_chaomingtifan {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -125px; }
+
+.sprite-font-whz_cumingtifan {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -155px; }
+
+.sprite-font-whz_kantingliufan {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -185px; }
+
+.sprite-font-whz_temingtifan {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -215px; }
+
+.sprite-font-whz_zhongkaitizhuyin {
+  width: 240px;
+  height: 20px;
+  background-position: -5px -245px; }
+
 body {
   background-color: #FFFFFF !important; }
 
@@ -719,6 +774,8 @@ input {
       width: 100%;
       height: 3.5rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+      .setting-panel-container .dropup-container li:last-child {
+        border-bottom: none; }
       .setting-panel-container .dropup-container li a {
         text-align: left;
         font-size: 1.4rem;
@@ -727,7 +784,12 @@ input {
         display: block;
         padding-left: 0.9rem;
         color: #000000;
-        position: relative; }
+        position: relative;
+        height: 100%; }
+        .setting-panel-container .dropup-container li a .sprite-font {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%); }
         .setting-panel-container .dropup-container li a .check-mark {
           width: 24px;
           height: 24px;
@@ -736,8 +798,6 @@ input {
           right: 0.9rem;
           top: 50%;
           transform: translate(0, -50%); }
-      .setting-panel-container .dropup-container li:last-child {
-        border-bottom: none; }
 
 .shirt-info-summary-container {
   height: 15rem;
