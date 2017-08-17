@@ -206,6 +206,11 @@ input{
 			width: 100%;
 			height: 3.5rem;
 			border-bottom: 1px solid rgba(0,0,0,0.25);
+			&:last-child{
+				border-bottom: none;
+			}
+
+
 			a{
 				text-align: left;
 				font-size: 1.4rem;
@@ -215,6 +220,14 @@ input{
 				padding-left: 0.9rem;
 				color: #000000;
 				position: relative;
+				height: 100%;
+
+				.sprite-font{
+					position: absolute;
+					top: 50%;
+				    transform: translate(0,-50%);
+				}
+				
 				.check-mark{
 					width: 24px;
 					height: 24px;
@@ -228,9 +241,6 @@ input{
 						@extend .sprite-selected-black;
 					}
 				}
-			}
-			&:last-child{
-				border-bottom: none;
 			}
 
 			

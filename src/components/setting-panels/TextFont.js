@@ -18,7 +18,8 @@ class TextFont extends React.Component{
 		var fontPreview, selectedFontPreview;
 		for(var i = 0; i < this.fontList.length; i++){
 			var item = this.fontList[i];
-			fontPreview = <div className="font-list-preview" style={{backgroundImage: "url(" + item.src + ")"}} />;
+			var fontClass = "sprite-font sprite-font-" + item.id;
+			fontPreview = <div className={fontClass} />;
 			if(selectedFont.id == item.id)
 				selectedFontPreview = fontPreview;
 			menuList.push(
