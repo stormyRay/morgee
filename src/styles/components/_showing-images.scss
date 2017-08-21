@@ -88,9 +88,12 @@
 		}
 	}
 
-	.image-price,
-	.category-price{
+	.image-price{
 		text-align: left;
+	}
+
+	.category-price{
+		float: right;
 	}
 }
 .category-container{
