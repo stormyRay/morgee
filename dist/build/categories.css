@@ -134,19 +134,6 @@ html {
   .category-container .category-price {
     float: right; }
 
-.category-container {
-  margin: 1.1rem 0.6rem;
-  border: 0 solid; }
-  .category-container .top-info {
-    margin-top: 1.6rem;
-    margin-bottom: 0.8rem; }
-    .category-container .top-info .category-title {
-      margin: 0;
-      font-size: 1.4rem; }
-  .category-container .category-price {
-    font-size: 1.4rem;
-    color: #DA4000; }
-
 .theme-container {
   display: inline-block;
   margin: 0 0.6rem; }
@@ -173,6 +160,15 @@ html {
   .category-container .category-information {
     max-width: 10rem;
     margin: 0 auto; }
+  .category-container .top-info {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem; }
+    .category-container .top-info .category-title {
+      margin: 0;
+      font-size: 1.4rem; }
+  .category-container .category-price {
+    font-size: 1.4rem;
+    color: #DA4000; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .image-wrapper.theme-image-wrapper {
