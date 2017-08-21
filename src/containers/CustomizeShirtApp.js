@@ -17,7 +17,7 @@ const store = createStore(reducers, {
 	activeCustomizeTab: "type",
 	customizeSettings: {
 		clothType: getParameterByName("clothType") || "man_normal",
-		clothColor: getParameterByName("clothColor") || "black",
+		clothColor: getParameterByName("clothColor") || "white",
 		imageSize: getParameterByName("imageSize") || 50,
 		imagePosition: getParameterByName("imagePosition") || 50, 
 		clothSize: getParameterByName("clothSize") || "XL",
@@ -26,7 +26,7 @@ const store = createStore(reducers, {
 			id: getParameterByName("textFontId") || fontList[0].id,
 			text: getParameterByName("textFontValue") || fontList[0].text
 		},
-		textColor: getParameterByName("textColor") || "white",
+		textColor: getParameterByName("textColor") || "black",
 		thumbnailSrc: "",
 		thumbnailContent: getParameterByName("textContent") || ""
 	},

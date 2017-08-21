@@ -1,5 +1,5 @@
 import React from "react";
-import {IMAGE_LABEL, TEXT_LABEL, CLOTH_LABEL, PRINT_LABEL, TOTAL_LABEL} from "../../../constants/texts";
+import {IMAGE_LABEL, TEXT_LABEL, CLOTH_LABEL, PRINT_LABEL, SINGLE_TOTAL_LABEL} from "../../../constants/texts";
 import {clothNameMapping} from "../../../constants/methods";
 class TshirtSummary extends React.Component{
 	constructor(props) {
@@ -30,7 +30,7 @@ class TshirtSummary extends React.Component{
 					<div className="summary-price">{"￥" + printPrice.toFixed(2)}</div>
 				</div>
 				<div className="total-summary summary-wrapper summary-content">
-					<div className="summary-label summary-label_total">{TOTAL_LABEL}</div>
+					<div className="summary-label summary-label_total">{SINGLE_TOTAL_LABEL}</div>
 					<div className="summary-price">{"￥" + totalPrice.toFixed(2)}</div>
 				</div>
 			</div>

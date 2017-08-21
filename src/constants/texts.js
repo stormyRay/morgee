@@ -67,7 +67,9 @@ export const IMAGE_LABEL = "图片：";
 export const TEXT_LABEL = "文字：";
 export const CLOTH_LABEL = "T恤：";
 export const PRINT_LABEL = "印刷服务：";
+export const SINGLE_TOTAL_LABEL = "合计：";
 export const TOTAL_LABEL = "合计：";
+
 
 export const ORDER_NUMBER = "订单编号：";
 export const SHIPPING_INFORMATION = "物流信息：";
@@ -90,6 +92,6 @@ export const SELECT_PROVINCE_PLACEHOLDER = "选择省份";
 export const SELECT_CITY_PLACEHOLDER = "选择城市";
 export const SELECT_DISTRICT_PLACEHOLDER = "选择地区";
 
-export const SUCCESSFULLY_PAID = "订 单 支 付 成 功";
-export const FOLLOW_TO_SEE_DETAIL = "关 注 Moregee，查 看 订 单 详 情";
+export const SUCCESSFULLY_PAID = "支 付 成 功";
+export const FOLLOW_TO_SEE_DETAIL = "返 回 公 众 号 ， 查 看 订 单 详 情";
 

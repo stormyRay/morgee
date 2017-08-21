@@ -13,19 +13,19 @@ export const fontList = [
     // },
     {
         "id": "SourceHanSerifSC-ExtraLight",
-        "text": "思源宋体（特细）"
+        "text": "思源宋体-特细"
     },
     {
         "id": "SourceHanSerifSC-Heavy",
-        "text": "思源宋体（粗）"
+        "text": "思源宋体-粗"
     },
     {
         "id": "NotoSansSChinese-Light",
-        "text": "思源黑体（细）"
+        "text": "思源黑体-细"
     },
     {
         "id": "NotoSansSChinese-ExtraHeavy",
-        "text": "思源黑体（特粗）"
+        "text": "思源黑体-特粗"
     },
     // {
     //     "id": "SourceHanSerifSC-Light",
