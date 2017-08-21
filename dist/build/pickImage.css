@@ -339,10 +339,11 @@ html {
     color: rgba(0, 0, 0, 0.54);
     float: right; }
   .image-in-sale-container .image-price,
-  .image-in-sale-container .category-price,
-  .category-container .image-price,
-  .category-container .category-price {
+  .category-container .image-price {
     text-align: left; }
+  .image-in-sale-container .category-price,
+  .category-container .category-price {
+    float: right; }
 
 .category-container {
   margin: 1.1rem 0.6rem;
