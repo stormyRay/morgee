@@ -13,4 +13,17 @@
 		max-width: 10rem;
 		margin: 0 auto;
 	}
+	.top-info{
+		margin-top: 0.8rem;
+		margin-bottom: 0.8rem;
+		.category-title{
+			margin: 0;
+			font-size: 1.4rem;
+		}
+	}
+
+	.category-price{
+		font-size: 1.4rem;
+		color: #DA4000;
+	}
 }
