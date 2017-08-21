@@ -396,7 +396,7 @@ html {
   height: 24px;
   background-position: -137px -73px; }
 
-.sprite-rightt-arrow-black {
+.sprite-right-arrow-black {
   width: 24px;
   height: 24px;
   background-position: -5px -107px; }
@@ -1068,7 +1068,6 @@ input[type="number"] {
     width: 30rem;
     font-size: 1.4rem;
     background-color: #FFFFFF;
-    border: 2px solid #000000;
     text-align: center; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
